@@ -4,6 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>مسابقة كأس العالم 2026 — Outfit × همكس</title>
+
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700;900&family=Bebas+Neue&display=swap" rel="stylesheet">
@@ -217,7 +218,7 @@
     }
 
     .error-text {
-      color: #ff7b7b;
+      color: #ff8080;
       font-size: 12px;
       font-weight: 600;
       display: none;
@@ -238,6 +239,7 @@
     }
 
     .btn-submit:active { transform: scale(0.98); }
+
     .btn-submit:disabled {
       opacity: 0.7;
       cursor: not-allowed;
@@ -264,20 +266,20 @@
       text-align: center;
     }
 
-    .status-box {
+    .msg-box {
       display: none;
       margin-top: 18px;
+      border-radius: 8px;
       padding: 12px 14px;
-      border-radius: 6px;
+      text-align: center;
       font-size: 14px;
       font-weight: 700;
-      text-align: center;
     }
 
-    .status-error {
-      background: #2b1111;
+    .msg-error {
+      background: #2a1212;
       color: #ff9f9f;
-      border: 1px solid #5a1f1f;
+      border: 1px solid #5b2323;
     }
 
     .success {
@@ -321,18 +323,13 @@
       flex-wrap: wrap;
     }
 
-    .f-dot {
-      width: 4px;
-      height: 4px;
-      border-radius: 50%;
-    }
-
+    .f-dot { width: 4px; height: 4px; border-radius: 50%; }
     .f-orange { background: #FF5C00; }
     .f-green { background: #006C35; }
 
     @media (max-width: 640px) {
       .header {
-        padding: 18px 18px;
+        padding: 18px;
       }
 
       .hero,
@@ -352,7 +349,6 @@
       .btn-left,
       .btn-right {
         padding: 14px;
-        font-size: 14px;
       }
     }
   </style>
@@ -396,7 +392,7 @@
       <div class="field-num">01</div>
       <label class="lbl-ar" for="f-name">الاسم</label>
       <div class="lbl-en">Full Name</div>
-      <input class="finput" id="f-name" type="text" placeholder="اكتب اسمك الكامل" />
+      <input class="finput" id="f-name" type="text" placeholder="اكتب اسمك الكامل">
       <div class="error-text" id="err-name">يرجى إدخال الاسم الكامل</div>
     </div>
 
@@ -404,7 +400,7 @@
       <div class="field-num">02</div>
       <label class="lbl-ar" for="f-nat">الجنسية</label>
       <div class="lbl-en">Nationality</div>
-      <input class="finput" id="f-nat" type="text" placeholder="اكتب جنسيتك" />
+      <input class="finput" id="f-nat" type="text" placeholder="اكتب جنسيتك">
       <div class="error-text" id="err-nat">يرجى إدخال الجنسية</div>
     </div>
 
@@ -412,7 +408,7 @@
       <div class="field-num">03</div>
       <label class="lbl-ar" for="f-city">المدينة</label>
       <div class="lbl-en">City</div>
-      <input class="finput" id="f-city" type="text" placeholder="اكتب مدينتك" />
+      <input class="finput" id="f-city" type="text" placeholder="اكتب مدينتك">
       <div class="error-text" id="err-city">يرجى إدخال المدينة</div>
     </div>
 
@@ -420,8 +416,8 @@
       <div class="field-num">04</div>
       <label class="lbl-ar" for="f-num">الرقم</label>
       <div class="lbl-en">Phone Number</div>
-      <input class="finput" id="f-num" type="text" inputmode="tel" placeholder="اكتب رقمك" />
-      <div class="error-text" id="err-num">يرجى إدخال رقم جوال صحيح</div>
+      <input class="finput" id="f-num" type="text" inputmode="tel" placeholder="اكتب رقمك">
+      <div class="error-text" id="err-num">يرجى إدخال رقم صحيح</div>
     </div>
 
     <div class="btn-wrap">
@@ -431,8 +427,7 @@
       </button>
     </div>
 
-    <div class="status-box status-error" id="statusBox"></div>
-
+    <div class="msg-box msg-error" id="errorBox"></div>
   </div>
 
   <div class="success" id="successBox">
@@ -451,107 +446,95 @@
   <script>
     const SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbx9kFSQFDPogsKnBHUmM7tXbkou2xviqIAueIFXOm84Vp5DdjM4sP3NuAI73REsD0ek/exec';
 
-    const fields = {
+    const els = {
       name: document.getElementById('f-name'),
-      nationality: document.getElementById('f-nat'),
+      nat: document.getElementById('f-nat'),
       city: document.getElementById('f-city'),
-      number: document.getElementById('f-num')
+      num: document.getElementById('f-num'),
+      errName: document.getElementById('err-name'),
+      errNat: document.getElementById('err-nat'),
+      errCity: document.getElementById('err-city'),
+      errNum: document.getElementById('err-num'),
+      submitBtn: document.getElementById('submitBtn'),
+      btnLeft: document.getElementById('btnLeft'),
+      btnRight: document.getElementById('btnRight'),
+      errorBox: document.getElementById('errorBox'),
+      form: document.getElementById('theForm'),
+      success: document.getElementById('successBox')
     };
 
-    const errors = {
-      name: document.getElementById('err-name'),
-      nationality: document.getElementById('err-nat'),
-      city: document.getElementById('err-city'),
-      number: document.getElementById('err-num')
-    };
-
-    const submitBtn = document.getElementById('submitBtn');
-    const btnLeft = document.getElementById('btnLeft');
-    const btnRight = document.getElementById('btnRight');
-    const statusBox = document.getElementById('statusBox');
-
-    function resetErrors() {
-      Object.values(errors).forEach(el => el.style.display = 'none');
-      statusBox.style.display = 'none';
-      statusBox.textContent = '';
-    }
-
-    function showError(fieldKey, message) {
-      if (errors[fieldKey]) {
-        errors[fieldKey].textContent = message;
-        errors[fieldKey].style.display = 'block';
-      }
+    function hideErrors() {
+      els.errName.style.display = 'none';
+      els.errNat.style.display = 'none';
+      els.errCity.style.display = 'none';
+      els.errNum.style.display = 'none';
+      els.errorBox.style.display = 'none';
+      els.errorBox.textContent = '';
     }
 
     function validateForm() {
-      resetErrors();
+      hideErrors();
 
-      const name = fields.name.value.trim();
-      const nationality = fields.nationality.value.trim();
-      const city = fields.city.value.trim();
-      const number = fields.number.value.trim();
+      const name = els.name.value.trim();
+      const nat = els.nat.value.trim();
+      const city = els.city.value.trim();
+      const num = els.num.value.trim();
 
-      let isValid = true;
+      let valid = true;
 
       if (!name || name.length < 3) {
-        showError('name', 'يرجى إدخال الاسم الكامل');
-        isValid = false;
+        els.errName.style.display = 'block';
+        valid = false;
       }
 
-      if (!nationality || nationality.length < 2) {
-        showError('nationality', 'يرجى إدخال الجنسية');
-        isValid = false;
+      if (!nat || nat.length < 2) {
+        els.errNat.style.display = 'block';
+        valid = false;
       }
 
       if (!city || city.length < 2) {
-        showError('city', 'يرجى إدخال المدينة');
-        isValid = false;
+        els.errCity.style.display = 'block';
+        valid = false;
       }
 
-      const phoneRegex = /^[0-9+\s\-()]{6,20}$/;
-      if (!number || !phoneRegex.test(number)) {
-        showError('number', 'يرجى إدخال رقم جوال صحيح');
-        isValid = false;
+      const phoneRegex = /^[0-9+\-\s()]{6,20}$/;
+      if (!num || !phoneRegex.test(num)) {
+        els.errNum.style.display = 'block';
+        valid = false;
       }
 
-      return isValid;
+      return valid;
     }
 
-    function setLoading(isLoading) {
-      submitBtn.disabled = isLoading;
-      btnLeft.textContent = isLoading ? 'SENDING...' : 'REGISTER';
-      btnRight.textContent = isLoading ? 'جاري الإرسال...' : 'سجّل الآن';
+    function setLoading(loading) {
+      els.submitBtn.disabled = loading;
+      els.btnLeft.textContent = loading ? 'SENDING...' : 'REGISTER';
+      els.btnRight.textContent = loading ? 'جاري الإرسال...' : 'سجّل الآن';
     }
 
     async function doSubmit() {
       if (!validateForm()) return;
 
-      const name = fields.name.value.trim();
-      const nationality = fields.nationality.value.trim();
-      const city = fields.city.value.trim();
-      const number = fields.number.value.trim();
-
-      const formData = new FormData();
-      formData.append('name', name);
-      formData.append('nationality', nationality);
-      formData.append('city', city);
-      formData.append('number', number);
+      const body = new URLSearchParams();
+      body.append('name', els.name.value.trim());
+      body.append('nationality', els.nat.value.trim());
+      body.append('city', els.city.value.trim());
+      body.append('number', els.num.value.trim());
 
       try {
         setLoading(true);
 
         await fetch(SCRIPT_URL, {
           method: 'POST',
-          body: formData,
-          mode: 'no-cors'
+          body: body
         });
 
-        document.getElementById('theForm').style.display = 'none';
-        document.getElementById('successBox').style.display = 'block';
-      } catch (error) {
-        console.error(error);
-        statusBox.textContent = 'حدث خطأ أثناء الإرسال، يرجى المحاولة مرة أخرى';
-        statusBox.style.display = 'block';
+        els.form.style.display = 'none';
+        els.success.style.display = 'block';
+      } catch (err) {
+        console.error(err);
+        els.errorBox.textContent = 'حدث خطأ أثناء الإرسال، يرجى المحاولة مرة أخرى';
+        els.errorBox.style.display = 'block';
       } finally {
         setLoading(false);
       }
