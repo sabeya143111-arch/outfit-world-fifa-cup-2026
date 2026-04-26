@@ -20,7 +20,6 @@
       color: #111;
     }
 
-    /* BANNER */
     .top-banner {
       background: #006c35;
       padding: 10px 28px;
@@ -31,19 +30,20 @@
       flex-wrap: wrap;
       text-align: center;
     }
+
     .banner-text {
       font-family: 'Bebas Neue', sans-serif;
       font-size: 13px;
       color: #fff;
       letter-spacing: 4px;
     }
+
     .banner-sub {
       font-size: 11px;
       color: rgba(255,255,255,0.78);
       font-weight: 600;
     }
 
-    /* COUNTDOWN */
     .countdown-bar {
       background: #f3f3f3;
       border-bottom: 1px solid #e3e3e3;
@@ -54,28 +54,33 @@
       gap: 8px;
       flex-wrap: wrap;
     }
+
     .cd-label {
       font-family: 'Bebas Neue', sans-serif;
       font-size: 11px;
       color: #ff5c00;
       letter-spacing: 3px;
     }
+
     .cd-label-ar {
       font-size: 10px;
       color: #666;
       font-weight: 600;
     }
+
     .cd-blocks {
       display: flex;
       gap: 6px;
       align-items: center;
     }
+
     .cd-unit {
       display: flex;
       flex-direction: column;
       align-items: center;
       min-width: 42px;
     }
+
     .cd-num {
       font-family: 'Bebas Neue', sans-serif;
       font-size: 22px;
@@ -88,6 +93,7 @@
       min-width: 42px;
       text-align: center;
     }
+
     .cd-sub {
       font-size: 8px;
       color: #777;
@@ -95,6 +101,7 @@
       letter-spacing: 1px;
       margin-top: 2px;
     }
+
     .cd-sep {
       font-family: 'Bebas Neue', sans-serif;
       font-size: 20px;
@@ -103,37 +110,42 @@
       margin-bottom: 12px;
     }
 
-    /* LOGO ROW */
     .logo-row {
       background: #ffffff;
-      padding: 8px 20px 6px;
-      display: flex;
+      padding: 10px 20px 8px;
+      display: grid;
+      grid-template-columns: 110px 1fr 140px;
       align-items: center;
-      justify-content: space-between;
       gap: 10px;
       border-bottom: 1px solid #ececec;
     }
+
     .logo-row-left {
       display: flex;
       flex-direction: column;
       align-items: flex-start;
-      gap: 2px;
+      gap: 4px;
       min-width: 0;
     }
+
     .presenter {
       font-size: 10px;
       color: #777;
       font-weight: 600;
     }
+
     .header-logo-left {
-      width: 70px;
-      height: 70px;
-      object-fit: cover;
-      border-radius: 50%;
-      border: 2px solid #d9d9d9;
-      background: #f6f6f6;
+      width: 82px;
+      height: 82px;
+      object-fit: contain;
+      border-radius: 14px;
+      border: 1px solid #e5e5e5;
+      background: #ffffff;
       display: block;
+      padding: 6px;
+      box-shadow: 0 4px 14px rgba(0,0,0,0.05);
     }
+
     .hmx-tag {
       font-family: 'Cairo', sans-serif;
       font-size: 13px;
@@ -141,60 +153,55 @@
       font-weight: 800;
       line-height: 1;
     }
+
     .logo-row-center {
-      flex: 1;
       display: flex;
       justify-content: center;
       align-items: center;
     }
+
     .main-top-logo {
-      width: 180px;
+      width: 190px;
       max-width: 100%;
       height: auto;
       display: block;
       object-fit: contain;
     }
+
     .logo-row-right {
       display: flex;
       flex-direction: column;
       align-items: flex-end;
+      justify-content: center;
       gap: 2px;
       min-width: 0;
     }
-    .header-logo-right {
-      width: 60px;
-      height: 60px;
-      object-fit: contain;
-      border-radius: 50%;
-      background: #ffffff;
-      padding: 5px;
-      border: 2px solid #d8ff3c;
-      display: block;
-    }
+
     .logo-outfit {
       font-family: 'Bebas Neue', sans-serif;
-      font-size: 28px;
+      font-size: 32px;
       color: #111;
       letter-spacing: 5px;
       line-height: 1;
       text-align: right;
     }
+
     .logo-x {
       font-family: 'Bebas Neue', sans-serif;
-      font-size: 9px;
+      font-size: 10px;
       color: #ff5c00;
       letter-spacing: 2px;
       text-align: right;
       font-weight: 700;
     }
 
-    /* HERO */
     .hero {
       background: #ffffff;
       padding: 0 28px;
       position: relative;
       overflow: hidden;
     }
+
     .hero-stripe {
       position: absolute;
       top: 0;
@@ -203,11 +210,13 @@
       height: 4px;
       background: linear-gradient(90deg, #ff5c00 0%, #ff5c00 50%, #006c35 50%, #006c35 100%);
     }
+
     .hero-inner {
       padding: 14px 0 24px;
       text-align: center;
       position: relative;
     }
+
     .hero-eyebrow {
       font-family: 'Bebas Neue', sans-serif;
       font-size: 11px;
@@ -215,13 +224,16 @@
       letter-spacing: 5px;
       margin-bottom: 8px;
     }
+
     .hero-ar {
       font-size: 28px;
       font-weight: 900;
       color: #111;
       line-height: 1.2;
     }
+
     .hero-ar span { color: #ff5c00; }
+
     .hero-en {
       font-family: 'Bebas Neue', sans-serif;
       font-size: 14px;
@@ -230,6 +242,7 @@
       margin-top: 8px;
       font-weight: 700;
     }
+
     .hero-divider {
       display: flex;
       align-items: center;
@@ -237,12 +250,12 @@
       gap: 8px;
       margin-top: 16px;
     }
+
     .hd-line { flex: 1; max-width: 62px; height: 1px; }
     .hd-left { background: #ff5c00; }
     .hd-right { background: #006c35; }
     .hd-dot { width: 6px; height: 6px; background: #111; border-radius: 50%; }
 
-    /* FORM */
     .form-body {
       background: #ffffff;
       padding: 28px 28px 36px;
@@ -252,6 +265,7 @@
       flex-direction: column;
       gap: 0;
     }
+
     .field {
       display: flex;
       flex-direction: column;
@@ -259,7 +273,9 @@
       padding: 20px 0;
       border-bottom: 1px solid #ececec;
     }
+
     .field:last-of-type { border-bottom: none; }
+
     .field-num {
       font-family: 'Bebas Neue', sans-serif;
       font-size: 11px;
@@ -268,6 +284,7 @@
       margin-bottom: 2px;
       text-align: right;
     }
+
     .lbl-ar {
       font-size: 16px;
       font-weight: 800;
@@ -275,6 +292,7 @@
       line-height: 1;
       text-align: right;
     }
+
     .lbl-en {
       font-family: 'Bebas Neue', sans-serif;
       font-size: 14px;
@@ -299,16 +317,17 @@
       width: 100%;
       margin-top: 6px;
     }
+
     .finput:focus {
       border-color: #ff5c00;
       background: #fff7f2;
     }
+
     .finput::placeholder {
       color: #8a8a8a;
       font-size: 13px;
     }
 
-    /* DROPDOWN */
     .fselect {
       background: #f7f7f7;
       border: 1.5px solid #dcdcdc;
@@ -330,26 +349,29 @@
       padding-left: 36px;
       cursor: pointer;
     }
+
     .fselect:focus {
       border-color: #ff5c00;
       background-color: #fff7f2;
     }
+
     .fselect option {
       background: #ffffff;
       color: #111;
     }
 
-    /* PHONE */
     .phone-row {
       display: flex;
       gap: 8px;
       margin-top: 6px;
       direction: rtl;
     }
+
     .phone-code-wrap {
       flex-shrink: 0;
       width: 140px;
     }
+
     .phone-code-select {
       background: #f7f7f7;
       border: 1.5px solid #dcdcdc;
@@ -371,14 +393,17 @@
       cursor: pointer;
       text-align: left;
     }
+
     .phone-code-select:focus {
       border-color: #ff5c00;
       background-color: #fff7f2;
     }
+
     .phone-code-select option {
       background: #ffffff;
       color: #111;
     }
+
     .phone-number-input {
       flex: 1;
       background: #f7f7f7;
@@ -393,10 +418,12 @@
       transition: border-color 0.2s, background 0.2s;
       text-align: left;
     }
+
     .phone-number-input:focus {
       border-color: #ff5c00;
       background: #fff7f2;
     }
+
     .phone-number-input::placeholder {
       color: #8a8a8a;
       font-size: 13px;
@@ -412,6 +439,7 @@
     }
 
     .btn-wrap { padding-top: 24px; }
+
     .btn-submit {
       width: 100%;
       border: none;
@@ -423,6 +451,7 @@
       transition: transform 0.1s, opacity 0.2s;
       box-shadow: 0 4px 18px rgba(0,0,0,0.06);
     }
+
     .btn-submit:active { transform: scale(0.98); }
     .btn-submit:disabled { opacity: 0.7; cursor: not-allowed; }
 
@@ -436,6 +465,7 @@
       color: #fff;
       text-align: center;
     }
+
     .btn-right {
       background: #006c35;
       flex: 1;
@@ -455,13 +485,13 @@
       font-size: 14px;
       font-weight: 700;
     }
+
     .msg-error {
       background: #fff1f1;
       color: #c13b3b;
       border: 1px solid #f0c7c7;
     }
 
-    /* SUCCESS */
     .success {
       display: none;
       margin: 0 28px 14px;
@@ -469,6 +499,7 @@
       overflow: hidden;
       box-shadow: 0 6px 24px rgba(0,0,0,0.08);
     }
+
     .success-top {
       background: #006c35;
       padding: 20px;
@@ -477,6 +508,7 @@
       font-size: 20px;
       font-weight: 700;
     }
+
     .success-ticket {
       background: #ffffff;
       padding: 14px 20px;
@@ -484,6 +516,7 @@
       border-left: 1px solid #ececec;
       border-right: 1px solid #ececec;
     }
+
     .ticket-label {
       font-size: 10px;
       color: #777;
@@ -491,12 +524,14 @@
       letter-spacing: 2px;
       margin-bottom: 4px;
     }
+
     .ticket-id {
       font-family: 'Bebas Neue', sans-serif;
       font-size: 26px;
       color: #ff5c00;
       letter-spacing: 6px;
     }
+
     .success-bottom {
       background: #ff5c00;
       padding: 10px;
@@ -507,7 +542,6 @@
       color: #fff;
     }
 
-    /* WHATSAPP */
     .btn-whatsapp {
       display: none;
       align-items: center;
@@ -523,26 +557,29 @@
       transition: opacity 0.2s, transform 0.1s;
       box-shadow: 0 4px 18px rgba(37,211,102,0.22);
     }
+
     .btn-whatsapp:active { transform: scale(0.98); opacity: 0.9; }
+
     .btn-whatsapp-text {
       font-family: 'Cairo', sans-serif;
       font-size: 15px;
       font-weight: 700;
       color: #fff;
     }
+
     .btn-whatsapp-en {
       font-family: 'Bebas Neue', sans-serif;
       font-size: 12px;
       color: rgba(255,255,255,0.84);
       letter-spacing: 2px;
     }
+
     .wa-icon {
       width: 22px;
       height: 22px;
       flex-shrink: 0;
     }
 
-    /* CONFETTI */
     #confetti-canvas {
       position: fixed;
       top: 0;
@@ -554,7 +591,6 @@
       display: none;
     }
 
-    /* FOOTER */
     .footer {
       text-align: center;
       padding: 16px;
@@ -570,8 +606,15 @@
       flex-wrap: wrap;
       background: #fff;
     }
+
     .footer span { color: #111; }
-    .f-dot { width: 4px; height: 4px; border-radius: 50%; }
+
+    .f-dot {
+      width: 4px;
+      height: 4px;
+      border-radius: 50%;
+    }
+
     .f-orange { background: #ff5c00; }
     .f-green { background: #006c35; }
 
@@ -579,16 +622,28 @@
       .top-banner { padding: 8px 14px; gap: 8px; }
       .countdown-bar { gap: 4px; padding: 8px 14px; }
       .cd-num { font-size: 18px; min-width: 34px; padding: 2px 6px; }
-      .logo-row { padding: 8px 14px 6px; gap: 8px; }
+
+      .logo-row {
+        grid-template-columns: 88px 1fr 92px;
+        padding: 8px 14px 6px;
+        gap: 8px;
+      }
+
+      .header-logo-left {
+        width: 68px;
+        height: 68px;
+      }
+
       .main-top-logo { width: 130px; }
-      .header-logo-left { width: 56px; height: 56px; }
-      .header-logo-right { width: 48px; height: 48px; }
       .logo-outfit { font-size: 22px; }
+
       .hero, .form-body { padding-left: 18px; padding-right: 18px; }
       .hero-inner { padding: 10px 0 20px; }
       .hero-ar { font-size: 23px; }
+
       .btn-left, .btn-right { padding: 14px; }
       .lbl-en { font-size: 13px; }
+
       .success { margin: 0 18px 14px; }
       .btn-whatsapp { margin: 0 18px 18px; }
       .phone-code-wrap { width: 120px; }
@@ -637,11 +692,12 @@
       <img src="./logo2.png" alt="HMX" class="header-logo-left">
       <span class="hmx-tag">همكس</span>
     </div>
+
     <div class="logo-row-center">
       <img src="./logo3.png" alt="Outfit Arabic" class="main-top-logo">
     </div>
+
     <div class="logo-row-right">
-      <img src="./log1.png" alt="Outfit Logo" class="header-logo-right">
       <span class="logo-outfit">OUTFIT</span>
       <span class="logo-x">BRAND × COMPETITION</span>
     </div>
@@ -810,7 +866,6 @@
 
   <script>
     const SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbwR08nI7LerzJbcYy_jKpvE1M4d6IAaTp3iZ8srsoaGdu2dyedSFp8OeIvM-hX_j6JhPA/exec';
-
     const WC_DATE = new Date('2026-06-11T00:00:00');
 
     function updateCountdown() {
