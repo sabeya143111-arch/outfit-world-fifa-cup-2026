@@ -10,7 +10,11 @@
   <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700;900&family=Bebas+Neue&display=swap" rel="stylesheet">
 
   <style>
-    * { box-sizing: border-box; margin: 0; padding: 0; }
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
 
     body {
       background: #0d0d0d;
@@ -43,6 +47,7 @@
       font-weight: 600;
     }
 
+    /* === THREE LOGOS IN ONE ROW === */
     .logo-row {
       background: #0d0d0d;
       padding: 6px 28px 0;
@@ -59,6 +64,7 @@
     }
 
     .logo-side-text {
+      font-family: 'Cairo', sans-serif;
       font-size: 12px;
       color: #ff7a1f;
       font-weight: 800;
@@ -155,7 +161,9 @@
       line-height: 1.2;
     }
 
-    .hero-ar span { color: #ff5c00; }
+    .hero-ar span {
+      color: #ff5c00;
+    }
 
     .hero-en {
       font-family: 'Bebas Neue', sans-serif;
@@ -174,10 +182,26 @@
       margin-top: 16px;
     }
 
-    .hd-line { flex: 1; max-width: 62px; height: 1px; }
-    .hd-left { background: #ff5c00; }
-    .hd-right { background: #006c35; }
-    .hd-dot { width: 6px; height: 6px; background: #fff; border-radius: 50%; }
+    .hd-line {
+      flex: 1;
+      max-width: 62px;
+      height: 1px;
+    }
+
+    .hd-left {
+      background: #ff5c00;
+    }
+
+    .hd-right {
+      background: #006c35;
+    }
+
+    .hd-dot {
+      width: 6px;
+      height: 6px;
+      background: #fff;
+      border-radius: 50%;
+    }
 
     .form-body {
       padding: 28px 28px 36px;
@@ -196,7 +220,9 @@
       border-bottom: 1px solid #1a1a1a;
     }
 
-    .field:last-of-type { border-bottom: none; }
+    .field:last-of-type {
+      border-bottom: none;
+    }
 
     .field-num {
       font-family: 'Bebas Neue', sans-serif;
@@ -225,13 +251,6 @@
       text-align: right;
     }
 
-    .helper-text {
-      color: #7d7d7d;
-      font-size: 12px;
-      margin-top: 2px;
-      text-align: right;
-    }
-
     .finput {
       background: #141414;
       border: 1.5px solid #222;
@@ -242,7 +261,7 @@
       font-size: 14px;
       direction: rtl;
       outline: none;
-      transition: border-color 0.2s, background 0.2s, box-shadow 0.2s;
+      transition: border-color 0.2s, background 0.2s;
       width: 100%;
       margin-top: 6px;
     }
@@ -250,17 +269,6 @@
     .finput:focus {
       border-color: #ff5c00;
       background: #180e00;
-      box-shadow: 0 0 0 3px rgba(255, 92, 0, 0.12);
-    }
-
-    .finput.valid {
-      border-color: #1f9d55;
-      background: #0f1611;
-    }
-
-    .finput.invalid {
-      border-color: #b33939;
-      background: #1b1010;
     }
 
     .finput::placeholder {
@@ -277,7 +285,9 @@
       text-align: right;
     }
 
-    .btn-wrap { padding-top: 24px; }
+    .btn-wrap {
+      padding-top: 24px;
+    }
 
     .btn-submit {
       width: 100%;
@@ -290,7 +300,9 @@
       transition: transform 0.1s, opacity 0.2s;
     }
 
-    .btn-submit:active { transform: scale(0.98); }
+    .btn-submit:active {
+      transform: scale(0.98);
+    }
 
     .btn-submit:disabled {
       opacity: 0.7;
@@ -352,19 +364,11 @@
 
     .success-bottom {
       background: #ff5c00;
-      padding: 12px 10px;
+      padding: 10px;
       text-align: center;
       font-family: 'Bebas Neue', sans-serif;
       font-size: 13px;
       letter-spacing: 3px;
-      color: #fff;
-    }
-
-    .success-id {
-      font-family: 'Cairo', sans-serif;
-      font-size: 14px;
-      font-weight: 700;
-      margin-top: 8px;
       color: #fff;
     }
 
@@ -383,7 +387,9 @@
       flex-wrap: wrap;
     }
 
-    .footer span { color: #fff; }
+    .footer span {
+      color: #fff;
+    }
 
     .f-dot {
       width: 4px;
@@ -391,8 +397,13 @@
       border-radius: 50%;
     }
 
-    .f-orange { background: #ff5c00; }
-    .f-green { background: #006c35; }
+    .f-orange {
+      background: #ff5c00;
+    }
+
+    .f-green {
+      background: #006c35;
+    }
 
     @media (max-width: 640px) {
       .top-banner {
@@ -452,16 +463,20 @@
     <span class="banner-sub">الصقور الخضر</span>
   </div>
 
+  <!-- THREE LOGOS SAME ROW -->
   <div class="logo-row">
+    <!-- Left side: logo2 + text -->
     <div class="logo-side">
-      <img src="./logo2.jpg" alt="HMX Presenter Logo" class="header-logo-left">
+      <img src="./logo2.png" alt="HMX Presenter Logo" class="header-logo-left">
       <span class="logo-side-text">همكس</span>
     </div>
 
-    <img src="./logo3.jpg" alt="Outfit Arabic Logo" class="main-top-logo">
+    <!-- Center: logo3 -->
+    <img src="./logo3.png" alt="Outfit Arabic Logo" class="main-top-logo">
 
+    <!-- Right side: log1 + OUTIFT text -->
     <div class="logo-side">
-      <img src="./log1.jpg" alt="Outfit Logo" class="header-logo-right">
+      <img src="./log1.png" alt="Outfit Logo" class="header-logo-right">
       <div class="logo-col">
         <span class="logo-outfit">OUTFIT</span>
         <span class="logo-x">BRAND × COMPETITION</span>
@@ -488,7 +503,6 @@
       <div class="field-num">01</div>
       <label class="lbl-ar" for="f-name">الاسم</label>
       <div class="lbl-en">FULL NAME</div>
-      <div class="helper-text">اكتب الاسم الكامل كما هو</div>
       <input class="finput" id="f-name" type="text" placeholder="اكتب اسمك الكامل">
       <div class="error-text" id="err-name">يرجى إدخال الاسم الكامل</div>
     </div>
@@ -497,7 +511,6 @@
       <div class="field-num">02</div>
       <label class="lbl-ar" for="f-nat">الجنسية</label>
       <div class="lbl-en">NATIONALITY</div>
-      <div class="helper-text">مثال: سعودي، هندي، باكستاني</div>
       <input class="finput" id="f-nat" type="text" placeholder="اكتب جنسيتك">
       <div class="error-text" id="err-nat">يرجى إدخال الجنسية</div>
     </div>
@@ -506,7 +519,6 @@
       <div class="field-num">03</div>
       <label class="lbl-ar" for="f-city">المدينة</label>
       <div class="lbl-en">CITY</div>
-      <div class="helper-text">اكتب المدينة الحالية</div>
       <input class="finput" id="f-city" type="text" placeholder="اكتب مدينتك">
       <div class="error-text" id="err-city">يرجى إدخال المدينة</div>
     </div>
@@ -515,7 +527,6 @@
       <div class="field-num">04</div>
       <label class="lbl-ar" for="f-num">الرقم</label>
       <div class="lbl-en">PHONE NUMBER</div>
-      <div class="helper-text">يسمح بالأرقام و + و المسافات فقط</div>
       <input class="finput" id="f-num" type="text" inputmode="tel" placeholder="اكتب رقمك">
       <div class="error-text" id="err-num">يرجى إدخال رقم صحيح</div>
     </div>
@@ -531,10 +542,7 @@
   </div>
 
   <div class="success" id="successBox">
-    <div class="success-top">
-      ✓ تم التسجيل بنجاح! 🇸🇦
-      <div class="success-id" id="successId"></div>
-    </div>
+    <div class="success-top">✓ تم التسجيل بنجاح! 🇸🇦</div>
     <div class="success-bottom">REGISTRATION SUBMITTED — OUTFIT × همكس</div>
   </div>
 
@@ -563,89 +571,51 @@
       btnRight: document.getElementById('btnRight'),
       errorBox: document.getElementById('errorBox'),
       form: document.getElementById('theForm'),
-      success: document.getElementById('successBox'),
-      successId: document.getElementById('successId')
+      success: document.getElementById('successBox')
     };
 
-    function normalizePhone(value) {
-      return value.replace(/[^\d+\-\s()]/g, '').replace(/\s{2,}/g, ' ').trim();
-    }
-
     function hideErrors() {
-      [els.errName, els.errNat, els.errCity, els.errNum].forEach(el => el.style.display = 'none');
+      els.errName.style.display = 'none';
+      els.errNat.style.display = 'none';
+      els.errCity.style.display = 'none';
+      els.errNum.style.display = 'none';
       els.errorBox.style.display = 'none';
       els.errorBox.textContent = '';
     }
 
-    function setFieldState(input, valid) {
-      input.classList.remove('valid', 'invalid');
-      if (valid === true) input.classList.add('valid');
-      if (valid === false) input.classList.add('invalid');
-    }
-
-    function validateName(show = true) {
-      const value = els.name.value.trim();
-      const ok = value.length >= 3;
-      setFieldState(els.name, ok);
-      if (show) els.errName.style.display = ok ? 'none' : 'block';
-      return ok;
-    }
-
-    function validateNat(show = true) {
-      const value = els.nat.value.trim();
-      const ok = value.length >= 2;
-      setFieldState(els.nat, ok);
-      if (show) els.errNat.style.display = ok ? 'none' : 'block';
-      return ok;
-    }
-
-    function validateCity(show = true) {
-      const value = els.city.value.trim();
-      const ok = value.length >= 2;
-      setFieldState(els.city, ok);
-      if (show) els.errCity.style.display = ok ? 'none' : 'block';
-      return ok;
-    }
-
-    function validateNum(show = true) {
-      els.num.value = normalizePhone(els.num.value);
-      const value = els.num.value.trim();
-      const phoneRegex = /^[0-9+\-\s()]{6,20}$/;
-      const ok = phoneRegex.test(value);
-      setFieldState(els.num, ok);
-      if (show) els.errNum.style.display = ok ? 'none' : 'block';
-      return ok;
-    }
-
     function validateForm() {
       hideErrors();
-      const a = validateName(true);
-      const b = validateNat(true);
-      const c = validateCity(true);
-      const d = validateNum(true);
-      return a && b && c && d;
+
+      const name = els.name.value.trim();
+      const nat = els.nat.value.trim();
+      const city = els.city.value.trim();
+      const num = els.num.value.trim();
+
+      let valid = true;
+
+      if (!name || name.length < 3) {
+        els.errName.style.display = 'block';
+        valid = false;
+      }
+
+      if (!nat || nat.length < 2) {
+        els.errNat.style.display = 'block';
+        valid = false;
+      }
+
+      if (!city || city.length < 2) {
+        els.errCity.style.display = 'block';
+        valid = false;
+      }
+
+      const phoneRegex = /^[0-9+\-\s()]{6,20}$/;
+      if (!num || !phoneRegex.test(num)) {
+        els.errNum.style.display = 'block';
+        valid = false;
+      }
+
+      return valid;
     }
-
-    [els.name, els.nat, els.city].forEach(input => {
-      input.addEventListener('blur', () => {
-        if (input === els.name) validateName(true);
-        if (input === els.nat) validateNat(true);
-        if (input === els.city) validateCity(true);
-      });
-
-      input.addEventListener('input', () => {
-        if (input === els.name) validateName(false);
-        if (input === els.nat) validateNat(false);
-        if (input === els.city) validateCity(false);
-      });
-    });
-
-    els.num.addEventListener('input', () => {
-      els.num.value = normalizePhone(els.num.value);
-      validateNum(false);
-    });
-
-    els.num.addEventListener('blur', () => validateNum(true));
 
     function setLoading(loading) {
       els.submitBtn.disabled = loading;
@@ -660,31 +630,16 @@
       body.append('name', els.name.value.trim());
       body.append('nationality', els.nat.value.trim());
       body.append('city', els.city.value.trim());
-      body.append('number', normalizePhone(els.num.value));
+      body.append('number', els.num.value.trim());
 
       try {
         setLoading(true);
 
-        const res = await fetch(SCRIPT_URL, {
+        await fetch(SCRIPT_URL, {
           method: 'POST',
           body: body
         });
 
-        const data = await res.json();
-
-        if (data.status === 'duplicate') {
-          els.errorBox.textContent = 'هذا الرقم مسجل من قبل';
-          els.errorBox.style.display = 'block';
-          setFieldState(els.num, false);
-          els.errNum.style.display = 'block';
-          return;
-        }
-
-        if (data.status !== 'success') {
-          throw new Error(data.message || 'Submission failed');
-        }
-
-        els.successId.textContent = data.registrationId ? `رقم التسجيل: ${data.registrationId}` : '';
         els.form.style.display = 'none';
         els.success.style.display = 'block';
       } catch (err) {
