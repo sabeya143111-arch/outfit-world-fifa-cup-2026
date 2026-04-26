@@ -5,16 +5,11 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>مسابقة كأس العالم 2026 — Outfit × همكس</title>
 
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <!-- Fonts (you can keep as-is or replace with live links) -->
   <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700;900&family=Bebas+Neue&display=swap" rel="stylesheet">
 
   <style>
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
 
     body {
       background: #0d0d0d;
@@ -24,14 +19,12 @@
     }
 
     .top-banner {
-      background: #006c35;
+      background: #006C35;
       padding: 10px 28px;
       display: flex;
       align-items: center;
       justify-content: center;
       gap: 14px;
-      flex-wrap: wrap;
-      text-align: center;
     }
 
     .banner-text {
@@ -42,104 +35,58 @@
     }
 
     .banner-sub {
+      font-family: 'Cairo', sans-serif;
       font-size: 11px;
-      color: rgba(255, 255, 255, 0.75);
+      color: rgba(255,255,255,0.7);
       font-weight: 600;
-    }
-
-    .top-center-logo {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      padding: 4px 20px 0;
-      background: #0d0d0d;
-    }
-
-    .main-top-logo {
-      width: 200px;
-      max-width: 70%;
-      height: auto;
-      display: block;
-      object-fit: contain;
     }
 
     .header {
       background: #0d0d0d;
-      padding: 4px 28px 0;
+      padding: 10px 28px 0; /* gap kam kar diya */
       display: flex;
-      align-items: flex-end;
+      align-items: center;
       justify-content: space-between;
-      border-bottom: none;
-      gap: 16px;
+      border-bottom: 1px solid #1a1a1a;
     }
 
-    .logo-col {
-      display: flex;
-      flex-direction: column;
-      align-items: flex-end;
+    .logo-col { display: flex; flex-direction: column; align-items: flex-end; }
+
+    .logo-outfit {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 42px;
+      color: #fff;
+      letter-spacing: 6px;
+      line-height: 1;
+    }
+
+    .logo-x {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 11px;
+      color: #FF5C00;
+      letter-spacing: 3px;
+      margin-top: 2px;
     }
 
     .right-col {
       display: flex;
       flex-direction: column;
       align-items: flex-start;
-      gap: 4px;
+      gap: 6px;
     }
 
     .presenter {
+      font-family: 'Cairo', sans-serif;
       font-size: 11px;
-      color: #777;
+      color: #444;
       font-weight: 600;
-      margin-bottom: 2px;
-    }
-
-    .header-logo-left {
-      width: 92px;
-      height: 92px;
-      object-fit: cover;
-      border-radius: 50%;
-      margin-bottom: 6px;
-      border: 2px solid #2a2a2a;
-      background: #111;
-      display: block;
-    }
-
-    .header-logo-right {
-      width: 68px;
-      height: 68px;
-      object-fit: contain;
-      border-radius: 50%;
-      background: #ffffff;
-      padding: 6px;
-      border: 2px solid #d8ff3c;
-      display: block;
-      margin-bottom: 4px;
-    }
-
-    .logo-outfit {
-      font-family: 'Bebas Neue', sans-serif;
-      font-size: 34px;
-      color: #fff;
-      letter-spacing: 5px;
-      line-height: 1;
-      text-align: right;
-    }
-
-    .logo-x {
-      font-family: 'Bebas Neue', sans-serif;
-      font-size: 11px;
-      color: #ff5c00;
-      letter-spacing: 2px;
-      margin-top: 2px;
-      text-align: right;
-      font-weight: 700;
     }
 
     .hmx-tag {
-      font-family: 'Cairo', sans-serif;
-      font-size: 16px;
-      color: #ff7a1f;
-      font-weight: 800;
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 22px;
+      color: #FF5C00;
+      letter-spacing: 3px;
       line-height: 1;
     }
 
@@ -152,21 +99,21 @@
 
     .hero-stripe {
       position: absolute;
-      top: 0;
-      left: 0;
-      right: 0;
+      top: 0; left: 0; right: 0;
       height: 4px;
-      background: linear-gradient(90deg, #ff5c00 0%, #ff5c00 50%, #006c35 50%, #006c35 100%);
+      background: linear-gradient(90deg, #FF5C00 0%, #FF5C00 50%, #006C35 50%, #006C35 100%);
     }
 
     .hero-inner {
-  padding: 0 0 26px;
-}
+      padding: 10px 0 26px; /* pehle 30px tha, ab gap bohot kam */
+      text-align: center;
+      position: relative;
+    }
 
     .hero-eyebrow {
       font-family: 'Bebas Neue', sans-serif;
       font-size: 11px;
-      color: #006c35;
+      color: #006C35;
       letter-spacing: 5px;
       margin-bottom: 8px;
     }
@@ -178,17 +125,14 @@
       line-height: 1.2;
     }
 
-    .hero-ar span {
-      color: #ff5c00;
-    }
+    .hero-ar span { color: #FF5C00; }
 
     .hero-en {
       font-family: 'Bebas Neue', sans-serif;
-      font-size: 14px;
-      color: #cfcfcf;
+      font-size: 13px;
+      color: #444;
       letter-spacing: 4px;
-      margin-top: 8px;
-      font-weight: 700;
+      margin-top: 6px;
     }
 
     .hero-divider {
@@ -199,26 +143,10 @@
       margin-top: 16px;
     }
 
-    .hd-line {
-      flex: 1;
-      max-width: 62px;
-      height: 1px;
-    }
-
-    .hd-left {
-      background: #ff5c00;
-    }
-
-    .hd-right {
-      background: #006c35;
-    }
-
-    .hd-dot {
-      width: 6px;
-      height: 6px;
-      background: #fff;
-      border-radius: 50%;
-    }
+    .hd-line { flex: 1; max-width: 60px; height: 1px; }
+    .hd-left { background: #FF5C00; }
+    .hd-right { background: #006C35; }
+    .hd-dot { width: 6px; height: 6px; background: #fff; border-radius: 50%; }
 
     .form-body {
       padding: 28px 28px 36px;
@@ -237,14 +165,12 @@
       border-bottom: 1px solid #1a1a1a;
     }
 
-    .field:last-of-type {
-      border-bottom: none;
-    }
+    .field:last-of-type { border-bottom: none; }
 
     .field-num {
       font-family: 'Bebas Neue', sans-serif;
       font-size: 11px;
-      color: #ff5c00;
+      color: #FF5C00;
       letter-spacing: 2px;
       margin-bottom: 2px;
       text-align: right;
@@ -252,7 +178,7 @@
 
     .lbl-ar {
       font-size: 16px;
-      font-weight: 800;
+      font-weight: 700;
       color: #fff;
       line-height: 1;
       text-align: right;
@@ -260,11 +186,10 @@
 
     .lbl-en {
       font-family: 'Bebas Neue', sans-serif;
-      font-size: 14px;
-      color: #ffffff;
+      font-size: 10px;
+      color: #555;
       letter-spacing: 3px;
-      margin-top: 4px;
-      font-weight: 700;
+      margin-top: 2px;
       text-align: right;
     }
 
@@ -284,27 +209,13 @@
     }
 
     .finput:focus {
-      border-color: #ff5c00;
+      border-color: #FF5C00;
       background: #180e00;
     }
 
-    .finput::placeholder {
-      color: #4a4a4a;
-      font-size: 13px;
-    }
+    .finput::placeholder { color: #333; font-size: 13px; }
 
-    .error-text {
-      color: #ff8080;
-      font-size: 12px;
-      font-weight: 600;
-      display: none;
-      margin-top: 4px;
-      text-align: right;
-    }
-
-    .btn-wrap {
-      padding-top: 24px;
-    }
+    .btn-wrap { padding-top: 24px; }
 
     .btn-submit {
       width: 100%;
@@ -314,20 +225,13 @@
       cursor: pointer;
       overflow: hidden;
       display: flex;
-      transition: transform 0.1s, opacity 0.2s;
+      transition: transform 0.1s;
     }
 
-    .btn-submit:active {
-      transform: scale(0.98);
-    }
-
-    .btn-submit:disabled {
-      opacity: 0.7;
-      cursor: not-allowed;
-    }
+    .btn-submit:active { transform: scale(0.98); }
 
     .btn-left {
-      background: #ff5c00;
+      background: #FF5C00;
       flex: 1;
       padding: 16px;
       font-family: 'Bebas Neue', sans-serif;
@@ -338,29 +242,14 @@
     }
 
     .btn-right {
-      background: #006c35;
+      background: #006C35;
       flex: 1;
       padding: 16px;
+      font-family: 'Cairo', sans-serif;
       font-size: 15px;
       font-weight: 700;
       color: #fff;
       text-align: center;
-    }
-
-    .msg-box {
-      display: none;
-      margin-top: 18px;
-      border-radius: 8px;
-      padding: 12px 14px;
-      text-align: center;
-      font-size: 14px;
-      font-weight: 700;
-    }
-
-    .msg-error {
-      background: #2a1212;
-      color: #ff9f9f;
-      border: 1px solid #5b2323;
     }
 
     .success {
@@ -371,7 +260,7 @@
     }
 
     .success-top {
-      background: #006c35;
+      background: #006C35;
       padding: 20px;
       text-align: center;
       color: #fff;
@@ -380,7 +269,7 @@
     }
 
     .success-bottom {
-      background: #ff5c00;
+      background: #FF5C00;
       padding: 10px;
       text-align: center;
       font-family: 'Bebas Neue', sans-serif;
@@ -392,7 +281,7 @@
     .footer {
       text-align: center;
       padding: 16px;
-      color: #fff;
+      color: #222;
       font-family: 'Bebas Neue', sans-serif;
       font-size: 11px;
       letter-spacing: 3px;
@@ -401,44 +290,15 @@
       align-items: center;
       justify-content: center;
       gap: 12px;
-      flex-wrap: wrap;
     }
 
-    .footer span {
-      color: #fff;
-    }
-
-    .f-dot {
-      width: 4px;
-      height: 4px;
-      border-radius: 50%;
-    }
-
-    .f-orange {
-      background: #ff5c00;
-    }
-
-    .f-green {
-      background: #006c35;
-    }
+    .f-dot { width: 4px; height: 4px; border-radius: 50%; }
+    .f-orange { background: #FF5C00; }
+    .f-green { background: #006C35; }
 
     @media (max-width: 640px) {
-      .top-banner {
-        padding: 8px 14px;
-        gap: 8px;
-      }
-
-      .top-center-logo {
-        padding: 4px 16px 0;
-      }
-
-      .main-top-logo {
-        width: 170px;
-        max-width: 74%;
-      }
-
       .header {
-        padding: 2px 18px 0;
+        padding: 10px 18px 0;
       }
 
       .hero,
@@ -449,33 +309,6 @@
 
       .hero-inner {
         padding: 8px 0 20px;
-      }
-
-      .header-logo-left {
-        width: 76px;
-        height: 76px;
-      }
-
-      .header-logo-right {
-        width: 56px;
-        height: 56px;
-      }
-
-      .logo-outfit {
-        font-size: 28px;
-      }
-
-      .hero-ar {
-        font-size: 23px;
-      }
-
-      .btn-left,
-      .btn-right {
-        padding: 14px;
-      }
-
-      .lbl-en {
-        font-size: 13px;
       }
     }
   </style>
@@ -488,21 +321,14 @@
     <span class="banner-sub">الصقور الخضر</span>
   </div>
 
-  <div class="top-center-logo">
-    <img src="./logo3.png" alt="Outfit Arabic Logo" class="main-top-logo">
-  </div>
-
   <div class="header">
-    <div class="right-col">
-      <span class="presenter">Presented by</span>
-      <img src="./logo2.png" alt="HMX Presenter Logo" class="header-logo-left">
-      <span class="hmx-tag">همكس</span>
-    </div>
-
     <div class="logo-col">
-      <img src="./log1.png" alt="Outfit Logo" class="header-logo-right">
       <span class="logo-outfit">OUTFIT</span>
       <span class="logo-x">BRAND × COMPETITION</span>
+    </div>
+    <div class="right-col">
+      <span class="presenter">Presented by</span>
+      <span class="hmx-tag">همكس</span>
     </div>
   </div>
 
@@ -511,7 +337,7 @@
     <div class="hero-inner">
       <div class="hero-eyebrow">SAUDI ARABIA × FIFA 2026</div>
       <div class="hero-ar">مسابقة <span>كأس العالم</span> 2026</div>
-      <div class="hero-en">FIFA WORLD CUP 2026 — REGISTRATION</div>
+      <div class="hero-en">FIFA World Cup 2026 — Registration</div>
       <div class="hero-divider">
         <div class="hd-line hd-left"></div>
         <div class="hd-dot"></div>
@@ -521,46 +347,42 @@
   </div>
 
   <div class="form-body" id="theForm">
+
     <div class="field">
       <div class="field-num">01</div>
-      <label class="lbl-ar" for="f-name">الاسم</label>
-      <div class="lbl-en">FULL NAME</div>
+      <div class="lbl-ar">الاسم</div>
+      <div class="lbl-en">Full Name</div>
       <input class="finput" id="f-name" type="text" placeholder="اكتب اسمك الكامل">
-      <div class="error-text" id="err-name">يرجى إدخال الاسم الكامل</div>
     </div>
 
     <div class="field">
       <div class="field-num">02</div>
-      <label class="lbl-ar" for="f-nat">الجنسية</label>
-      <div class="lbl-en">NATIONALITY</div>
+      <div class="lbl-ar">الجنسية</div>
+      <div class="lbl-en">Nationality</div>
       <input class="finput" id="f-nat" type="text" placeholder="اكتب جنسيتك">
-      <div class="error-text" id="err-nat">يرجى إدخال الجنسية</div>
     </div>
 
     <div class="field">
       <div class="field-num">03</div>
-      <label class="lbl-ar" for="f-city">المدينة</label>
-      <div class="lbl-en">CITY</div>
+      <div class="lbl-ar">المدينة</div>
+      <div class="lbl-en">City</div>
       <input class="finput" id="f-city" type="text" placeholder="اكتب مدينتك">
-      <div class="error-text" id="err-city">يرجى إدخال المدينة</div>
     </div>
 
     <div class="field">
       <div class="field-num">04</div>
-      <label class="lbl-ar" for="f-num">الرقم</label>
-      <div class="lbl-en">PHONE NUMBER</div>
-      <input class="finput" id="f-num" type="text" inputmode="tel" placeholder="اكتب رقمك">
-      <div class="error-text" id="err-num">يرجى إدخال رقم صحيح</div>
+      <div class="lbl-ar">الرقم</div>
+      <div class="lbl-en">Phone Number</div>
+      <input class="finput" id="f-num" type="text" placeholder="اكتب رقمك">
     </div>
 
     <div class="btn-wrap">
-      <button class="btn-submit" id="submitBtn" type="button" onclick="doSubmit()">
-        <div class="btn-left" id="btnLeft">REGISTER</div>
-        <div class="btn-right" id="btnRight">سجّل الآن</div>
+      <button class="btn-submit" type="button" onclick="doSubmit()">
+        <div class="btn-left">REGISTER</div>
+        <div class="btn-right">سجّل الآن</div>
       </button>
     </div>
 
-    <div class="msg-box msg-error" id="errorBox"></div>
   </div>
 
   <div class="success" id="successBox">
@@ -577,100 +399,21 @@
   </div>
 
   <script>
-    const SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbwR08nI7LerzJbcYy_jKpvE1M4d6IAaTp3iZ8srsoaGdu2dyedSFp8OeIvM-hX_j6JhPA/exec';
+    function doSubmit() {
+      const n = document.getElementById('f-name').value.trim();
+      const na = document.getElementById('f-nat').value.trim();
+      const c = document.getElementById('f-city').value.trim();
+      const nu = document.getElementById('f-num').value.trim();
 
-    const els = {
-      name: document.getElementById('f-name'),
-      nat: document.getElementById('f-nat'),
-      city: document.getElementById('f-city'),
-      num: document.getElementById('f-num'),
-      errName: document.getElementById('err-name'),
-      errNat: document.getElementById('err-nat'),
-      errCity: document.getElementById('err-city'),
-      errNum: document.getElementById('err-num'),
-      submitBtn: document.getElementById('submitBtn'),
-      btnLeft: document.getElementById('btnLeft'),
-      btnRight: document.getElementById('btnRight'),
-      errorBox: document.getElementById('errorBox'),
-      form: document.getElementById('theForm'),
-      success: document.getElementById('successBox')
-    };
-
-    function hideErrors() {
-      els.errName.style.display = 'none';
-      els.errNat.style.display = 'none';
-      els.errCity.style.display = 'none';
-      els.errNum.style.display = 'none';
-      els.errorBox.style.display = 'none';
-      els.errorBox.textContent = '';
-    }
-
-    function validateForm() {
-      hideErrors();
-
-      const name = els.name.value.trim();
-      const nat = els.nat.value.trim();
-      const city = els.city.value.trim();
-      const num = els.num.value.trim();
-
-      let valid = true;
-
-      if (!name || name.length < 3) {
-        els.errName.style.display = 'block';
-        valid = false;
+      if (!n || !na || !c || !nu) {
+        alert('يرجى تعبئة جميع الحقول');
+        return;
       }
 
-      if (!nat || nat.length < 2) {
-        els.errNat.style.display = 'block';
-        valid = false;
-      }
+      document.getElementById('theForm').style.display = 'none';
+      document.getElementById('successBox').style.display = 'block';
 
-      if (!city || city.length < 2) {
-        els.errCity.style.display = 'block';
-        valid = false;
-      }
-
-      const phoneRegex = /^[0-9+\-\s()]{6,20}$/;
-      if (!num || !phoneRegex.test(num)) {
-        els.errNum.style.display = 'block';
-        valid = false;
-      }
-
-      return valid;
-    }
-
-    function setLoading(loading) {
-      els.submitBtn.disabled = loading;
-      els.btnLeft.textContent = loading ? 'SENDING...' : 'REGISTER';
-      els.btnRight.textContent = loading ? 'جاري الإرسال...' : 'سجّل الآن';
-    }
-
-    async function doSubmit() {
-      if (!validateForm()) return;
-
-      const body = new URLSearchParams();
-      body.append('name', els.name.value.trim());
-      body.append('nationality', els.nat.value.trim());
-      body.append('city', els.city.value.trim());
-      body.append('number', els.num.value.trim());
-
-      try {
-        setLoading(true);
-
-        await fetch(SCRIPT_URL, {
-          method: 'POST',
-          body: body
-        });
-
-        els.form.style.display = 'none';
-        els.success.style.display = 'block';
-      } catch (err) {
-        console.error(err);
-        els.errorBox.textContent = 'حدث خطأ أثناء الإرسال، يرجى المحاولة مرة أخرى';
-        els.errorBox.style.display = 'block';
-      } finally {
-        setLoading(false);
-      }
+      console.log({ name: n, nationality: na, city: c, number: nu });
     }
   </script>
 
