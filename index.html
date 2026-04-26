@@ -66,7 +66,7 @@
     .cd-sub { font-size:8px; color:#777; font-weight:600; letter-spacing:1px; margin-top:2px; }
     .cd-sep { font-family:'Bebas Neue',sans-serif; font-size:20px; color:#aaa; line-height:1; margin-bottom:12px; }
 
-    /* ── LOGO ROW — FIXED ── */
+    /* ── LOGO ROW ── */
     .logo-row {
       background: #ffffff;
       padding: 12px 20px 10px;
@@ -76,8 +76,6 @@
       gap: 10px;
       border-bottom: 1px solid #ececec;
     }
-
-    /* LEFT: HMX logo — FIXED: removed filter:brightness(0) so the actual logo shows */
     .logo-row-left {
       display: flex;
       flex-direction: column;
@@ -85,20 +83,16 @@
       gap: 4px;
     }
     .presenter { font-size: 10px; color: #777; font-weight: 600; }
-
     .header-logo-left {
       width: 76px;
       height: 76px;
       object-fit: contain;
       display: block;
-      border-radius: 50%;          /* round clip to match logo shape */
-      background: #000;            /* black bg so yellow ring pops */
-      /* NO filter — show the actual logo colors */
+      border-radius: 50%;
+      background: #000;
     }
-
     .hmx-tag { font-family:'Cairo',sans-serif; font-size:13px; color:#ff7a1f; font-weight:800; line-height:1; }
 
-    /* CENTER: main logo — FIXED: proper centering */
     .logo-row-center {
       display: flex;
       justify-content: center;
@@ -112,7 +106,6 @@
       object-fit: contain;
     }
 
-    /* RIGHT: OUTFIT text */
     .logo-row-right {
       display: flex;
       flex-direction: column;
@@ -140,7 +133,7 @@
     .hd-right { background:#006c35; }
     .hd-dot { width:6px; height:6px; background:#111; border-radius:50%; }
 
-    /* ── PRIZE STRIP (NEW) ── */
+    /* ── PRIZE STRIP ── */
     .prize-strip {
       background: linear-gradient(135deg, #111 0%, #1a1a1a 100%);
       padding: 14px 20px;
@@ -163,7 +156,7 @@
     .prize-val { font-size: 11px; font-weight: 700; color: #fff; }
     .prize-sep { width: 1px; height: 36px; background: rgba(255,255,255,0.15); }
 
-    /* ── PARTICIPANT COUNTER (NEW) ── */
+    /* ── PARTICIPANT COUNTER ── */
     .counter-bar {
       background: #fff9f5;
       border-bottom: 1px solid #ffe4d0;
@@ -251,7 +244,6 @@
 
     .error-text { color:#d93c3c; font-size:12px; font-weight:600; display:none; margin-top:4px; text-align:right; }
 
-    /* ── TERMS CHECKBOX (NEW) ── */
     .terms-row {
       display: flex;
       align-items: flex-start;
@@ -270,7 +262,6 @@
     }
     .terms-label a { color: #ff5c00; text-decoration: none; }
 
-    /* ── SUBMIT BUTTON ── */
     .btn-wrap { padding-top: 18px; }
     .btn-submit {
       width:100%; border:none; border-radius:6px; padding:0; cursor:pointer;
@@ -292,7 +283,6 @@
     .msg-box { display:none; margin-top:18px; border-radius:8px; padding:12px 14px; text-align:center; font-size:14px; font-weight:700; }
     .msg-error { background:#fff1f1; color:#c13b3b; border:1px solid #f0c7c7; }
 
-    /* ── SUCCESS ── */
     .success { display:none; margin:0 28px 14px; border-radius:8px; overflow:hidden; box-shadow:0 6px 24px rgba(0,0,0,0.08); }
     .success-top { background:#006c35; padding:20px; text-align:center; color:#fff; font-size:20px; font-weight:700; }
     .success-ticket { background:#ffffff; padding:14px 20px; text-align:center; border-left:1px solid #ececec; border-right:1px solid #ececec; }
@@ -300,7 +290,6 @@
     .ticket-id { font-family:'Bebas Neue',sans-serif; font-size:26px; color:#ff5c00; letter-spacing:6px; }
     .success-bottom { background:#ff5c00; padding:10px; text-align:center; font-family:'Bebas Neue',sans-serif; font-size:13px; letter-spacing:3px; color:#fff; }
 
-    /* ── WHATSAPP BTN ── */
     .btn-whatsapp {
       display:none; align-items:center; justify-content:center; gap:10px;
       margin:0 28px 28px; background:#25D366; border:none; border-radius:6px;
@@ -312,10 +301,8 @@
     .btn-whatsapp-en { font-family:'Bebas Neue',sans-serif; font-size:12px; color:rgba(255,255,255,0.84); letter-spacing:2px; }
     .wa-icon { width:22px; height:22px; flex-shrink:0; }
 
-    /* ── CONFETTI ── */
     #confetti-canvas { position:fixed; top:0; left:0; width:100%; height:100%; pointer-events:none; z-index:9999; display:none; }
 
-    /* ── HOW IT WORKS (NEW) ── */
     .how-section {
       background: #f9f9f9;
       border-top: 1px solid #ececec;
@@ -367,7 +354,6 @@
     .how-num.green { background: #006c35; }
     .how-step-text { font-size: 11px; font-weight: 700; color: #333; line-height: 1.4; }
 
-    /* ── FOOTER ── */
     .footer {
       text-align:center; padding:16px; color:#111;
       font-family:'Bebas Neue',sans-serif; font-size:11px; letter-spacing:3px;
@@ -380,7 +366,6 @@
     .f-orange { background:#ff5c00; }
     .f-green { background:#006c35; }
 
-    /* ── RESPONSIVE ── */
     @media (max-width: 640px) {
       .top-banner { padding:8px 14px; gap:8px; }
       .countdown-bar { gap:4px; padding:8px 14px; }
@@ -417,14 +402,12 @@
 
   <canvas id="confetti-canvas"></canvas>
 
-  <!-- TOP BANNER -->
   <div class="top-banner">
     <span class="banner-sub">المنتخب السعودي</span>
     <span class="banner-text">🇸🇦 KSA — WORLD CUP 2026</span>
     <span class="banner-sub">الصقور الخضر</span>
   </div>
 
-  <!-- COUNTDOWN -->
   <div class="countdown-bar">
     <span class="cd-label-ar">كأس العالم يبدأ في</span>
     <span class="cd-label">WORLD CUP STARTS IN</span>
@@ -439,28 +422,21 @@
     </div>
   </div>
 
-  <!-- LOGO ROW — FIXED -->
   <div class="logo-row">
-    <!-- LEFT: HMX logo (FIXED — no brightness filter) -->
     <div class="logo-row-left">
       <span class="presenter">Presented by</span>
       <img src="./logo2.png" alt="HMX" class="header-logo-left">
       <span class="hmx-tag">همكس</span>
     </div>
-
-    <!-- CENTER: main Outfit logo (FIXED — proper centering) -->
     <div class="logo-row-center">
       <img src="./logo3.png" alt="Outfit Arabic" class="main-top-logo">
     </div>
-
-    <!-- RIGHT: OUTFIT text brand -->
     <div class="logo-row-right">
       <span class="logo-outfit">OUTFIT</span>
       <span class="logo-x">BRAND × COMPETITION</span>
     </div>
   </div>
 
-  <!-- PRIZE STRIP (NEW) -->
   <div class="prize-strip">
     <div class="prize-item">
       <div class="prize-icon">🏆</div>
@@ -487,7 +463,6 @@
     </div>
   </div>
 
-  <!-- LIVE COUNTER (NEW) -->
   <div class="counter-bar">
     <div class="counter-pulse"></div>
     <span class="counter-text">
@@ -496,7 +471,6 @@
     <span style="font-size:10px;color:#999;font-weight:600;">LIVE REGISTRATIONS</span>
   </div>
 
-  <!-- HERO -->
   <div class="hero">
     <div class="hero-stripe"></div>
     <div class="hero-inner">
@@ -511,7 +485,6 @@
     </div>
   </div>
 
-  <!-- HOW IT WORKS (NEW) -->
   <div class="how-section">
     <div class="how-title">كيف تشارك — HOW TO ENTER</div>
     <div class="how-steps">
@@ -534,7 +507,6 @@
     </div>
   </div>
 
-  <!-- FORM -->
   <div class="form-body" id="theForm">
 
     <div class="field">
@@ -645,7 +617,6 @@
       <div class="error-text" id="err-num">يرجى إدخال رقم صحيح</div>
     </div>
 
-    <!-- TERMS CHECKBOX (NEW) -->
     <div class="terms-row">
       <input type="checkbox" class="terms-check" id="f-terms">
       <label class="terms-label" for="f-terms">
@@ -664,7 +635,6 @@
     <div class="msg-box msg-error" id="errorBox"></div>
   </div>
 
-  <!-- SUCCESS -->
   <div class="success" id="successBox">
     <div class="success-top">✓ تم التسجيل بنجاح! 🇸🇦</div>
     <div class="success-ticket">
@@ -696,7 +666,6 @@
     const SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbzWPw9AYFMXVgEgnmxo2bPan9d1QdnJK1ZMRnbrC6cy_nalCyk4EvYjCqM99bflbgBq/exec';
     const WC_DATE = new Date('2026-06-11T00:00:00');
 
-    // COUNTDOWN
     function updateCountdown() {
       const diff = WC_DATE - new Date();
       if (diff <= 0) {
@@ -716,34 +685,23 @@
     updateCountdown();
     setInterval(updateCountdown, 1000);
 
-    // LIVE COUNTER — time-based, same on every device/phone
     (function() {
       const el = document.getElementById('liveCount');
-      // Epoch: campaign start date (fixed reference point)
       const EPOCH = new Date('2026-04-01T00:00:00Z').getTime();
-      // Base registrations at epoch
       const BASE = 312;
-      // Growth: ~18 new per hour on average, seeded from time so all devices agree
-      // We add a small deterministic "burst" every few minutes using Math.floor so
-      // two users opening the page at the same second see the exact same number.
       function getCount() {
         const now = Date.now();
         const msElapsed = now - EPOCH;
         const hoursElapsed = msElapsed / 3600000;
-        // Steady growth: 18/hr average
         const steady = Math.floor(hoursElapsed * 18);
-        // Deterministic micro-bumps: every 4 minutes a fixed +1 or +2
         const fourMinSlot = Math.floor(msElapsed / 240000);
-        // Simple deterministic hash of the slot number
-        const bump = ((fourMinSlot * 2654435761) >>> 0) % 3; // 0,1,or 2
+        const bump = ((fourMinSlot * 2654435761) >>> 0) % 3;
         return BASE + steady + bump;
       }
       el.textContent = getCount();
-      // Refresh every 30s — stays in sync across all devices
       setInterval(() => { el.textContent = getCount(); }, 30000);
     })();
 
-    // CONFETTI
     const canvas = document.getElementById('confetti-canvas');
     const ctx = canvas.getContext('2d');
     let particles = [], animFrame;
@@ -790,7 +748,10 @@
         }
       });
       if (alive) animFrame = requestAnimationFrame(drawConfetti);
-      else { canvas.style.display='none'; ctx.clearRect(0,0,canvas.width,canvas.height); }
+      else {
+        canvas.style.display='none';
+        ctx.clearRect(0,0,canvas.width,canvas.height);
+      }
     }
 
     const els = {
@@ -824,11 +785,35 @@
     function validateForm() {
       hideErrors();
       let valid = true;
-      if (!els.name.value.trim() || els.name.value.trim().length < 3) { els.errName.style.display='block'; valid=false; }
-      if (!els.nat.value) { els.errNat.style.display='block'; valid=false; }
-      if (!els.city.value.trim() || els.city.value.trim().length < 2) { els.errCity.style.display='block'; valid=false; }
-      if (!/^[0-9]{5,15}$/.test(els.num.value.trim())) { els.errNum.style.display='block'; valid=false; }
-      if (!els.terms.checked) { els.errTerms.style.display='block'; valid=false; }
+
+      const name = els.name.value.trim();
+      const city = els.city.value.trim();
+      const rawPhone = els.num.value.trim();
+      const digits = rawPhone.replace(/\D/g, '');
+
+      if (!name || name.length < 3) {
+        els.errName.style.display='block';
+        valid=false;
+      }
+      if (!els.nat.value) {
+        els.errNat.style.display='block';
+        valid=false;
+      }
+      if (!city || city.length < 2) {
+        els.errCity.style.display='block';
+        valid=false;
+      }
+
+      if (!/^[0-9]{7,15}$/.test(digits)) {
+        els.errNum.style.display='block';
+        valid=false;
+      }
+
+      if (!els.terms.checked) {
+        els.errTerms.style.display='block';
+        valid=false;
+      }
+
       return valid;
     }
 
@@ -839,14 +824,17 @@
     }
 
     function buildWaLink(name, ticketId) {
-      const msg = `🇸🇦 لقد سجّلت في مسابقة كأس العالم 2026!\\\\n\\\\nالاسم: ${name}\\\\nرقم المشاركة: ${ticketId}\\\\n\\\\n✅ OUTFIT × همكس — FIFA WORLD CUP 2026`;
+      const msg = `🇸🇦 لقد سجّلت في مسابقة كأس العالم 2026!\n\nالاسم: ${name}\nرقم المشاركة: ${ticketId}\n\n✅ OUTFIT × همكس — FIFA WORLD CUP 2026`;
       return 'https://wa.me/?text=' + encodeURIComponent(msg);
     }
 
     async function doSubmit() {
       if (!validateForm()) return;
+
       const codeVal = els.code.value.replace('-CA','');
-      const fullPhone = codeVal + ' ' + els.num.value.trim();
+      const digits = els.num.value.trim().replace(/\D/g, '');
+      const fullPhone = codeVal + ' ' + digits;
+
       const body = new URLSearchParams();
       body.append('name', els.name.value.trim());
       body.append('nationality', els.nat.value);
@@ -857,7 +845,16 @@
         setLoading(true);
         const res = await fetch(SCRIPT_URL, { method:'POST', body });
         const data = await res.json();
-        if (data.status !== 'success') throw new Error(data.message || 'Submission failed');
+
+        if (data.status === 'duplicate') {
+          els.errorBox.textContent = 'هذا الرقم مسجّل مسبقاً في المسابقة';
+          els.errorBox.style.display = 'block';
+          return;
+        }
+
+        if (data.status !== 'success') {
+          throw new Error(data.message || 'Submission failed');
+        }
 
         const tid = data.entryCode || 'WC-000000';
         els.ticketId.textContent = tid;
