@@ -47,67 +47,88 @@
       font-weight: 600;
     }
 
-    /* === THREE LOGOS IN ONE ROW === */
+    /* ── UNIFIED LOGO ROW ── */
     .logo-row {
       background: #0d0d0d;
-      padding: 6px 28px 0;
+      padding: 10px 20px 8px;
       display: flex;
       align-items: center;
       justify-content: space-between;
-      gap: 12px;
+      gap: 10px;
     }
 
-    .logo-side {
+    /* Left side: logo2 + label */
+    .logo-row-left {
       display: flex;
-      align-items: center;
-      gap: 8px;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 2px;
+      min-width: 0;
     }
 
-    .logo-side-text {
-      font-family: 'Cairo', sans-serif;
-      font-size: 12px;
-      color: #ff7a1f;
-      font-weight: 800;
+    .presenter {
+      font-size: 10px;
+      color: #777;
+      font-weight: 600;
     }
 
     .header-logo-left {
-      width: 68px;
-      height: 68px;
+      width: 70px;
+      height: 70px;
       object-fit: cover;
       border-radius: 50%;
-      border: 2px solid #d8ff3c;
+      border: 2px solid #2a2a2a;
       background: #111;
       display: block;
     }
 
-    .header-logo-right {
-      width: 68px;
-      height: 68px;
-      object-fit: contain;
-      border-radius: 50%;
-      background: #ffffff;
-      padding: 4px;
-      border: 2px solid #d8ff3c;
-      display: block;
+    .hmx-tag {
+      font-family: 'Cairo', sans-serif;
+      font-size: 13px;
+      color: #ff7a1f;
+      font-weight: 800;
+      line-height: 1;
+    }
+
+    /* Center: logo3 (main) */
+    .logo-row-center {
+      flex: 1;
+      display: flex;
+      justify-content: center;
+      align-items: center;
     }
 
     .main-top-logo {
-      width: 200px;
-      max-width: 70%;
+      width: 180px;
+      max-width: 100%;
       height: auto;
       display: block;
       object-fit: contain;
     }
 
-    .logo-col {
+    /* Right side: logo1 + OUTFIT text */
+    .logo-row-right {
       display: flex;
       flex-direction: column;
       align-items: flex-end;
+      gap: 2px;
+      min-width: 0;
+    }
+
+    .header-logo-right {
+      width: 60px;
+      height: 60px;
+      object-fit: contain;
+      border-radius: 50%;
+      background: #ffffff;
+      padding: 5px;
+      border: 2px solid #d8ff3c;
+      display: block;
     }
 
     .logo-outfit {
       font-family: 'Bebas Neue', sans-serif;
-      font-size: 34px;
+      font-size: 28px;
       color: #fff;
       letter-spacing: 5px;
       line-height: 1;
@@ -116,14 +137,14 @@
 
     .logo-x {
       font-family: 'Bebas Neue', sans-serif;
-      font-size: 11px;
+      font-size: 9px;
       color: #ff5c00;
       letter-spacing: 2px;
-      margin-top: 2px;
       text-align: right;
       font-weight: 700;
     }
 
+    /* ── HERO ── */
     .hero {
       background: #0d0d0d;
       padding: 0 28px;
@@ -182,27 +203,12 @@
       margin-top: 16px;
     }
 
-    .hd-line {
-      flex: 1;
-      max-width: 62px;
-      height: 1px;
-    }
+    .hd-line { flex: 1; max-width: 62px; height: 1px; }
+    .hd-left { background: #ff5c00; }
+    .hd-right { background: #006c35; }
+    .hd-dot { width: 6px; height: 6px; background: #fff; border-radius: 50%; }
 
-    .hd-left {
-      background: #ff5c00;
-    }
-
-    .hd-right {
-      background: #006c35;
-    }
-
-    .hd-dot {
-      width: 6px;
-      height: 6px;
-      background: #fff;
-      border-radius: 50%;
-    }
-
+    /* ── FORM ── */
     .form-body {
       padding: 28px 28px 36px;
       max-width: 560px;
@@ -220,9 +226,7 @@
       border-bottom: 1px solid #1a1a1a;
     }
 
-    .field:last-of-type {
-      border-bottom: none;
-    }
+    .field:last-of-type { border-bottom: none; }
 
     .field-num {
       font-family: 'Bebas Neue', sans-serif;
@@ -285,9 +289,7 @@
       text-align: right;
     }
 
-    .btn-wrap {
-      padding-top: 24px;
-    }
+    .btn-wrap { padding-top: 24px; }
 
     .btn-submit {
       width: 100%;
@@ -300,14 +302,8 @@
       transition: transform 0.1s, opacity 0.2s;
     }
 
-    .btn-submit:active {
-      transform: scale(0.98);
-    }
-
-    .btn-submit:disabled {
-      opacity: 0.7;
-      cursor: not-allowed;
-    }
+    .btn-submit:active { transform: scale(0.98); }
+    .btn-submit:disabled { opacity: 0.7; cursor: not-allowed; }
 
     .btn-left {
       background: #ff5c00;
@@ -387,71 +383,28 @@
       flex-wrap: wrap;
     }
 
-    .footer span {
-      color: #fff;
-    }
-
-    .f-dot {
-      width: 4px;
-      height: 4px;
-      border-radius: 50%;
-    }
-
-    .f-orange {
-      background: #ff5c00;
-    }
-
-    .f-green {
-      background: #006c35;
-    }
+    .footer span { color: #fff; }
+    .f-dot { width: 4px; height: 4px; border-radius: 50%; }
+    .f-orange { background: #ff5c00; }
+    .f-green { background: #006c35; }
 
     @media (max-width: 640px) {
-      .top-banner {
-        padding: 8px 14px;
-        gap: 8px;
-      }
+      .top-banner { padding: 8px 14px; gap: 8px; }
 
-      .logo-row {
-        padding: 4px 16px 0;
-      }
+      .logo-row { padding: 8px 14px 6px; gap: 8px; }
 
-      .main-top-logo {
-        width: 170px;
-        max-width: 74%;
-      }
+      .main-top-logo { width: 130px; }
 
-      .header-logo-left,
-      .header-logo-right {
-        width: 56px;
-        height: 56px;
-      }
+      .header-logo-left { width: 56px; height: 56px; }
+      .header-logo-right { width: 48px; height: 48px; }
 
-      .hero,
-      .form-body {
-        padding-left: 18px;
-        padding-right: 18px;
-      }
+      .logo-outfit { font-size: 22px; }
 
-      .hero-inner {
-        padding: 8px 0 20px;
-      }
-
-      .logo-outfit {
-        font-size: 28px;
-      }
-
-      .hero-ar {
-        font-size: 23px;
-      }
-
-      .btn-left,
-      .btn-right {
-        padding: 14px;
-      }
-
-      .lbl-en {
-        font-size: 13px;
-      }
+      .hero, .form-body { padding-left: 18px; padding-right: 18px; }
+      .hero-inner { padding: 8px 0 20px; }
+      .hero-ar { font-size: 23px; }
+      .btn-left, .btn-right { padding: 14px; }
+      .lbl-en { font-size: 13px; }
     }
   </style>
 </head>
@@ -463,24 +416,25 @@
     <span class="banner-sub">الصقور الخضر</span>
   </div>
 
-  <!-- THREE LOGOS SAME ROW -->
+  <!-- UNIFIED LOGO ROW: logo2 | logo3 | logo1 -->
   <div class="logo-row">
-    <!-- Left side: logo2 + text -->
-    <div class="logo-side">
+    <!-- Left: HMX (logo2) -->
+    <div class="logo-row-left">
+      <span class="presenter">Presented by</span>
       <img src="./logo2.png" alt="HMX Presenter Logo" class="header-logo-left">
-      <span class="logo-side-text">همكس</span>
+      <span class="hmx-tag">همكس</span>
     </div>
 
-    <!-- Center: logo3 -->
-    <img src="./logo3.png" alt="Outfit Arabic Logo" class="main-top-logo">
+    <!-- Center: Main Arabic logo (logo3) -->
+    <div class="logo-row-center">
+      <img src="./logo3.png" alt="Outfit Arabic Logo" class="main-top-logo">
+    </div>
 
-    <!-- Right side: log1 + OUTIFT text -->
-    <div class="logo-side">
+    <!-- Right: Outfit (logo1) -->
+    <div class="logo-row-right">
       <img src="./log1.png" alt="Outfit Logo" class="header-logo-right">
-      <div class="logo-col">
-        <span class="logo-outfit">OUTFIT</span>
-        <span class="logo-x">BRAND × COMPETITION</span>
-      </div>
+      <span class="logo-outfit">OUTFIT</span>
+      <span class="logo-x">BRAND × COMPETITION</span>
     </div>
   </div>
 
@@ -585,34 +539,18 @@
 
     function validateForm() {
       hideErrors();
-
       const name = els.name.value.trim();
       const nat = els.nat.value.trim();
       const city = els.city.value.trim();
       const num = els.num.value.trim();
-
       let valid = true;
 
-      if (!name || name.length < 3) {
-        els.errName.style.display = 'block';
-        valid = false;
-      }
-
-      if (!nat || nat.length < 2) {
-        els.errNat.style.display = 'block';
-        valid = false;
-      }
-
-      if (!city || city.length < 2) {
-        els.errCity.style.display = 'block';
-        valid = false;
-      }
+      if (!name || name.length < 3) { els.errName.style.display = 'block'; valid = false; }
+      if (!nat || nat.length < 2) { els.errNat.style.display = 'block'; valid = false; }
+      if (!city || city.length < 2) { els.errCity.style.display = 'block'; valid = false; }
 
       const phoneRegex = /^[0-9+\-\s()]{6,20}$/;
-      if (!num || !phoneRegex.test(num)) {
-        els.errNum.style.display = 'block';
-        valid = false;
-      }
+      if (!num || !phoneRegex.test(num)) { els.errNum.style.display = 'block'; valid = false; }
 
       return valid;
     }
@@ -634,12 +572,7 @@
 
       try {
         setLoading(true);
-
-        await fetch(SCRIPT_URL, {
-          method: 'POST',
-          body: body
-        });
-
+        await fetch(SCRIPT_URL, { method: 'POST', body: body });
         els.form.style.display = 'none';
         els.success.style.display = 'block';
       } catch (err) {
