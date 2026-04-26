@@ -2,9 +2,12 @@
 <html lang="ar" dir="rtl">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>مسابقة كأس العالم 2026 — Outfit × همكس</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700;900&family=Bebas+Neue&display=swap" rel="stylesheet">
+
   <style>
     * { box-sizing: border-box; margin: 0; padding: 0; }
 
@@ -22,6 +25,8 @@
       align-items: center;
       justify-content: center;
       gap: 14px;
+      flex-wrap: wrap;
+      text-align: center;
     }
 
     .banner-text {
@@ -32,7 +37,6 @@
     }
 
     .banner-sub {
-      font-family: 'Cairo', sans-serif;
       font-size: 11px;
       color: rgba(255,255,255,0.7);
       font-weight: 600;
@@ -45,6 +49,7 @@
       align-items: center;
       justify-content: space-between;
       border-bottom: 1px solid #1a1a1a;
+      gap: 16px;
     }
 
     .logo-col { display: flex; flex-direction: column; }
@@ -73,7 +78,6 @@
     }
 
     .presenter {
-      font-family: 'Cairo', sans-serif;
       font-size: 11px;
       color: #444;
       font-weight: 600;
@@ -207,7 +211,18 @@
       background: #180e00;
     }
 
-    .finput::placeholder { color: #333; font-size: 13px; }
+    .finput::placeholder {
+      color: #333;
+      font-size: 13px;
+    }
+
+    .error-text {
+      color: #ff7b7b;
+      font-size: 12px;
+      font-weight: 600;
+      display: none;
+      margin-top: 4px;
+    }
 
     .btn-wrap { padding-top: 24px; }
 
@@ -219,10 +234,14 @@
       cursor: pointer;
       overflow: hidden;
       display: flex;
-      transition: transform 0.1s;
+      transition: transform 0.1s, opacity 0.2s;
     }
 
     .btn-submit:active { transform: scale(0.98); }
+    .btn-submit:disabled {
+      opacity: 0.7;
+      cursor: not-allowed;
+    }
 
     .btn-left {
       background: #FF5C00;
@@ -239,11 +258,26 @@
       background: #006C35;
       flex: 1;
       padding: 16px;
-      font-family: 'Cairo', sans-serif;
       font-size: 15px;
       font-weight: 700;
       color: #fff;
       text-align: center;
+    }
+
+    .status-box {
+      display: none;
+      margin-top: 18px;
+      padding: 12px 14px;
+      border-radius: 6px;
+      font-size: 14px;
+      font-weight: 700;
+      text-align: center;
+    }
+
+    .status-error {
+      background: #2b1111;
+      color: #ff9f9f;
+      border: 1px solid #5a1f1f;
     }
 
     .success {
@@ -284,11 +318,43 @@
       align-items: center;
       justify-content: center;
       gap: 12px;
+      flex-wrap: wrap;
     }
 
-    .f-dot { width: 4px; height: 4px; border-radius: 50%; }
+    .f-dot {
+      width: 4px;
+      height: 4px;
+      border-radius: 50%;
+    }
+
     .f-orange { background: #FF5C00; }
     .f-green { background: #006C35; }
+
+    @media (max-width: 640px) {
+      .header {
+        padding: 18px 18px;
+      }
+
+      .hero,
+      .form-body {
+        padding-left: 18px;
+        padding-right: 18px;
+      }
+
+      .logo-outfit {
+        font-size: 34px;
+      }
+
+      .hero-ar {
+        font-size: 23px;
+      }
+
+      .btn-left,
+      .btn-right {
+        padding: 14px;
+        font-size: 14px;
+      }
+    }
   </style>
 </head>
 <body>
@@ -328,38 +394,44 @@
 
     <div class="field">
       <div class="field-num">01</div>
-      <div class="lbl-ar">الاسم</div>
+      <label class="lbl-ar" for="f-name">الاسم</label>
       <div class="lbl-en">Full Name</div>
-      <input class="finput" id="f-name" type="text" placeholder="اكتب اسمك الكامل">
+      <input class="finput" id="f-name" type="text" placeholder="اكتب اسمك الكامل" />
+      <div class="error-text" id="err-name">يرجى إدخال الاسم الكامل</div>
     </div>
 
     <div class="field">
       <div class="field-num">02</div>
-      <div class="lbl-ar">الجنسية</div>
+      <label class="lbl-ar" for="f-nat">الجنسية</label>
       <div class="lbl-en">Nationality</div>
-      <input class="finput" id="f-nat" type="text" placeholder="اكتب جنسيتك">
+      <input class="finput" id="f-nat" type="text" placeholder="اكتب جنسيتك" />
+      <div class="error-text" id="err-nat">يرجى إدخال الجنسية</div>
     </div>
 
     <div class="field">
       <div class="field-num">03</div>
-      <div class="lbl-ar">المدينة</div>
+      <label class="lbl-ar" for="f-city">المدينة</label>
       <div class="lbl-en">City</div>
-      <input class="finput" id="f-city" type="text" placeholder="اكتب مدينتك">
+      <input class="finput" id="f-city" type="text" placeholder="اكتب مدينتك" />
+      <div class="error-text" id="err-city">يرجى إدخال المدينة</div>
     </div>
 
     <div class="field">
       <div class="field-num">04</div>
-      <div class="lbl-ar">الرقم</div>
+      <label class="lbl-ar" for="f-num">الرقم</label>
       <div class="lbl-en">Phone Number</div>
-      <input class="finput" id="f-num" type="text" placeholder="اكتب رقمك">
+      <input class="finput" id="f-num" type="text" inputmode="tel" placeholder="اكتب رقمك" />
+      <div class="error-text" id="err-num">يرجى إدخال رقم جوال صحيح</div>
     </div>
 
     <div class="btn-wrap">
-      <button class="btn-submit" type="button" onclick="doSubmit()">
-        <div class="btn-left">REGISTER</div>
-        <div class="btn-right">سجّل الآن</div>
+      <button class="btn-submit" id="submitBtn" type="button" onclick="doSubmit()">
+        <div class="btn-left" id="btnLeft">REGISTER</div>
+        <div class="btn-right" id="btnRight">سجّل الآن</div>
       </button>
     </div>
+
+    <div class="status-box status-error" id="statusBox"></div>
 
   </div>
 
@@ -377,34 +449,97 @@
   </div>
 
   <script>
-    const SCRIPT_URL = 'YAHAN_APPS_SCRIPT_WEB_APP_URL_PASTE_KARO';
+    const SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbx9kFSQFDPogsKnBHUmM7tXbkou2xviqIAueIFXOm84Vp5DdjM4sP3NuAI73REsD0ek/exec';
 
-    async function doSubmit() {
-      const n  = document.getElementById('f-name').value.trim();
-      const na = document.getElementById('f-nat').value.trim();
-      const c  = document.getElementById('f-city').value.trim();
-      const nu = document.getElementById('f-num').value.trim();
+    const fields = {
+      name: document.getElementById('f-name'),
+      nationality: document.getElementById('f-nat'),
+      city: document.getElementById('f-city'),
+      number: document.getElementById('f-num')
+    };
 
-      // Frontend validation
-      if (!n || !na || !c || !nu) {
-        alert('يرجى تعبئة جميع الحقول');
-        return;
+    const errors = {
+      name: document.getElementById('err-name'),
+      nationality: document.getElementById('err-nat'),
+      city: document.getElementById('err-city'),
+      number: document.getElementById('err-num')
+    };
+
+    const submitBtn = document.getElementById('submitBtn');
+    const btnLeft = document.getElementById('btnLeft');
+    const btnRight = document.getElementById('btnRight');
+    const statusBox = document.getElementById('statusBox');
+
+    function resetErrors() {
+      Object.values(errors).forEach(el => el.style.display = 'none');
+      statusBox.style.display = 'none';
+      statusBox.textContent = '';
+    }
+
+    function showError(fieldKey, message) {
+      if (errors[fieldKey]) {
+        errors[fieldKey].textContent = message;
+        errors[fieldKey].style.display = 'block';
+      }
+    }
+
+    function validateForm() {
+      resetErrors();
+
+      const name = fields.name.value.trim();
+      const nationality = fields.nationality.value.trim();
+      const city = fields.city.value.trim();
+      const number = fields.number.value.trim();
+
+      let isValid = true;
+
+      if (!name || name.length < 3) {
+        showError('name', 'يرجى إدخال الاسم الكامل');
+        isValid = false;
       }
 
-      // Optional: basic phone validation
-      // const phoneRegex = /^[0-9+\-\s]{6,20}$/;
-      // if (!phoneRegex.test(nu)) {
-      //   alert('الرجاء إدخال رقم صحيح');
-      //   return;
-      // }
+      if (!nationality || nationality.length < 2) {
+        showError('nationality', 'يرجى إدخال الجنسية');
+        isValid = false;
+      }
+
+      if (!city || city.length < 2) {
+        showError('city', 'يرجى إدخال المدينة');
+        isValid = false;
+      }
+
+      const phoneRegex = /^[0-9+\s\-()]{6,20}$/;
+      if (!number || !phoneRegex.test(number)) {
+        showError('number', 'يرجى إدخال رقم جوال صحيح');
+        isValid = false;
+      }
+
+      return isValid;
+    }
+
+    function setLoading(isLoading) {
+      submitBtn.disabled = isLoading;
+      btnLeft.textContent = isLoading ? 'SENDING...' : 'REGISTER';
+      btnRight.textContent = isLoading ? 'جاري الإرسال...' : 'سجّل الآن';
+    }
+
+    async function doSubmit() {
+      if (!validateForm()) return;
+
+      const name = fields.name.value.trim();
+      const nationality = fields.nationality.value.trim();
+      const city = fields.city.value.trim();
+      const number = fields.number.value.trim();
 
       const formData = new FormData();
-      formData.append('name', n);
-      formData.append('nationality', na);
-      formData.append('city', c);
-      formData.append('number', nu);
+      formData.append('name', name);
+      formData.append('nationality', nationality);
+      formData.append('city', city);
+      formData.append('number', number);
 
       try {
+        setLoading(true);
+
         await fetch(SCRIPT_URL, {
           method: 'POST',
           body: formData,
@@ -413,9 +548,12 @@
 
         document.getElementById('theForm').style.display = 'none';
         document.getElementById('successBox').style.display = 'block';
-      } catch (err) {
-        console.error(err);
-        alert('Error hua, baad me phir try karein.');
+      } catch (error) {
+        console.error(error);
+        statusBox.textContent = 'حدث خطأ أثناء الإرسال، يرجى المحاولة مرة أخرى';
+        statusBox.style.display = 'block';
+      } finally {
+        setLoading(false);
       }
     }
   </script>
