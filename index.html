@@ -53,7 +53,11 @@
       gap: 16px;
     }
 
-    .logo-col { display: flex; flex-direction: column; }
+    .logo-col {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+    }
 
     .logo-outfit {
       font-family: 'Bebas Neue', sans-serif;
@@ -90,6 +94,23 @@
       color: #FF5C00;
       letter-spacing: 3px;
       line-height: 1;
+    }
+
+    .header-logo {
+      width: 72px;
+      height: 72px;
+      object-fit: cover;
+      border-radius: 50%;
+      margin-bottom: 8px;
+      border: 2px solid #222;
+      background: #111;
+    }
+
+    .header-logo.small {
+      width: 58px;
+      height: 58px;
+      margin-bottom: 0;
+      margin-top: 4px;
     }
 
     .hero {
@@ -350,6 +371,16 @@
       .btn-right {
         padding: 14px;
       }
+
+      .header-logo {
+        width: 58px;
+        height: 58px;
+      }
+
+      .header-logo.small {
+        width: 48px;
+        height: 48px;
+      }
     }
   </style>
 </head>
@@ -363,11 +394,13 @@
 
   <div class="header">
     <div class="logo-col">
+      <img src="./logo2.jpg" alt="Outfit Logo" class="header-logo">
       <span class="logo-outfit">OUTFIT</span>
       <span class="logo-x">BRAND × COMPETITION</span>
     </div>
     <div class="right-col">
       <span class="presenter">Presented by</span>
+      <img src="./log1.png" alt="HMX Logo" class="header-logo small">
       <span class="hmx-tag">همكس</span>
     </div>
   </div>
