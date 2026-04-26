@@ -75,6 +75,7 @@
       align-items: center;
       gap: 10px;
       border-bottom: 1px solid #ececec;
+      position: relative;   /* needed for absolute center child */
     }
 
     /* LEFT: HMX logo — FIXED: removed filter:brightness(0) so the actual logo shows */
@@ -98,30 +99,90 @@
 
     .hmx-tag { font-family:'Cairo',sans-serif; font-size:13px; color:#ff7a1f; font-weight:800; line-height:1; }
 
-    /* CENTER: main logo — FIXED: proper centering */
+    /* CENTER: OUTFIT branding — absolutely centered */
     .logo-row-center {
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
       display: flex;
       justify-content: center;
       align-items: center;
-    }
-    .main-top-logo {
-      width: 190px;
-      max-width: 100%;
-      height: auto;
-      display: block;
-      object-fit: contain;
+      pointer-events: none;
+      z-index: 2;
     }
 
-    /* RIGHT: OUTFIT text */
+    .center-brand {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 0;
+      text-align: center;
+      pointer-events: auto;
+    }
+
+    .center-brand-top {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 42px;
+      color: #111;
+      letter-spacing: 8px;
+      line-height: 1;
+    }
+
+    .center-brand-x {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 13px;
+      color: #ff5c00;
+      letter-spacing: 4px;
+      line-height: 1.4;
+    }
+
+    .center-brand-bottom {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 11px;
+      color: #555;
+      letter-spacing: 3px;
+      line-height: 1;
+    }
+
+    /* RIGHT: year badge */
     .logo-row-right {
       display: flex;
       flex-direction: column;
       align-items: flex-end;
       justify-content: center;
-      gap: 2px;
     }
-    .logo-outfit { font-family:'Bebas Neue',sans-serif; font-size:32px; color:#111; letter-spacing:3px; line-height:1; text-align:right; }
-    .logo-x { font-family:'Bebas Neue',sans-serif; font-size:10px; color:#ff5c00; letter-spacing:1.2px; text-align:right; font-weight:700; }
+
+    .right-badge {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 0;
+      border: 1.5px solid #ececec;
+      border-radius: 6px;
+      padding: 6px 10px;
+      background: #f9f9f9;
+    }
+
+    .right-badge-year {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 22px;
+      color: #006c35;
+      letter-spacing: 2px;
+      line-height: 1;
+    }
+
+    .right-badge-label {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 9px;
+      color: #999;
+      letter-spacing: 2px;
+    }
+
+    .right-badge-flag {
+      font-size: 16px;
+      line-height: 1.2;
+    }
 
     /* ── HERO ── */
     .hero { background:#ffffff; padding:0 28px; position:relative; overflow:hidden; }
@@ -387,14 +448,18 @@
       .cd-num { font-size:18px; min-width:34px; padding:2px 6px; }
 
       .logo-row {
-        grid-template-columns: 80px 1fr 110px;
-        padding: 8px 14px 6px;
-        gap: 8px;
+        grid-template-columns: 72px 1fr 80px;
+        padding: 8px 14px 8px;
+        gap: 6px;
+        min-height: 80px;
       }
-      .header-logo-left { width: 64px; height: 64px; }
-      .main-top-logo { width: 110px; }
-      .logo-outfit { font-size: 20px; letter-spacing: 2px; }
-      .logo-x { font-size: 8px; letter-spacing: 0.8px; }
+      .header-logo-left { width: 60px; height: 60px; }
+      .center-brand-top { font-size: 28px; letter-spacing: 5px; }
+      .center-brand-x { font-size: 11px; }
+      .center-brand-bottom { font-size: 9px; letter-spacing: 2px; }
+      .right-badge { padding: 4px 7px; }
+      .right-badge-year { font-size: 16px; }
+      .right-badge-label { font-size: 7px; }
 
       .hero, .form-body { padding-left:18px; padding-right:18px; }
       .hero-inner { padding:10px 0 20px; }
@@ -439,24 +504,31 @@
     </div>
   </div>
 
-  <!-- LOGO ROW — FIXED -->
+  <!-- LOGO ROW — REDESIGNED -->
   <div class="logo-row">
-    <!-- LEFT: HMX logo (FIXED — no brightness filter) -->
+    <!-- LEFT: HMX logo -->
     <div class="logo-row-left">
       <span class="presenter">Presented by</span>
       <img src="./logo2.png" alt="HMX" class="header-logo-left">
       <span class="hmx-tag">همكس</span>
     </div>
 
-    <!-- CENTER: main Outfit logo (FIXED — proper centering) -->
+    <!-- CENTER: OUTFIT branding — absolutely centered -->
     <div class="logo-row-center">
-      <img src="./logo3.png" alt="Outfit Arabic" class="main-top-logo">
+      <div class="center-brand">
+        <div class="center-brand-top">OUTFIT</div>
+        <div class="center-brand-x">✕</div>
+        <div class="center-brand-bottom">BRAND &amp; COMPETITION</div>
+      </div>
     </div>
 
-    <!-- RIGHT: OUTFIT text brand -->
+    <!-- RIGHT: spacer to balance grid -->
     <div class="logo-row-right">
-      <span class="logo-outfit">OUTFIT</span>
-      <span class="logo-x">BRAND × COMPETITION</span>
+      <div class="right-badge">
+        <div class="right-badge-year">2026</div>
+        <div class="right-badge-label">FIFA WC</div>
+        <div class="right-badge-flag">🇸🇦</div>
+      </div>
     </div>
   </div>
 
