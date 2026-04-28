@@ -55,15 +55,101 @@
     .prize-val { font-size:11px; font-weight:700; color:#fff; }
     .prize-sep { width:1px; height:36px; background:rgba(255,255,255,0.15); }
 
-    .earn-section { background:#fffbf5; border-bottom:1px solid #ffe4d0; padding:14px 20px; }
-    .earn-title { text-align:center; font-family:'Bebas Neue',sans-serif; font-size:11px; color:#ff5c00; letter-spacing:4px; margin-bottom:10px; }
-    .earn-rows { display:flex; gap:10px; justify-content:center; flex-wrap:wrap; }
-    .earn-row { display:flex; align-items:center; gap:8px; background:#fff; border:1px solid #ffe0c8; border-radius:8px; padding:8px 14px; flex:1; min-width:180px; max-width:260px; }
-    .earn-icon { font-size:20px; flex-shrink:0; }
-    .earn-desc { flex:1; }
-    .earn-desc-ar { font-size:12px; font-weight:700; color:#333; }
-    .earn-desc-en { font-family:'Bebas Neue',sans-serif; font-size:10px; color:#999; letter-spacing:2px; }
-    .earn-pts-badge { background:#ff5c00; color:#fff; font-family:'Bebas Neue',sans-serif; font-size:14px; letter-spacing:1px; padding:3px 8px; border-radius:20px; flex-shrink:0; white-space:nowrap; }
+    .rewards-section {
+      background: linear-gradient(135deg, #0a2a15 0%, #062010 100%);
+      border-top: 2px solid #d8ff3c;
+      border-bottom: 2px solid #ff5c00;
+      padding: 16px 20px;
+    }
+    .rewards-title {
+      text-align: center;
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 12px;
+      color: #d8ff3c;
+      letter-spacing: 4px;
+      margin-bottom: 12px;
+    }
+    .rewards-title span { color: #ff5c00; }
+    .rewards-grid {
+      display: flex;
+      justify-content: center;
+      gap: 8px;
+      flex-wrap: wrap;
+    }
+    .reward-card {
+      background: rgba(255,255,255,0.05);
+      border: 1px solid rgba(216,255,60,0.2);
+      border-radius: 8px;
+      padding: 10px 12px;
+      text-align: center;
+      min-width: 80px;
+      flex: 1;
+      max-width: 110px;
+      position: relative;
+      overflow: hidden;
+    }
+    .reward-card::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0;
+      height: 2px;
+    }
+    .reward-card.tier1::before { background: #d8ff3c; }
+    .reward-card.tier2::before { background: #ff5c00; }
+    .reward-card.tier3::before { background: #00c4ff; }
+    .reward-card.tier4::before { background: #ffd700; }
+    .reward-pts {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 20px;
+      color: #d8ff3c;
+      line-height: 1;
+      margin-bottom: 2px;
+    }
+    .reward-pts-label { font-size: 8px; color: rgba(255,255,255,0.5); letter-spacing: 1px; margin-bottom:6px; }
+    .reward-emoji { font-size: 18px; margin-bottom: 4px; }
+    .reward-name { font-size: 10px; font-weight: 700; color: #fff; line-height: 1.3; }
+
+    .earn-section {
+      background: #fffbf5;
+      border-bottom: 1px solid #ffe4d0;
+      padding: 14px 20px;
+    }
+    .earn-title {
+      text-align: center;
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 11px;
+      color: #ff5c00;
+      letter-spacing: 4px;
+      margin-bottom: 10px;
+    }
+    .earn-rows { display: flex; gap: 10px; justify-content: center; flex-wrap: wrap; }
+    .earn-row {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      background: #fff;
+      border: 1px solid #ffe0c8;
+      border-radius: 8px;
+      padding: 8px 14px;
+      flex: 1;
+      min-width: 180px;
+      max-width: 260px;
+    }
+    .earn-icon { font-size: 20px; flex-shrink: 0; }
+    .earn-desc { flex: 1; }
+    .earn-desc-ar { font-size: 12px; font-weight: 700; color: #333; }
+    .earn-desc-en { font-family: 'Bebas Neue', sans-serif; font-size: 10px; color: #999; letter-spacing: 2px; }
+    .earn-pts-badge {
+      background: #ff5c00;
+      color: #fff;
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 14px;
+      letter-spacing: 1px;
+      padding: 3px 8px;
+      border-radius: 20px;
+      flex-shrink: 0;
+      white-space: nowrap;
+    }
 
     .counter-bar { background:#fff9f5; border-bottom:1px solid #ffe4d0; padding:10px 20px; display:flex; align-items:center; justify-content:center; gap:10px; flex-wrap:wrap; }
     .counter-pulse { width:8px; height:8px; border-radius:50%; background:#ff5c00; animation:pulse 1.4s ease-in-out infinite; flex-shrink:0; }
@@ -80,34 +166,38 @@
     .finput { background:#f7f7f7; border:1.5px solid #dcdcdc; border-radius:6px; padding:13px 15px; color:#111; font-family:'Cairo',sans-serif; font-size:14px; direction:rtl; outline:none; transition:border-color 0.2s,background 0.2s; width:100%; margin-top:6px; }
     .finput:focus { border-color:#ff5c00; background:#fff7f2; }
     .finput::placeholder { color:#8a8a8a; font-size:13px; }
-
     .fselect { background:#f7f7f7; border:1.5px solid #dcdcdc; border-radius:6px; padding:13px 15px; color:#111; font-family:'Cairo',sans-serif; font-size:14px; direction:rtl; outline:none; transition:border-color 0.2s,background 0.2s; width:100%; margin-top:6px; appearance:none; -webkit-appearance:none; background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%23ff5c00' stroke-width='2' fill='none' stroke-linecap='round'/%3E%3C/svg%3E"); background-repeat:no-repeat; background-position:left 14px center; padding-left:36px; cursor:pointer; }
     .fselect:focus { border-color:#ff5c00; background-color:#fff7f2; }
     .fselect option { background:#ffffff; color:#111; }
-
     .phone-row { display:flex; gap:8px; margin-top:6px; direction:rtl; }
     .phone-code-wrap { flex-shrink:0; width:140px; }
     .phone-code-select { background:#f7f7f7; border:1.5px solid #dcdcdc; border-radius:6px; padding:13px 10px; color:#111; font-family:'Cairo',sans-serif; font-size:13px; direction:ltr; outline:none; transition:border-color 0.2s,background 0.2s; width:100%; appearance:none; -webkit-appearance:none; background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='6' viewBox='0 0 10 6'%3E%3Cpath d='M1 1l4 4 4-4' stroke='%23ff5c00' stroke-width='1.5' fill='none' stroke-linecap='round'/%3E%3C/svg%3E"); background-repeat:no-repeat; background-position:right 10px center; padding-right:28px; cursor:pointer; text-align:left; }
     .phone-code-select:focus { border-color:#ff5c00; background-color:#fff7f2; }
-
     .phone-number-input { flex:1; background:#f7f7f7; border:1.5px solid #dcdcdc; border-radius:6px; padding:13px 15px; color:#111; font-family:'Cairo',sans-serif; font-size:14px; direction:ltr; outline:none; transition:border-color 0.2s,background 0.2s; text-align:left; }
     .phone-number-input:focus { border-color:#ff5c00; background:#fff7f2; }
     .phone-number-input::placeholder { color:#8a8a8a; font-size:13px; }
-
     .error-text { color:#d93c3c; font-size:12px; font-weight:600; display:none; margin-top:4px; text-align:right; }
 
-    .ref-notice { background:linear-gradient(135deg,#f0fff4,#e8f5e9); border:1.5px solid #006c35; border-radius:8px; padding:10px 14px; display:none; align-items:center; gap:10px; margin-bottom:4px; }
-    .ref-notice.visible { display:flex; }
-    .ref-notice-icon { font-size:22px; flex-shrink:0; }
-    .ref-notice-text { flex:1; }
-    .ref-notice-ar { font-size:13px; font-weight:700; color:#006c35; }
-    .ref-notice-en { font-family:'Bebas Neue',sans-serif; font-size:10px; color:#888; letter-spacing:2px; }
+    .ref-notice {
+      background: linear-gradient(135deg, #f0fff4, #e8f5e9);
+      border: 1.5px solid #006c35;
+      border-radius: 8px;
+      padding: 10px 14px;
+      display: none;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 4px;
+    }
+    .ref-notice.visible { display: flex; }
+    .ref-notice-icon { font-size: 22px; flex-shrink: 0; }
+    .ref-notice-text { flex: 1; }
+    .ref-notice-ar { font-size: 13px; font-weight: 700; color: #006c35; }
+    .ref-notice-en { font-family: 'Bebas Neue', sans-serif; font-size: 10px; color: #888; letter-spacing: 2px; }
 
     .terms-row { display:flex; align-items:flex-start; gap:10px; padding:16px 0 4px; direction:rtl; }
     .terms-check { width:18px; height:18px; border:2px solid #dcdcdc; border-radius:4px; flex-shrink:0; cursor:pointer; accent-color:#ff5c00; margin-top:2px; }
     .terms-label { font-size:12px; color:#555; font-weight:600; line-height:1.6; text-align:right; }
     .terms-label a { color:#ff5c00; text-decoration:none; }
-
     .btn-wrap { padding-top:18px; }
     .btn-submit { width:100%; border:none; border-radius:6px; padding:0; cursor:pointer; overflow:hidden; display:flex; transition:transform 0.1s,opacity 0.2s,box-shadow 0.2s; box-shadow:0 4px 18px rgba(0,0,0,0.06); }
     .btn-submit:hover { box-shadow:0 6px 24px rgba(255,92,0,0.25); }
@@ -115,7 +205,6 @@
     .btn-submit:disabled { opacity:0.7; cursor:not-allowed; }
     .btn-left { background:#ff5c00; flex:1; padding:16px; font-family:'Bebas Neue',sans-serif; font-size:18px; letter-spacing:3px; color:#fff; text-align:center; }
     .btn-right { background:#006c35; flex:1; padding:16px; font-size:15px; font-weight:700; color:#fff; text-align:center; }
-
     .msg-box { display:none; margin-top:18px; border-radius:8px; padding:12px 14px; text-align:center; font-size:14px; font-weight:700; }
     .msg-error { background:#fff1f1; color:#c13b3b; border:1px solid #f0c7c7; }
 
@@ -126,47 +215,104 @@
     .ticket-id { font-family:'Bebas Neue',sans-serif; font-size:26px; color:#ff5c00; letter-spacing:6px; }
     .success-bottom { background:#ff5c00; padding:10px; text-align:center; font-family:'Bebas Neue',sans-serif; font-size:13px; letter-spacing:3px; color:#fff; }
 
-    .points-card { display:none; margin:0 28px 10px; border-radius:10px; overflow:hidden; box-shadow:0 6px 24px rgba(0,0,0,0.10); border:2px solid #d8ff3c; }
-    .points-card-top { background:linear-gradient(135deg,#0a2a15,#062010); padding:14px 20px; display:flex; align-items:center; justify-content:space-between; gap:12px; }
-    .pts-label-group { display:flex; flex-direction:column; gap:2px; }
-    .pts-title { font-family:'Bebas Neue',sans-serif; font-size:11px; color:#d8ff3c; letter-spacing:3px; }
-    .pts-title-ar { font-size:13px; font-weight:800; color:#fff; }
-    .pts-display { display:flex; flex-direction:column; align-items:center; background:rgba(216,255,60,0.12); border:1px solid rgba(216,255,60,0.3); border-radius:8px; padding:8px 18px; }
-    .pts-num { font-family:'Bebas Neue',sans-serif; font-size:32px; color:#d8ff3c; line-height:1; }
-    .pts-unit { font-size:9px; color:rgba(216,255,60,0.7); letter-spacing:2px; font-weight:700; }
+    .points-card {
+      display: none;
+      margin: 0 28px 10px;
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 6px 24px rgba(0,0,0,0.10);
+      border: 2px solid #d8ff3c;
+    }
+    .points-card-top {
+      background: linear-gradient(135deg, #0a2a15, #062010);
+      padding: 14px 20px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+    }
+    .pts-label-group { display: flex; flex-direction: column; gap: 2px; }
+    .pts-title { font-family: 'Bebas Neue', sans-serif; font-size: 11px; color: #d8ff3c; letter-spacing: 3px; }
+    .pts-title-ar { font-size: 13px; font-weight: 800; color: #fff; }
+    .pts-display {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      background: rgba(216,255,60,0.12);
+      border: 1px solid rgba(216,255,60,0.3);
+      border-radius: 8px;
+      padding: 8px 18px;
+    }
+    .pts-num { font-family: 'Bebas Neue', sans-serif; font-size: 32px; color: #d8ff3c; line-height: 1; }
+    .pts-unit { font-size: 9px; color: rgba(216,255,60,0.7); letter-spacing: 2px; font-weight: 700; }
 
-    .next-reward-bar { background:#fff; border-top:1px solid #efefef; padding:10px 14px; }
-    .nrb-label { font-size:11px; font-weight:700; color:#555; margin-bottom:5px; text-align:right; }
-    .nrb-track { background:#ececec; border-radius:20px; height:8px; overflow:hidden; }
-    .nrb-fill { height:100%; border-radius:20px; background:linear-gradient(90deg,#006c35,#d8ff3c); transition:width 0.6s ease; }
-    .nrb-next { font-size:10px; color:#ff5c00; font-weight:700; text-align:left; direction:ltr; margin-top:4px; }
+    .points-actions {
+      background: #f9f9f9;
+      padding: 12px 16px;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+    .pts-action-row {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      background: #fff;
+      border: 1px solid #ececec;
+      border-radius: 8px;
+      padding: 10px 12px;
+      gap: 10px;
+    }
+    .pts-action-left { display: flex; align-items: center; gap: 8px; }
+    .pts-action-icon { font-size: 18px; }
+    .pts-action-desc { font-size: 12px; font-weight: 700; color: #333; }
+    .pts-action-en { font-family: 'Bebas Neue', sans-serif; font-size: 9px; color: #aaa; letter-spacing: 2px; }
+    .pts-badge-done { background: #006c35; color: #fff; font-family: 'Bebas Neue', sans-serif; font-size: 12px; letter-spacing: 1px; padding: 3px 10px; border-radius: 20px; white-space: nowrap; }
+    .pts-badge-earn { background: #ff5c00; color: #fff; font-family: 'Bebas Neue', sans-serif; font-size: 12px; letter-spacing: 1px; padding: 3px 10px; border-radius: 20px; white-space: nowrap; }
 
-    .points-actions { background:#f9f9f9; padding:12px 16px; display:flex; flex-direction:column; gap:8px; }
-    .pts-action-row { display:flex; align-items:center; justify-content:space-between; background:#fff; border:1px solid #ececec; border-radius:8px; padding:10px 12px; gap:10px; }
-    .pts-action-left { display:flex; align-items:center; gap:8px; }
-    .pts-action-icon { font-size:18px; }
-    .pts-action-desc { font-size:12px; font-weight:700; color:#333; }
-    .pts-action-en { font-family:'Bebas Neue',sans-serif; font-size:9px; color:#aaa; letter-spacing:2px; }
-    .pts-badge-done { background:#006c35; color:#fff; font-family:'Bebas Neue',sans-serif; font-size:12px; letter-spacing:1px; padding:3px 10px; border-radius:20px; white-space:nowrap; }
-    .pts-badge-earn { background:#ff5c00; color:#fff; font-family:'Bebas Neue',sans-serif; font-size:12px; letter-spacing:1px; padding:3px 10px; border-radius:20px; white-space:nowrap; }
-
-    .stats-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:8px; padding:12px 16px; background:#fff; border-top:1px solid #efefef; }
-    .stat-box { background:#f7f7f7; border:1px solid #ececec; border-radius:8px; padding:10px; text-align:center; }
-    .stat-num { font-family:'Bebas Neue',sans-serif; font-size:24px; color:#006c35; line-height:1; }
-    .stat-label { font-size:10px; font-weight:700; color:#666; margin-top:4px; }
-
-    .tshirt-box { background:linear-gradient(135deg,#fff8e8,#fff2cc); border-top:1px solid #f1df9a; padding:12px 16px; text-align:center; }
-    .tshirt-title { font-size:12px; font-weight:800; color:#7a5a00; }
-    .tshirt-sub { font-family:'Bebas Neue',sans-serif; font-size:10px; letter-spacing:2px; color:#a97b00; margin-top:4px; }
-
-    .ref-link-box { display:none; margin:0 28px 12px; background:#f0fff4; border:1.5px dashed #006c35; border-radius:10px; padding:14px 16px; }
-    .ref-link-title { font-size:13px; font-weight:800; color:#006c35; margin-bottom:4px; text-align:right; }
-    .ref-link-sub { font-family:'Bebas Neue',sans-serif; font-size:10px; color:#888; letter-spacing:2px; margin-bottom:8px; text-align:right; }
-    .ref-link-row { display:flex; gap:6px; align-items:center; direction:ltr; }
-    .ref-link-input { flex:1; background:#fff; border:1px solid #c3e6cb; border-radius:6px; padding:9px 12px; font-size:12px; color:#333; outline:none; direction:ltr; text-align:left; }
-    .ref-copy-btn { background:#006c35; color:#fff; border:none; border-radius:6px; padding:9px 14px; font-family:'Bebas Neue',sans-serif; font-size:13px; letter-spacing:2px; cursor:pointer; white-space:nowrap; transition:background 0.2s,transform 0.1s; }
-    .ref-copy-btn:active { transform:scale(0.97); background:#004d25; }
-    .ref-copied { font-size:11px; color:#006c35; font-weight:700; text-align:center; margin-top:6px; display:none; }
+    .ref-link-box {
+      display: none;
+      margin: 0 28px 12px;
+      background: #f0fff4;
+      border: 1.5px dashed #006c35;
+      border-radius: 10px;
+      padding: 14px 16px;
+    }
+    .ref-link-title { font-size: 13px; font-weight: 800; color: #006c35; margin-bottom: 4px; text-align: right; }
+    .ref-link-sub { font-family: 'Bebas Neue', sans-serif; font-size: 10px; color: #888; letter-spacing: 2px; margin-bottom: 8px; text-align: right; }
+    .ref-link-row {
+      display: flex;
+      gap: 6px;
+      align-items: center;
+      direction: ltr;
+    }
+    .ref-link-input {
+      flex: 1;
+      background: #fff;
+      border: 1px solid #c3e6cb;
+      border-radius: 6px;
+      padding: 9px 12px;
+      font-size: 12px;
+      color: #333;
+      outline: none;
+      direction: ltr;
+      text-align: left;
+    }
+    .ref-copy-btn {
+      background: #006c35;
+      color: #fff;
+      border: none;
+      border-radius: 6px;
+      padding: 9px 14px;
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 13px;
+      letter-spacing: 2px;
+      cursor: pointer;
+      white-space: nowrap;
+      transition: background 0.2s, transform 0.1s;
+    }
+    .ref-copy-btn:active { transform: scale(0.97); background: #004d25; }
+    .ref-copied { font-size: 11px; color: #006c35; font-weight: 700; text-align: center; margin-top: 6px; display: none; }
 
     #confetti-canvas { position:fixed; top:0; left:0; width:100%; height:100%; pointer-events:none; z-index:9999; display:none; }
 
@@ -175,6 +321,16 @@
     .f-dot { width:4px; height:4px; border-radius:50%; }
     .f-orange { background:#ff5c00; }
     .f-green { background:#006c35; }
+
+    .next-reward-bar {
+      background: #fff;
+      border-top: 1px solid #efefef;
+      padding: 10px 14px;
+    }
+    .nrb-label { font-size: 11px; font-weight: 700; color: #555; margin-bottom: 5px; text-align: right; }
+    .nrb-track { background: #ececec; border-radius: 20px; height: 8px; overflow: hidden; }
+    .nrb-fill { height: 100%; border-radius: 20px; background: linear-gradient(90deg, #006c35, #d8ff3c); transition: width 0.6s ease; }
+    .nrb-next { font-size: 10px; color: #ff5c00; font-weight: 700; text-align: left; margin-top: 4px; direction: ltr; }
 
     @media (max-width:640px) {
       .top-banner { padding:8px 14px; gap:8px; }
@@ -195,7 +351,9 @@
       .success { margin:0 18px 14px; }
       .points-card, .ref-link-box { margin-left:18px; margin-right:18px; }
       .phone-code-wrap { width:120px; }
-      .stats-grid { grid-template-columns:1fr; }
+      .rewards-grid { gap:5px; }
+      .reward-card { min-width:70px; padding:8px 8px; }
+      .earn-row { min-width:160px; }
     }
   </style>
 </head>
@@ -281,6 +439,36 @@
           <div class="earn-desc-en">EACH REFERRAL SIGNUP</div>
         </div>
         <div class="earn-pts-badge">+10 PTS</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="rewards-section">
+    <div class="rewards-title">🎁 جوائز النقاط — <span>POINTS REWARDS</span></div>
+    <div class="rewards-grid">
+      <div class="reward-card tier1">
+        <div class="reward-pts">15</div>
+        <div class="reward-pts-label">POINTS نقطة</div>
+        <div class="reward-emoji">🏷️</div>
+        <div class="reward-name">خصم 15% على منتجات Outfit</div>
+      </div>
+      <div class="reward-card tier2">
+        <div class="reward-pts">30</div>
+        <div class="reward-pts-label">POINTS نقطة</div>
+        <div class="reward-emoji">👕</div>
+        <div class="reward-name">قميص Outfit مجاني</div>
+      </div>
+      <div class="reward-card tier3">
+        <div class="reward-pts">60</div>
+        <div class="reward-pts-label">POINTS نقطة</div>
+        <div class="reward-emoji">🎟️</div>
+        <div class="reward-name">دخول مضاعف في السحب</div>
+      </div>
+      <div class="reward-card tier4">
+        <div class="reward-pts">100</div>
+        <div class="reward-pts-label">POINTS نقطة</div>
+        <div class="reward-emoji">👑</div>
+        <div class="reward-name">جائزة VIP خاصة</div>
       </div>
     </div>
   </div>
@@ -438,7 +626,6 @@
         <div class="btn-right" id="btnRight">سجّل الآن</div>
       </button>
     </div>
-
     <div class="msg-box msg-error" id="errorBox"></div>
   </div>
 
@@ -462,13 +649,11 @@
         <div class="pts-unit">POINTS نقطة</div>
       </div>
     </div>
-
     <div class="next-reward-bar">
-      <div class="nrb-label" id="nrbLabel">الجائزة التالية</div>
-      <div class="nrb-track"><div class="nrb-fill" id="nrbFill" style="width:0%"></div></div>
-      <div class="nrb-next" id="nrbNext">15 pts → Discount</div>
+      <div class="nrb-label" id="nrbLabel">الجائزة التالية: خصم 15% — تحتاج <span id="nrbNeeded">5</span> نقاط إضافية</div>
+      <div class="nrb-track"><div class="nrb-fill" id="nrbFill" style="width:67%"></div></div>
+      <div class="nrb-next" id="nrbNext">15 pts → 🏷️ 15% Discount</div>
     </div>
-
     <div class="points-actions">
       <div class="pts-action-row">
         <div class="pts-action-left">
@@ -480,37 +665,16 @@
         </div>
         <div class="pts-badge-done">+10 ✓</div>
       </div>
-
       <div class="pts-action-row">
         <div class="pts-action-left">
           <div class="pts-action-icon">👥</div>
           <div>
-            <div class="pts-action-desc">كل صديق يسجل من رابطك = +10</div>
+            <div class="pts-action-desc">ادعُ أصدقاءك — كل تسجيل = +10</div>
             <div class="pts-action-en">EACH FRIEND SIGNUP = +10 PTS</div>
           </div>
         </div>
         <div class="pts-badge-earn">+10 PTS</div>
       </div>
-    </div>
-
-    <div class="stats-grid">
-      <div class="stat-box">
-        <div class="stat-num" id="refCountNum">0</div>
-        <div class="stat-label">REFERRALS</div>
-      </div>
-      <div class="stat-box">
-        <div class="stat-num" id="refPointsNum">0</div>
-        <div class="stat-label">REF POINTS</div>
-      </div>
-      <div class="stat-box">
-        <div class="stat-num" id="totalPointsNum">10</div>
-        <div class="stat-label">TOTAL POINTS</div>
-      </div>
-    </div>
-
-    <div class="tshirt-box">
-      <div class="tshirt-title" id="tshirtTitle">👕 10 referrals = 1 Free T-Shirt</div>
-      <div class="tshirt-sub" id="tshirtSub">YOU NEED 10 REFERRALS FOR FIRST T-SHIRT</div>
     </div>
   </div>
 
@@ -533,16 +697,41 @@
   </div>
 
   <script>
-    const SCRIPT_URL = 'PASTE_YOUR_GOOGLE_APPS_SCRIPT_WEBAPP_URL_HERE';
+    const SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbyHoZ9U3O8qAUq2c1-nmDhoPNDckGzKRzEYJmD4Byrek0ICp-_w0qi0HcsSfSDFwwgG/exec';
     const WC_DATE = new Date('2026-06-11T00:00:00');
+    const TIERS = [
+      { pts: 15, label: 'خصم 15% — 15% Discount', emoji: '🏷️' },
+      { pts: 30, label: 'قميص Outfit — Outfit Jersey', emoji: '👕' },
+      { pts: 60, label: 'دخول مضاعف — Double Entry', emoji: '🎟️' },
+      { pts: 100, label: 'جائزة VIP — VIP Prize', emoji: '👑' }
+    ];
+
+    const PTS_KEY = 'wc2026_points';
     const TID_KEY = 'wc2026_tid';
 
-    const TIERS = [
-      { pts: 15, label: '🏷️ 15% Discount' },
-      { pts: 30, label: '👕 Outfit Jersey' },
-      { pts: 60, label: '🎟️ Double Entry' },
-      { pts: 100, label: '👑 VIP Prize' }
-    ];
+    function getPoints() { return parseInt(localStorage.getItem(PTS_KEY) || '0'); }
+    function setPoints(n) { localStorage.setItem(PTS_KEY, n); }
+    function addPoints(n) { setPoints(getPoints() + n); refreshPointsUI(); }
+
+    function refreshPointsUI() {
+      const p = getPoints();
+      document.getElementById('userPtsNum').textContent = p;
+      const next = TIERS.find(t => t.pts > p);
+
+      if (next) {
+        const prev = TIERS.filter(t => t.pts <= p).pop();
+        const base = prev ? prev.pts : 0;
+        const pct = Math.min(100, Math.round(((p - base) / (next.pts - base)) * 100));
+        document.getElementById('nrbFill').style.width = pct + '%';
+        document.getElementById('nrbNeeded').textContent = next.pts - p;
+        document.getElementById('nrbLabel').innerHTML = `الجائزة التالية: ${next.emoji} ${next.label} — تحتاج <span id="nrbNeeded">${next.pts - p}</span> نقطة إضافية`;
+        document.getElementById('nrbNext').textContent = `${next.pts} pts → ${next.emoji} ${next.label}`;
+      } else {
+        document.getElementById('nrbFill').style.width = '100%';
+        document.getElementById('nrbLabel').textContent = '🏆 وصلت للمستوى الأعلى! — MAX LEVEL REACHED!';
+        document.getElementById('nrbNext').textContent = '✓ ALL REWARDS UNLOCKED';
+      }
+    }
 
     function updateCountdown() {
       const diff = WC_DATE - new Date();
@@ -695,7 +884,7 @@
     function copyRefLink(){
       const input = document.getElementById('refLinkInput');
       input.select();
-      input.setSelectionRange(0,99999);
+      input.setSelectionRange(0,9999);
       try {
         document.execCommand('copy');
       } catch(e) {
@@ -704,61 +893,6 @@
       const el = document.getElementById('refCopied');
       el.style.display = 'block';
       setTimeout(()=>{ el.style.display='none'; }, 2500);
-    }
-
-    function updateTierProgress(totalPoints){
-      const next = TIERS.find(t => t.pts > totalPoints);
-      const fill = document.getElementById('nrbFill');
-      const label = document.getElementById('nrbLabel');
-      const nextTxt = document.getElementById('nrbNext');
-
-      if (next) {
-        const prevTier = [...TIERS].reverse().find(t => t.pts <= totalPoints);
-        const prevPts = prevTier ? prevTier.pts : 0;
-        const range = next.pts - prevPts;
-        const current = totalPoints - prevPts;
-        const pct = Math.max(0, Math.min(100, Math.round((current / range) * 100)));
-
-        fill.style.width = pct + '%';
-        label.textContent = 'الجائزة التالية: ' + next.label + ' — تحتاج ' + (next.pts - totalPoints) + ' نقطة إضافية';
-        nextTxt.textContent = next.pts + ' pts → ' + next.label;
-      } else {
-        fill.style.width = '100%';
-        label.textContent = '🏆 وصلت للمستوى الأعلى! — MAX LEVEL REACHED!';
-        nextTxt.textContent = 'ALL REWARDS UNLOCKED';
-      }
-    }
-
-    function updateTshirtBox(referralCount, tshirtsEarned, nextTshirtIn){
-      const title = document.getElementById('tshirtTitle');
-      const sub = document.getElementById('tshirtSub');
-
-      if (tshirtsEarned > 0) {
-        title.textContent = '👕 Free T-Shirts Earned: ' + tshirtsEarned;
-        sub.textContent = 'NEXT T-SHIRT IN ' + nextTshirtIn + ' REFERRALS';
-      } else {
-        title.textContent = '👕 10 referrals = 1 Free T-Shirt';
-        sub.textContent = 'YOU NEED ' + nextTshirtIn + ' MORE REFERRALS';
-      }
-    }
-
-    async function loadReferralStats(entryCode){
-      try {
-        const res = await fetch(SCRIPT_URL + '?entryCode=' + encodeURIComponent(entryCode));
-        const data = await res.json();
-
-        if (data.status !== 'success') return;
-
-        document.getElementById('refCountNum').textContent = data.referralCount || 0;
-        document.getElementById('refPointsNum').textContent = data.referralPoints || 0;
-        document.getElementById('totalPointsNum').textContent = data.totalPoints || 10;
-        document.getElementById('userPtsNum').textContent = data.totalPoints || 10;
-
-        updateTierProgress(data.totalPoints || 10);
-        updateTshirtBox(data.referralCount || 0, data.tshirtsEarned || 0, data.nextTshirtIn || 10);
-      } catch (err) {
-        console.error('Stats load failed', err);
-      }
     }
 
     async function doSubmit(){
@@ -773,6 +907,7 @@
       body.append('nationality', els.nat.value);
       body.append('city', els.city.value.trim());
       body.append('number', fullPhone);
+
       if(incomingRef) body.append('referredBy', incomingRef);
 
       try {
@@ -792,6 +927,10 @@
         els.ticketId.textContent = tid;
         localStorage.setItem(TID_KEY, tid);
 
+        const startPts = incomingRef ? 20 : 10;
+        setPoints(startPts);
+        refreshPointsUI();
+
         const refLink = buildRefLink(tid);
         document.getElementById('refLinkInput').value = refLink;
 
@@ -801,8 +940,6 @@
         document.getElementById('refLinkBox').style.display = 'block';
 
         launchConfetti();
-        await loadReferralStats(tid);
-
         setTimeout(()=>els.success.scrollIntoView({behavior:'smooth',block:'center'}), 100);
 
       } catch(err){
@@ -813,20 +950,6 @@
         setLoading(false);
       }
     }
-
-    window.addEventListener('load', async () => {
-      const savedTid = localStorage.getItem(TID_KEY);
-      if (savedTid) {
-        document.getElementById('ticketId').textContent = savedTid;
-        document.getElementById('refLinkInput').value = buildRefLink(savedTid);
-        document.getElementById('pointsCard').style.display = 'block';
-        document.getElementById('refLinkBox').style.display = 'block';
-        await loadReferralStats(savedTid);
-      } else {
-        updateTierProgress(10);
-        updateTshirtBox(0, 0, 10);
-      }
-    });
   </script>
 </body>
 </html>
