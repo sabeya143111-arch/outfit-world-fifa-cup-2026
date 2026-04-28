@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>مسابقة كأس العالم 2026 — Outfit × همكس</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700;900&family=Bebas+Neue&display=swap" rel="stylesheet">
   <style>
@@ -334,17 +334,6 @@
     .btn-whatsapp-en { font-family:'Bebas Neue',sans-serif; font-size:12px; color:rgba(255,255,255,0.84); letter-spacing:2px; }
     .wa-icon { width:22px; height:22px; flex-shrink:0; }
 
-    /* HOW SECTION */
-    .how-section { background:#f9f9f9; border-top:1px solid #ececec; border-bottom:1px solid #ececec; padding:20px 28px; margin-bottom:4px; }
-    .how-title { text-align:center; font-family:'Bebas Neue',sans-serif; font-size:11px; color:#006c35; letter-spacing:4px; margin-bottom:14px; }
-    .how-steps { display:flex; justify-content:center; gap:0; flex-wrap:wrap; }
-    .how-step { display:flex; flex-direction:column; align-items:center; gap:6px; flex:1; min-width:80px; max-width:120px; padding:0 8px; text-align:center; position:relative; }
-    .how-step:not(:last-child)::after { content:''; position:absolute; left:0; top:18px; width:1px; height:28px; background:#ddd; }
-    .how-num { width:34px; height:34px; border-radius:50%; display:flex; align-items:center; justify-content:center; font-family:'Bebas Neue',sans-serif; font-size:16px; color:#fff; }
-    .how-num.orange { background:#ff5c00; }
-    .how-num.green { background:#006c35; }
-    .how-step-text { font-size:11px; font-weight:700; color:#333; line-height:1.4; }
-
     #confetti-canvas { position:fixed; top:0; left:0; width:100%; height:100%; pointer-events:none; z-index:9999; display:none; }
 
     .footer { text-align:center; padding:16px; color:#111; font-family:'Bebas Neue',sans-serif; font-size:11px; letter-spacing:3px; border-top:1px solid #ececec; display:flex; align-items:center; justify-content:center; gap:12px; flex-wrap:wrap; background:#fff; }
@@ -384,7 +373,6 @@
       .points-card, .ref-link-box { margin-left:18px; margin-right:18px; }
       .btn-whatsapp { margin:0 18px 18px; }
       .phone-code-wrap { width:120px; }
-      .how-section { padding:16px 18px; }
       .rewards-grid { gap:5px; }
       .reward-card { min-width:70px; padding:8px 8px; }
       .earn-row { min-width:160px; }
@@ -542,17 +530,6 @@
         <div class="hd-dot"></div>
         <div class="hd-line hd-right"></div>
       </div>
-    </div>
-  </div>
-
-  <!-- HOW TO ENTER -->
-  <div class="how-section">
-    <div class="how-title">كيف تشارك — HOW TO ENTER</div>
-    <div class="how-steps">
-      <div class="how-step"><div class="how-num orange">1</div><div class="how-step-text">سجّل بياناتك</div></div>
-      <div class="how-step"><div class="how-num green">2</div><div class="how-step-text">احصل على رقم المشاركة</div></div>
-      <div class="how-step"><div class="how-num orange">3</div><div class="how-step-text">شارك رابطك واكسب نقاط</div></div>
-      <div class="how-step"><div class="how-num green">4</div><div class="how-step-text">انتظر السحب 🎉</div></div>
     </div>
   </div>
 
@@ -794,7 +771,6 @@
       { pts: 100, label: 'جائزة VIP — VIP Prize', emoji: '👑' }
     ];
 
-    /* ── POINTS SYSTEM (localStorage) ── */
     const PTS_KEY = 'wc2026_points';
     const TID_KEY = 'wc2026_tid';
     const WA_KEY  = 'wc2026_wa_shared';
@@ -821,7 +797,6 @@
         document.getElementById('nrbNext').textContent = '✓ ALL REWARDS UNLOCKED';
       }
 
-      // WhatsApp share badge
       const shared = localStorage.getItem(WA_KEY);
       if (shared) {
         const badge = document.getElementById('waBadge');
@@ -830,7 +805,6 @@
       }
     }
 
-    /* ── COUNTDOWN ── */
     function updateCountdown() {
       const diff = WC_DATE - new Date();
       if (diff <= 0) {
@@ -849,7 +823,6 @@
     }
     updateCountdown(); setInterval(updateCountdown, 1000);
 
-    /* ── LIVE COUNT ── */
     (function(){
       const el = document.getElementById('liveCount');
       const EPOCH = new Date('2026-04-01T00:00:00Z').getTime();
@@ -865,7 +838,6 @@
       setInterval(()=>{ el.textContent = getCount(); }, 30000);
     })();
 
-    /* ── CONFETTI ── */
     const canvas = document.getElementById('confetti-canvas');
     const ctx = canvas.getContext('2d');
     let particles=[], animFrame;
@@ -893,14 +865,12 @@
       else { canvas.style.display='none'; ctx.clearRect(0,0,canvas.width,canvas.height); }
     }
 
-    /* ── REFERRAL DETECTION ── */
     const urlParams = new URLSearchParams(window.location.search);
     const incomingRef = urlParams.get('ref') || '';
     if (incomingRef) {
       document.getElementById('refNotice').classList.add('visible');
     }
 
-    /* ── FORM ELEMENTS ── */
     const els = {
       name: document.getElementById('f-name'),
       nat: document.getElementById('f-nat'),
@@ -944,7 +914,6 @@
       els.btnRight.textContent=on?'جاري الإرسال...':'سجّل الآن';
     }
 
-    /* ── REFERRAL LINK ── */
     function buildRefLink(tid){
       const base = window.location.href.split('?')[0];
       return base + '?ref=' + encodeURIComponent(tid);
@@ -958,13 +927,11 @@
       setTimeout(()=>{ el.style.display='none'; }, 2500);
     }
 
-    /* ── WHATSAPP ── */
     function buildWaLink(name, ticketId, refLink){
       const msg = `🇸🇦 لقد سجّلت في مسابقة كأس العالم 2026!\n\nالاسم: ${name}\nرقم المشاركة: ${ticketId}\n\n🔗 سجّل أنت أيضاً واكسب نقاط:\n${refLink}\n\n✅ OUTFIT × همكس — FIFA WORLD CUP 2026`;
       return 'https://wa.me/?text='+encodeURIComponent(msg);
     }
 
-    /* ── SUBMIT ── */
     async function doSubmit(){
       if(!validateForm()) return;
       const codeVal=els.code.value.replace('-CA','');
@@ -992,26 +959,21 @@
         els.ticketId.textContent=tid;
         localStorage.setItem(TID_KEY, tid);
 
-        // Award points: 10 for register + 10 bonus if referred
         const startPts = incomingRef ? 20 : 10;
         setPoints(startPts);
         refreshPointsUI();
 
-        // Build referral link
         const refLink = buildRefLink(tid);
         document.getElementById('refLinkInput').value = refLink;
 
-        // WhatsApp link includes referral link
         els.waBtn.href = buildWaLink(els.name.value.trim(), tid, refLink);
 
-        // Show success elements
         els.form.style.display='none';
         els.success.style.display='block';
         document.getElementById('pointsCard').style.display='block';
         document.getElementById('refLinkBox').style.display='block';
         els.waBtn.style.display='flex';
 
-        // WhatsApp share awards +5 pts (once)
         els.waBtn.addEventListener('click', function onWaClick(){
           if(!localStorage.getItem(WA_KEY)){
             localStorage.setItem(WA_KEY, '1');
