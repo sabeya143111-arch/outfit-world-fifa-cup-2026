@@ -10,9 +10,11 @@
   <style>
     * { box-sizing: border-box; margin: 0; padding: 0; }
     body { background:#ffffff; font-family:'Cairo',sans-serif; direction:rtl; min-height:100vh; color:#111; }
+
     .top-banner { background:#006c35; padding:10px 28px; display:flex; align-items:center; justify-content:center; gap:14px; flex-wrap:wrap; text-align:center; }
     .banner-text { font-family:'Bebas Neue',sans-serif; font-size:13px; color:#fff; letter-spacing:4px; }
     .banner-sub { font-size:11px; color:rgba(255,255,255,0.85); font-weight:600; }
+
     .countdown-bar { background:#f3f3f3; border-bottom:1px solid #e3e3e3; padding:8px 20px; display:flex; align-items:center; justify-content:center; gap:8px; flex-wrap:wrap; }
     .cd-label { font-family:'Bebas Neue',sans-serif; font-size:11px; color:#ff5c00; letter-spacing:3px; }
     .cd-label-ar { font-size:10px; color:#666; font-weight:600; }
@@ -78,6 +80,7 @@
     .finput { background:#f7f7f7; border:1.5px solid #dcdcdc; border-radius:6px; padding:13px 15px; color:#111; font-family:'Cairo',sans-serif; font-size:14px; direction:rtl; outline:none; transition:border-color 0.2s,background 0.2s; width:100%; margin-top:6px; }
     .finput:focus { border-color:#ff5c00; background:#fff7f2; }
     .finput::placeholder { color:#8a8a8a; font-size:13px; }
+
     .fselect { background:#f7f7f7; border:1.5px solid #dcdcdc; border-radius:6px; padding:13px 15px; color:#111; font-family:'Cairo',sans-serif; font-size:14px; direction:rtl; outline:none; transition:border-color 0.2s,background 0.2s; width:100%; margin-top:6px; appearance:none; -webkit-appearance:none; background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%23ff5c00' stroke-width='2' fill='none' stroke-linecap='round'/%3E%3C/svg%3E"); background-repeat:no-repeat; background-position:left 14px center; padding-left:36px; cursor:pointer; }
     .fselect:focus { border-color:#ff5c00; background-color:#fff7f2; }
     .fselect option { background:#ffffff; color:#111; }
@@ -86,6 +89,7 @@
     .phone-code-wrap { flex-shrink:0; width:140px; }
     .phone-code-select { background:#f7f7f7; border:1.5px solid #dcdcdc; border-radius:6px; padding:13px 10px; color:#111; font-family:'Cairo',sans-serif; font-size:13px; direction:ltr; outline:none; transition:border-color 0.2s,background 0.2s; width:100%; appearance:none; -webkit-appearance:none; background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='6' viewBox='0 0 10 6'%3E%3Cpath d='M1 1l4 4 4-4' stroke='%23ff5c00' stroke-width='1.5' fill='none' stroke-linecap='round'/%3E%3C/svg%3E"); background-repeat:no-repeat; background-position:right 10px center; padding-right:28px; cursor:pointer; text-align:left; }
     .phone-code-select:focus { border-color:#ff5c00; background-color:#fff7f2; }
+
     .phone-number-input { flex:1; background:#f7f7f7; border:1.5px solid #dcdcdc; border-radius:6px; padding:13px 15px; color:#111; font-family:'Cairo',sans-serif; font-size:14px; direction:ltr; outline:none; transition:border-color 0.2s,background 0.2s; text-align:left; }
     .phone-number-input:focus { border-color:#ff5c00; background:#fff7f2; }
     .phone-number-input::placeholder { color:#8a8a8a; font-size:13px; }
@@ -135,7 +139,7 @@
     .nrb-label { font-size:11px; font-weight:700; color:#555; margin-bottom:5px; text-align:right; }
     .nrb-track { background:#ececec; border-radius:20px; height:8px; overflow:hidden; }
     .nrb-fill { height:100%; border-radius:20px; background:linear-gradient(90deg,#006c35,#d8ff3c); transition:width 0.6s ease; }
-    .nrb-next { font-size:10px; color:#ff5c00; font-weight:700; text-align:left; margin-top:4px; direction:ltr; }
+    .nrb-next { font-size:10px; color:#ff5c00; font-weight:700; text-align:left; direction:ltr; margin-top:4px; }
 
     .points-actions { background:#f9f9f9; padding:12px 16px; display:flex; flex-direction:column; gap:8px; }
     .pts-action-row { display:flex; align-items:center; justify-content:space-between; background:#fff; border:1px solid #ececec; border-radius:8px; padding:10px 12px; gap:10px; }
@@ -146,25 +150,23 @@
     .pts-badge-done { background:#006c35; color:#fff; font-family:'Bebas Neue',sans-serif; font-size:12px; letter-spacing:1px; padding:3px 10px; border-radius:20px; white-space:nowrap; }
     .pts-badge-earn { background:#ff5c00; color:#fff; font-family:'Bebas Neue',sans-serif; font-size:12px; letter-spacing:1px; padding:3px 10px; border-radius:20px; white-space:nowrap; }
 
+    .stats-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:8px; padding:12px 16px; background:#fff; border-top:1px solid #efefef; }
+    .stat-box { background:#f7f7f7; border:1px solid #ececec; border-radius:8px; padding:10px; text-align:center; }
+    .stat-num { font-family:'Bebas Neue',sans-serif; font-size:24px; color:#006c35; line-height:1; }
+    .stat-label { font-size:10px; font-weight:700; color:#666; margin-top:4px; }
+
+    .tshirt-box { background:linear-gradient(135deg,#fff8e8,#fff2cc); border-top:1px solid #f1df9a; padding:12px 16px; text-align:center; }
+    .tshirt-title { font-size:12px; font-weight:800; color:#7a5a00; }
+    .tshirt-sub { font-family:'Bebas Neue',sans-serif; font-size:10px; letter-spacing:2px; color:#a97b00; margin-top:4px; }
+
     .ref-link-box { display:none; margin:0 28px 12px; background:#f0fff4; border:1.5px dashed #006c35; border-radius:10px; padding:14px 16px; }
     .ref-link-title { font-size:13px; font-weight:800; color:#006c35; margin-bottom:4px; text-align:right; }
     .ref-link-sub { font-family:'Bebas Neue',sans-serif; font-size:10px; color:#888; letter-spacing:2px; margin-bottom:8px; text-align:right; }
     .ref-link-row { display:flex; gap:6px; align-items:center; direction:ltr; }
     .ref-link-input { flex:1; background:#fff; border:1px solid #c3e6cb; border-radius:6px; padding:9px 12px; font-size:12px; color:#333; outline:none; direction:ltr; text-align:left; }
-    .ref-copy-btn { background:#006c35; color:#fff; border:none; border-radius:6px; padding:9px 14px; font-family:'Bebas Neue',sans-serif; font-size:13px; letter-spacing:2px; cursor:pointer; white-space:nowrap; transition:background 0.2s, transform 0.1s; }
+    .ref-copy-btn { background:#006c35; color:#fff; border:none; border-radius:6px; padding:9px 14px; font-family:'Bebas Neue',sans-serif; font-size:13px; letter-spacing:2px; cursor:pointer; white-space:nowrap; transition:background 0.2s,transform 0.1s; }
     .ref-copy-btn:active { transform:scale(0.97); background:#004d25; }
     .ref-copied { font-size:11px; color:#006c35; font-weight:700; text-align:center; margin-top:6px; display:none; }
-
-    .ref-stats-box { display:none; margin:0 28px 14px; background:#fff; border:1.5px solid #e7e7e7; border-radius:10px; padding:14px 16px; }
-    .stats-title { font-size:13px; font-weight:800; color:#111; margin-bottom:8px; text-align:right; }
-    .stats-grid { display:grid; grid-template-columns:repeat(2,minmax(120px,1fr)); gap:8px; }
-    .stat-item { background:#f8f8f8; border-radius:8px; padding:10px; text-align:center; }
-    .stat-label { font-size:11px; color:#777; }
-    .stat-value { font-family:'Bebas Neue',sans-serif; font-size:26px; }
-    .stat-green { color:#006c35; }
-    .stat-orange { color:#ff5c00; }
-    .stat-dark { color:#111; }
-    .tshirt-progress-text { margin-top:10px; font-size:12px; font-weight:700; color:#333; text-align:center; }
 
     #confetti-canvas { position:fixed; top:0; left:0; width:100%; height:100%; pointer-events:none; z-index:9999; display:none; }
 
@@ -190,9 +192,10 @@
       .prize-sep { display:none; }
       .btn-left, .btn-right { padding:14px; }
       .lbl-en { font-size:13px; }
-      .success, .points-card, .ref-link-box, .ref-stats-box { margin-left:18px; margin-right:18px; }
+      .success { margin:0 18px 14px; }
+      .points-card, .ref-link-box { margin-left:18px; margin-right:18px; }
       .phone-code-wrap { width:120px; }
-      .earn-row { min-width:160px; }
+      .stats-grid { grid-template-columns:1fr; }
     }
   </style>
 </head>
@@ -235,13 +238,29 @@
   </div>
 
   <div class="prize-strip">
-    <div class="prize-item"><div class="prize-icon">🏆</div><div class="prize-label">GRAND PRIZE</div><div class="prize-val">تذكرة كأس العالم</div></div>
+    <div class="prize-item">
+      <div class="prize-icon">🏆</div>
+      <div class="prize-label">GRAND PRIZE</div>
+      <div class="prize-val">تذكرة كأس العالم</div>
+    </div>
     <div class="prize-sep"></div>
-    <div class="prize-item"><div class="prize-icon">👕</div><div class="prize-label">2ND PLACE</div><div class="prize-val">طقم Outfit رسمي</div></div>
+    <div class="prize-item">
+      <div class="prize-icon">👕</div>
+      <div class="prize-label">2ND PLACE</div>
+      <div class="prize-val">طقم Outfit رسمي</div>
+    </div>
     <div class="prize-sep"></div>
-    <div class="prize-item"><div class="prize-icon">🎁</div><div class="prize-label">3RD PLACE</div><div class="prize-val">هدية همكس المميزة</div></div>
+    <div class="prize-item">
+      <div class="prize-icon">🎁</div>
+      <div class="prize-label">3RD PLACE</div>
+      <div class="prize-val">هدية همكس المميزة</div>
+    </div>
     <div class="prize-sep"></div>
-    <div class="prize-item"><div class="prize-icon">📅</div><div class="prize-label">DRAW DATE</div><div class="prize-val">11 يونيو 2026</div></div>
+    <div class="prize-item">
+      <div class="prize-icon">📅</div>
+      <div class="prize-label">DRAW DATE</div>
+      <div class="prize-val">11 يونيو 2026</div>
+    </div>
   </div>
 
   <div class="earn-section">
@@ -268,7 +287,9 @@
 
   <div class="counter-bar">
     <div class="counter-pulse"></div>
-    <span class="counter-text">انضم <span class="counter-num" id="liveCount">—</span> مشارك حتى الآن</span>
+    <span class="counter-text">
+      انضم <span class="counter-num" id="liveCount">—</span> مشارك حتى الآن
+    </span>
     <span style="font-size:10px;color:#999;font-weight:600;">LIVE REGISTRATIONS</span>
   </div>
 
@@ -417,6 +438,7 @@
         <div class="btn-right" id="btnRight">سجّل الآن</div>
       </button>
     </div>
+
     <div class="msg-box msg-error" id="errorBox"></div>
   </div>
 
@@ -440,11 +462,13 @@
         <div class="pts-unit">POINTS نقطة</div>
       </div>
     </div>
+
     <div class="next-reward-bar">
-      <div class="nrb-label" id="nrbLabel">الجائزة التالية: خصم 15% — تحتاج <span id="nrbNeeded">5</span> نقاط إضافية</div>
-      <div class="nrb-track"><div class="nrb-fill" id="nrbFill" style="width:67%"></div></div>
-      <div class="nrb-next" id="nrbNext">15 pts → 🏷️ 15% Discount</div>
+      <div class="nrb-label" id="nrbLabel">الجائزة التالية</div>
+      <div class="nrb-track"><div class="nrb-fill" id="nrbFill" style="width:0%"></div></div>
+      <div class="nrb-next" id="nrbNext">15 pts → Discount</div>
     </div>
+
     <div class="points-actions">
       <div class="pts-action-row">
         <div class="pts-action-left">
@@ -456,16 +480,37 @@
         </div>
         <div class="pts-badge-done">+10 ✓</div>
       </div>
+
       <div class="pts-action-row">
         <div class="pts-action-left">
           <div class="pts-action-icon">👥</div>
           <div>
-            <div class="pts-action-desc">ادعُ أصدقاءك — كل تسجيل = +10</div>
+            <div class="pts-action-desc">كل صديق يسجل من رابطك = +10</div>
             <div class="pts-action-en">EACH FRIEND SIGNUP = +10 PTS</div>
           </div>
         </div>
         <div class="pts-badge-earn">+10 PTS</div>
       </div>
+    </div>
+
+    <div class="stats-grid">
+      <div class="stat-box">
+        <div class="stat-num" id="refCountNum">0</div>
+        <div class="stat-label">REFERRALS</div>
+      </div>
+      <div class="stat-box">
+        <div class="stat-num" id="refPointsNum">0</div>
+        <div class="stat-label">REF POINTS</div>
+      </div>
+      <div class="stat-box">
+        <div class="stat-num" id="totalPointsNum">10</div>
+        <div class="stat-label">TOTAL POINTS</div>
+      </div>
+    </div>
+
+    <div class="tshirt-box">
+      <div class="tshirt-title" id="tshirtTitle">👕 10 referrals = 1 Free T-Shirt</div>
+      <div class="tshirt-sub" id="tshirtSub">YOU NEED 10 REFERRALS FOR FIRST T-SHIRT</div>
     </div>
   </div>
 
@@ -479,29 +524,6 @@
     <div class="ref-copied" id="refCopied">✓ تم النسخ! — Copied!</div>
   </div>
 
-  <div class="ref-stats-box" id="refStatsBox">
-    <div class="stats-title">📊 إحصائيات الدعوات — Referral Stats</div>
-    <div class="stats-grid">
-      <div class="stat-item">
-        <div class="stat-label">إجمالي الإحالات</div>
-        <div id="myRefCount" class="stat-value stat-green">0</div>
-      </div>
-      <div class="stat-item">
-        <div class="stat-label">نقاط الإحالة</div>
-        <div id="myRefPoints" class="stat-value stat-orange">0</div>
-      </div>
-      <div class="stat-item">
-        <div class="stat-label">إجمالي النقاط</div>
-        <div id="myTotalPoints" class="stat-value stat-dark">10</div>
-      </div>
-      <div class="stat-item">
-        <div class="stat-label">التيشيرتات المستحقة</div>
-        <div id="myTshirts" class="stat-value stat-green">0</div>
-      </div>
-    </div>
-    <div id="tshirtProgressText" class="tshirt-progress-text">10 referrals = 1 T-shirt</div>
-  </div>
-
   <div class="footer">
     <div class="f-dot f-orange"></div>
     <span>OUTFIT © 2026</span>
@@ -511,14 +533,15 @@
   </div>
 
   <script>
-    const SCRIPT_URL = 'PASTE_YOUR_NEW_DEPLOYED_SCRIPT_URL_HERE';
+    const SCRIPT_URL = 'PASTE_YOUR_GOOGLE_APPS_SCRIPT_WEBAPP_URL_HERE';
     const WC_DATE = new Date('2026-06-11T00:00:00');
     const TID_KEY = 'wc2026_tid';
+
     const TIERS = [
-      { pts: 15, label: 'خصم 15% — 15% Discount', emoji: '🏷️' },
-      { pts: 30, label: 'قميص Outfit — Outfit Jersey', emoji: '👕' },
-      { pts: 60, label: 'دخول مضاعف — Double Entry', emoji: '🎟️' },
-      { pts: 100, label: 'جائزة VIP — VIP Prize', emoji: '👑' }
+      { pts: 15, label: '🏷️ 15% Discount' },
+      { pts: 30, label: '👕 Outfit Jersey' },
+      { pts: 60, label: '🎟️ Double Entry' },
+      { pts: 100, label: '👑 VIP Prize' }
     ];
 
     function updateCountdown() {
@@ -559,129 +582,53 @@
     const ctx = canvas.getContext('2d');
     let particles = [], animFrame;
 
-    function launchConfetti() {
+    function launchConfetti(){
       canvas.width = window.innerWidth;
       canvas.height = window.innerHeight;
       canvas.style.display = 'block';
       particles = [];
       const colors = ['#ff5c00','#006c35','#ffffff','#d8ff3c','#ffb347','#00cc55'];
-
-      for (let i = 0; i < 180; i++) {
+      for(let i=0;i<180;i++){
         particles.push({
-          x: Math.random() * canvas.width,
-          y: -20 - Math.random() * 300,
-          w: 6 + Math.random() * 8,
-          h: 10 + Math.random() * 6,
-          color: colors[Math.floor(Math.random() * colors.length)],
-          rot: Math.random() * 360,
-          rotSpeed: (Math.random() - 0.5) * 7,
-          vy: 2.5 + Math.random() * 4,
-          vx: (Math.random() - 0.5) * 2.5,
-          opacity: 1
+          x:Math.random()*canvas.width,
+          y:-20-Math.random()*300,
+          w:6+Math.random()*8,
+          h:10+Math.random()*6,
+          color:colors[Math.floor(Math.random()*colors.length)],
+          rot:Math.random()*360,
+          rotSpeed:(Math.random()-0.5)*7,
+          vy:2.5+Math.random()*4,
+          vx:(Math.random()-0.5)*2.5,
+          opacity:1
         });
       }
       cancelAnimationFrame(animFrame);
       drawConfetti();
     }
 
-    function drawConfetti() {
-      ctx.clearRect(0, 0, canvas.width, canvas.height);
+    function drawConfetti(){
+      ctx.clearRect(0,0,canvas.width,canvas.height);
       let alive = false;
-
-      particles.forEach(p => {
+      particles.forEach(p=>{
         p.y += p.vy;
         p.x += p.vx;
         p.rot += p.rotSpeed;
-
-        if (p.y > canvas.height * 0.7) p.opacity -= 0.018;
-
-        if (p.opacity > 0 && p.y < canvas.height + 40) {
+        if(p.y > canvas.height * 0.7) p.opacity -= 0.018;
+        if(p.opacity > 0 && p.y < canvas.height + 40){
           alive = true;
           ctx.save();
-          ctx.globalAlpha = Math.max(0, p.opacity);
-          ctx.translate(p.x, p.y);
-          ctx.rotate(p.rot * Math.PI / 180);
+          ctx.globalAlpha = Math.max(0,p.opacity);
+          ctx.translate(p.x,p.y);
+          ctx.rotate(p.rot*Math.PI/180);
           ctx.fillStyle = p.color;
-          ctx.fillRect(-p.w/2, -p.h/2, p.w, p.h);
+          ctx.fillRect(-p.w/2,-p.h/2,p.w,p.h);
           ctx.restore();
         }
       });
-
-      if (alive) animFrame = requestAnimationFrame(drawConfetti);
+      if(alive) animFrame = requestAnimationFrame(drawConfetti);
       else {
         canvas.style.display = 'none';
-        ctx.clearRect(0, 0, canvas.width, canvas.height);
-      }
-    }
-
-    function buildRefLink(tid) {
-      const base = window.location.href.split('?')[0];
-      return base + '?ref=' + encodeURIComponent(tid);
-    }
-
-    function copyRefLink() {
-      const input = document.getElementById('refLinkInput');
-      input.select();
-      input.setSelectionRange(0,9999);
-      try {
-        document.execCommand('copy');
-      } catch(e) {
-        navigator.clipboard.writeText(input.value);
-      }
-      const el = document.getElementById('refCopied');
-      el.style.display = 'block';
-      setTimeout(() => { el.style.display = 'none'; }, 2500);
-    }
-
-    function updateRewardProgress(totalPoints) {
-      document.getElementById('userPtsNum').textContent = totalPoints;
-
-      const next = TIERS.find(t => t.pts > totalPoints);
-      if (next) {
-        const prev = TIERS.filter(t => t.pts <= totalPoints).pop();
-        const base = prev ? prev.pts : 0;
-        const pct = Math.min(100, Math.round(((totalPoints - base) / (next.pts - base)) * 100));
-        document.getElementById('nrbFill').style.width = pct + '%';
-        document.getElementById('nrbLabel').innerHTML = `الجائزة التالية: ${next.emoji} ${next.label} — تحتاج <span id="nrbNeeded">${next.pts - totalPoints}</span> نقاط إضافية`;
-        document.getElementById('nrbNext').textContent = `${next.pts} pts → ${next.emoji} ${next.label}`;
-      } else {
-        document.getElementById('nrbFill').style.width = '100%';
-        document.getElementById('nrbLabel').textContent = '🏆 وصلت للمستوى الأعلى! — MAX LEVEL REACHED!';
-        document.getElementById('nrbNext').textContent = '✓ ALL REWARDS UNLOCKED';
-      }
-    }
-
-    async function loadReferralStats() {
-      const tid = localStorage.getItem(TID_KEY);
-      if (!tid) return;
-
-      try {
-        const res = await fetch(SCRIPT_URL + '?entryCode=' + encodeURIComponent(tid));
-        const data = await res.json();
-
-        if (data.status === 'success') {
-          document.getElementById('pointsCard').style.display = 'block';
-          document.getElementById('refLinkBox').style.display = 'block';
-          document.getElementById('refStatsBox').style.display = 'block';
-
-          document.getElementById('ticketId').textContent = data.entryCode || tid;
-          document.getElementById('refLinkInput').value = buildRefLink(tid);
-
-          document.getElementById('myRefCount').textContent = data.referralCount || 0;
-          document.getElementById('myRefPoints').textContent = data.referralPoints || 0;
-          document.getElementById('myTotalPoints').textContent = data.totalPoints || 10;
-          document.getElementById('myTshirts').textContent = data.tshirtsEarned || 0;
-
-          if ((data.referralCount || 0) > 0 && (data.referralCount % 10 === 0)) {
-            document.getElementById('tshirtProgressText').textContent = '🎉 T-shirt unlocked!';
-          } else {
-            document.getElementById('tshirtProgressText').textContent = `${data.nextTshirtIn || 10} referrals more for 1 T-shirt`;
-          }
-
-          updateRewardProgress(data.totalPoints || 10);
-        }
-      } catch (err) {
-        console.error('Failed to load referral stats', err);
+        ctx.clearRect(0,0,canvas.width,canvas.height);
       }
     }
 
@@ -712,36 +659,110 @@
       ticketId: document.getElementById('ticketId')
     };
 
-    function hideErrors() {
-      ['errName','errNat','errCity','errNum','errTerms'].forEach(k => els[k].style.display = 'none');
-      els.errorBox.style.display = 'none';
-      els.errorBox.textContent = '';
+    function hideErrors(){
+      ['errName','errNat','errCity','errNum','errTerms'].forEach(k=>els[k].style.display='none');
+      els.errorBox.style.display='none';
+      els.errorBox.textContent='';
     }
 
-    function validateForm() {
+    function validateForm(){
       hideErrors();
       let valid = true;
       const name = els.name.value.trim();
       const city = els.city.value.trim();
       const digits = els.num.value.trim().replace(/\D/g,'');
 
-      if (!name || name.length < 3) { els.errName.style.display = 'block'; valid = false; }
-      if (!els.nat.value) { els.errNat.style.display = 'block'; valid = false; }
-      if (!city || city.length < 2) { els.errCity.style.display = 'block'; valid = false; }
-      if (!/^[0-9]{7,15}$/.test(digits)) { els.errNum.style.display = 'block'; valid = false; }
-      if (!els.terms.checked) { els.errTerms.style.display = 'block'; valid = false; }
+      if(!name || name.length < 3){ els.errName.style.display='block'; valid=false; }
+      if(!els.nat.value){ els.errNat.style.display='block'; valid=false; }
+      if(!city || city.length < 2){ els.errCity.style.display='block'; valid=false; }
+      if(!/^[0-9]{7,15}$/.test(digits)){ els.errNum.style.display='block'; valid=false; }
+      if(!els.terms.checked){ els.errTerms.style.display='block'; valid=false; }
 
       return valid;
     }
 
-    function setLoading(on) {
+    function setLoading(on){
       els.submitBtn.disabled = on;
       els.btnLeft.textContent = on ? 'SENDING...' : 'REGISTER';
       els.btnRight.textContent = on ? 'جاري الإرسال...' : 'سجّل الآن';
     }
 
-    async function doSubmit() {
-      if (!validateForm()) return;
+    function buildRefLink(tid){
+      const base = window.location.href.split('?')[0];
+      return base + '?ref=' + encodeURIComponent(tid);
+    }
+
+    function copyRefLink(){
+      const input = document.getElementById('refLinkInput');
+      input.select();
+      input.setSelectionRange(0,99999);
+      try {
+        document.execCommand('copy');
+      } catch(e) {
+        navigator.clipboard.writeText(input.value);
+      }
+      const el = document.getElementById('refCopied');
+      el.style.display = 'block';
+      setTimeout(()=>{ el.style.display='none'; }, 2500);
+    }
+
+    function updateTierProgress(totalPoints){
+      const next = TIERS.find(t => t.pts > totalPoints);
+      const fill = document.getElementById('nrbFill');
+      const label = document.getElementById('nrbLabel');
+      const nextTxt = document.getElementById('nrbNext');
+
+      if (next) {
+        const prevTier = [...TIERS].reverse().find(t => t.pts <= totalPoints);
+        const prevPts = prevTier ? prevTier.pts : 0;
+        const range = next.pts - prevPts;
+        const current = totalPoints - prevPts;
+        const pct = Math.max(0, Math.min(100, Math.round((current / range) * 100)));
+
+        fill.style.width = pct + '%';
+        label.textContent = 'الجائزة التالية: ' + next.label + ' — تحتاج ' + (next.pts - totalPoints) + ' نقطة إضافية';
+        nextTxt.textContent = next.pts + ' pts → ' + next.label;
+      } else {
+        fill.style.width = '100%';
+        label.textContent = '🏆 وصلت للمستوى الأعلى! — MAX LEVEL REACHED!';
+        nextTxt.textContent = 'ALL REWARDS UNLOCKED';
+      }
+    }
+
+    function updateTshirtBox(referralCount, tshirtsEarned, nextTshirtIn){
+      const title = document.getElementById('tshirtTitle');
+      const sub = document.getElementById('tshirtSub');
+
+      if (tshirtsEarned > 0) {
+        title.textContent = '👕 Free T-Shirts Earned: ' + tshirtsEarned;
+        sub.textContent = 'NEXT T-SHIRT IN ' + nextTshirtIn + ' REFERRALS';
+      } else {
+        title.textContent = '👕 10 referrals = 1 Free T-Shirt';
+        sub.textContent = 'YOU NEED ' + nextTshirtIn + ' MORE REFERRALS';
+      }
+    }
+
+    async function loadReferralStats(entryCode){
+      try {
+        const res = await fetch(SCRIPT_URL + '?entryCode=' + encodeURIComponent(entryCode));
+        const data = await res.json();
+
+        if (data.status !== 'success') return;
+
+        document.getElementById('refCountNum').textContent = data.referralCount || 0;
+        document.getElementById('refPointsNum').textContent = data.referralPoints || 0;
+        document.getElementById('totalPointsNum').textContent = data.totalPoints || 10;
+        document.getElementById('userPtsNum').textContent = data.totalPoints || 10;
+
+        updateTierProgress(data.totalPoints || 10);
+        updateTshirtBox(data.referralCount || 0, data.tshirtsEarned || 0, data.nextTshirtIn || 10);
+      } catch (err) {
+        console.error('Stats load failed', err);
+      }
+    }
+
+    async function doSubmit(){
+      if(!validateForm()) return;
 
       const codeVal = els.code.value.replace('-CA','');
       const digits = els.num.value.trim().replace(/\D/g,'');
@@ -752,41 +773,39 @@
       body.append('nationality', els.nat.value);
       body.append('city', els.city.value.trim());
       body.append('number', fullPhone);
-      if (incomingRef) body.append('referredBy', incomingRef);
+      if(incomingRef) body.append('referredBy', incomingRef);
 
       try {
         setLoading(true);
-        const res = await fetch(SCRIPT_URL, { method:'POST', body });
+        const res = await fetch(SCRIPT_URL,{method:'POST',body});
         const data = await res.json();
 
-        if (data.status === 'duplicate') {
+        if(data.status === 'duplicate'){
           els.errorBox.textContent = 'هذا الرقم مسجّل مسبقاً في المسابقة';
           els.errorBox.style.display = 'block';
           return;
         }
 
-        if (data.status !== 'success') {
-          throw new Error(data.message || 'Submission failed');
-        }
+        if(data.status !== 'success') throw new Error(data.message || 'Submission failed');
 
         const tid = data.entryCode || 'WC-000000';
         els.ticketId.textContent = tid;
         localStorage.setItem(TID_KEY, tid);
 
-        document.getElementById('refLinkInput').value = buildRefLink(tid);
+        const refLink = buildRefLink(tid);
+        document.getElementById('refLinkInput').value = refLink;
 
         els.form.style.display = 'none';
         els.success.style.display = 'block';
         document.getElementById('pointsCard').style.display = 'block';
         document.getElementById('refLinkBox').style.display = 'block';
-        document.getElementById('refStatsBox').style.display = 'block';
 
-        await loadReferralStats();
         launchConfetti();
+        await loadReferralStats(tid);
 
-        setTimeout(() => els.success.scrollIntoView({ behavior:'smooth', block:'center' }), 100);
+        setTimeout(()=>els.success.scrollIntoView({behavior:'smooth',block:'center'}), 100);
 
-      } catch (err) {
+      } catch(err){
         console.error(err);
         els.errorBox.textContent = 'حدث خطأ أثناء الإرسال، يرجى المحاولة مرة أخرى';
         els.errorBox.style.display = 'block';
@@ -795,8 +814,18 @@
       }
     }
 
-    window.addEventListener('load', function () {
-      loadReferralStats();
+    window.addEventListener('load', async () => {
+      const savedTid = localStorage.getItem(TID_KEY);
+      if (savedTid) {
+        document.getElementById('ticketId').textContent = savedTid;
+        document.getElementById('refLinkInput').value = buildRefLink(savedTid);
+        document.getElementById('pointsCard').style.display = 'block';
+        document.getElementById('refLinkBox').style.display = 'block';
+        await loadReferralStats(savedTid);
+      } else {
+        updateTierProgress(10);
+        updateTshirtBox(0, 0, 10);
+      }
     });
   </script>
 </body>
