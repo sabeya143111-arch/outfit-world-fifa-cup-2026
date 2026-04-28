@@ -2,954 +2,994 @@
 <html lang="ar" dir="rtl">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>مسابقة كأس العالم 2026 — Outfit × همكس</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <title>كأس العالم 2026 | Outfit × همكس – التسجيل الرسمي</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700;900&family=Bebas+Neue&display=swap" rel="stylesheet">
   <style>
-    * { box-sizing: border-box; margin: 0; padding: 0; }
-    body { background:#ffffff; font-family:'Cairo',sans-serif; direction:rtl; min-height:100vh; color:#111; }
-
-    .top-banner { background:#006c35; padding:10px 28px; display:flex; align-items:center; justify-content:center; gap:14px; flex-wrap:wrap; text-align:center; }
-    .banner-text { font-family:'Bebas Neue',sans-serif; font-size:13px; color:#fff; letter-spacing:4px; }
-    .banner-sub { font-size:11px; color:rgba(255,255,255,0.85); font-weight:600; }
-
-    .countdown-bar { background:#f3f3f3; border-bottom:1px solid #e3e3e3; padding:8px 20px; display:flex; align-items:center; justify-content:center; gap:8px; flex-wrap:wrap; }
-    .cd-label { font-family:'Bebas Neue',sans-serif; font-size:11px; color:#ff5c00; letter-spacing:3px; }
-    .cd-label-ar { font-size:10px; color:#666; font-weight:600; }
-    .cd-blocks { display:flex; gap:6px; align-items:center; }
-    .cd-unit { display:flex; flex-direction:column; align-items:center; min-width:42px; }
-    .cd-num { font-family:'Bebas Neue',sans-serif; font-size:22px; color:#111; line-height:1; background:#fff; border:1px solid #d8d8d8; border-radius:4px; padding:3px 8px; min-width:42px; text-align:center; }
-    .cd-sub { font-size:8px; color:#777; font-weight:600; letter-spacing:1px; margin-top:2px; }
-    .cd-sep { font-family:'Bebas Neue',sans-serif; font-size:20px; color:#aaa; line-height:1; margin-bottom:12px; }
-
-    .logo-row { background:#ffffff; padding:12px 20px 10px; display:grid; grid-template-columns:100px 1fr 150px; align-items:center; gap:10px; border-bottom:1px solid #ececec; }
-    .logo-row-left { display:flex; flex-direction:column; align-items:flex-start; gap:4px; }
-    .presenter { font-size:10px; color:#777; font-weight:600; }
-    .header-logo-left { width:76px; height:76px; object-fit:contain; display:block; border-radius:50%; background:#000; }
-    .hmx-tag { font-family:'Cairo',sans-serif; font-size:13px; color:#ff7a1f; font-weight:800; line-height:1; }
-    .logo-row-center { display:flex; justify-content:center; align-items:center; }
-    .main-top-logo { width:190px; max-width:100%; height:auto; display:block; object-fit:contain; }
-    .logo-row-right { display:flex; flex-direction:column; align-items:flex-end; justify-content:center; gap:2px; }
-    .logo-outfit { font-family:'Bebas Neue',sans-serif; font-size:32px; color:#111; letter-spacing:3px; line-height:1; text-align:right; }
-    .logo-x { font-family:'Bebas Neue',sans-serif; font-size:10px; color:#ff5c00; letter-spacing:1.2px; text-align:right; font-weight:700; }
-
-    .hero { background:#ffffff; padding:0 28px; position:relative; overflow:hidden; }
-    .hero-stripe { position:absolute; top:0; left:0; right:0; height:4px; background:linear-gradient(90deg,#ff5c00 0%,#ff5c00 50%,#006c35 50%,#006c35 100%); }
-    .hero-inner { padding:14px 0 24px; text-align:center; position:relative; }
-    .hero-eyebrow { font-family:'Bebas Neue',sans-serif; font-size:11px; color:#006c35; letter-spacing:5px; margin-bottom:8px; }
-    .hero-ar { font-size:28px; font-weight:900; color:#111; line-height:1.2; }
-    .hero-ar span { color:#ff5c00; }
-    .hero-en { font-family:'Bebas Neue',sans-serif; font-size:14px; color:#555; letter-spacing:4px; margin-top:8px; font-weight:700; }
-    .hero-divider { display:flex; align-items:center; justify-content:center; gap:8px; margin-top:16px; }
-    .hd-line { flex:1; max-width:62px; height:1px; }
-    .hd-left { background:#ff5c00; }
-    .hd-right { background:#006c35; }
-    .hd-dot { width:6px; height:6px; background:#111; border-radius:50%; }
-
-    .prize-strip { background:linear-gradient(135deg,#111 0%,#1a1a1a 100%); padding:14px 20px; display:flex; align-items:center; justify-content:center; gap:18px; flex-wrap:wrap; border-top:2px solid #ff5c00; border-bottom:2px solid #006c35; }
-    .prize-item { display:flex; flex-direction:column; align-items:center; gap:2px; }
-    .prize-icon { font-size:22px; }
-    .prize-label { font-family:'Bebas Neue',sans-serif; font-size:11px; color:#ff5c00; letter-spacing:2px; }
-    .prize-val { font-size:11px; font-weight:700; color:#fff; }
-    .prize-sep { width:1px; height:36px; background:rgba(255,255,255,0.15); }
-
-    .rewards-section {
-      background: linear-gradient(135deg, #0a2a15 0%, #062010 100%);
-      border-top: 2px solid #d8ff3c;
-      border-bottom: 2px solid #ff5c00;
-      padding: 16px 20px;
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
     }
-    .rewards-title {
-      text-align: center;
-      font-family: 'Bebas Neue', sans-serif;
-      font-size: 12px;
-      color: #d8ff3c;
-      letter-spacing: 4px;
-      margin-bottom: 12px;
+
+    body {
+      background: #ffffff;
+      font-family: 'Cairo', sans-serif;
+      direction: rtl;
+      min-height: 100vh;
+      color: #111;
     }
-    .rewards-title span { color: #ff5c00; }
-    .rewards-grid {
+
+    /* top banner */
+    .top-banner {
+      background: #006c35;
+      padding: 8px 24px;
       display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 14px;
+      flex-wrap: wrap;
+      text-align: center;
+    }
+
+    .banner-text {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 13px;
+      color: #fff;
+      letter-spacing: 4px;
+    }
+
+    .banner-sub {
+      font-size: 11px;
+      color: rgba(255, 255, 255, 0.85);
+      font-weight: 600;
+    }
+
+    /* countdown */
+    .countdown-bar {
+      background: #f3f3f3;
+      border-bottom: 1px solid #e0e0e0;
+      padding: 8px 20px;
+      display: flex;
+      align-items: center;
       justify-content: center;
       gap: 8px;
       flex-wrap: wrap;
     }
+
+    .cd-label-ar {
+      font-size: 10px;
+      color: #666;
+      font-weight: 700;
+    }
+
+    .cd-label {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 11px;
+      color: #ff5c00;
+      letter-spacing: 3px;
+    }
+
+    .cd-blocks {
+      display: flex;
+      gap: 6px;
+      align-items: center;
+    }
+
+    .cd-unit {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      min-width: 42px;
+    }
+
+    .cd-num {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 22px;
+      color: #111;
+      background: #fff;
+      border: 1px solid #d3d3d3;
+      border-radius: 6px;
+      padding: 4px 8px;
+      min-width: 48px;
+      text-align: center;
+    }
+
+    .cd-sub {
+      font-size: 8px;
+      color: #777;
+      font-weight: 700;
+      margin-top: 4px;
+    }
+
+    .cd-sep {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 20px;
+      color: #aaa;
+      margin-bottom: 8px;
+    }
+
+    /* logo row */
+    .logo-row {
+      background: #ffffff;
+      padding: 12px 28px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 12px;
+      border-bottom: 1px solid #eee;
+    }
+
+    .logo-left {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .logo-left img {
+      width: 70px;
+      height: 70px;
+      object-fit: contain;
+      background: #000;
+      border-radius: 50%;
+      padding: 6px;
+    }
+
+    .hmx-tag {
+      font-weight: 800;
+      font-size: 14px;
+      color: #ff7a1f;
+    }
+
+    .logo-center img {
+      height: 68px;
+      max-width: 180px;
+      object-fit: contain;
+    }
+
+    .logo-right {
+      text-align: left;
+    }
+
+    .logo-outfit {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 30px;
+      letter-spacing: 4px;
+      color: #111;
+      line-height: 1;
+    }
+
+    .logo-x {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 11px;
+      color: #ff5c00;
+      letter-spacing: 1.5px;
+    }
+
+    /* hero */
+    .hero {
+      background: #ffffff;
+      padding: 20px 28px 8px;
+      position: relative;
+      text-align: center;
+    }
+
+    .hero-stripe {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 3px;
+      background: linear-gradient(90deg, #ff5c00 0%, #ff5c00 50%, #006c35 50%, #006c35 100%);
+    }
+
+    .hero-eyebrow {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 12px;
+      color: #006c35;
+      letter-spacing: 5px;
+    }
+
+    .hero-ar {
+      font-size: 28px;
+      font-weight: 900;
+      margin-top: 6px;
+    }
+
+    .hero-ar span {
+      color: #ff5c00;
+    }
+
+    .hero-en {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 13px;
+      color: #555;
+      letter-spacing: 3px;
+      margin-top: 6px;
+    }
+
+    /* prize strip */
+    .prize-strip {
+      background: #0e1c17;
+      padding: 14px 20px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 24px;
+      flex-wrap: wrap;
+      border-top: 2px solid #ff5c00;
+      border-bottom: 2px solid #d8ff3c;
+    }
+
+    .prize-item {
+      text-align: center;
+    }
+
+    .prize-icon {
+      font-size: 24px;
+    }
+
+    .prize-label {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 11px;
+      color: #d8ff3c;
+      letter-spacing: 2px;
+    }
+
+    .prize-val {
+      font-size: 12px;
+      font-weight: 700;
+      color: #fff;
+    }
+
+    /* rewards tiers section */
+    .reward-tier-section {
+      background: linear-gradient(145deg, #062010, #0a2e18);
+      padding: 20px 20px;
+      border-bottom: 1px solid #d8ff3c;
+    }
+
+    .reward-title {
+      text-align: center;
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 14px;
+      color: #ff5c00;
+      letter-spacing: 4px;
+      margin-bottom: 14px;
+    }
+
+    .reward-grid {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 12px;
+    }
+
     .reward-card {
-      background: rgba(255,255,255,0.05);
-      border: 1px solid rgba(216,255,60,0.2);
-      border-radius: 8px;
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid rgba(216, 255, 60, 0.2);
+      border-radius: 12px;
       padding: 10px 12px;
       text-align: center;
-      min-width: 80px;
+      min-width: 85px;
       flex: 1;
-      max-width: 110px;
-      position: relative;
-      overflow: hidden;
+      max-width: 115px;
     }
-    .reward-card::before {
-      content: '';
-      position: absolute;
-      top: 0; left: 0; right: 0;
-      height: 2px;
-    }
-    .reward-card.tier1::before { background: #d8ff3c; }
-    .reward-card.tier2::before { background: #ff5c00; }
-    .reward-card.tier3::before { background: #00c4ff; }
-    .reward-card.tier4::before { background: #ffd700; }
+
     .reward-pts {
       font-family: 'Bebas Neue', sans-serif;
       font-size: 20px;
       color: #d8ff3c;
-      line-height: 1;
-      margin-bottom: 2px;
     }
-    .reward-pts-label { font-size: 8px; color: rgba(255,255,255,0.5); letter-spacing: 1px; margin-bottom:6px; }
-    .reward-emoji { font-size: 18px; margin-bottom: 4px; }
-    .reward-name { font-size: 10px; font-weight: 700; color: #fff; line-height: 1.3; }
+
+    .reward-desc {
+      font-size: 10px;
+      font-weight: 700;
+      color: #fff;
+      margin-top: 5px;
+    }
 
     .earn-section {
       background: #fffbf5;
-      border-bottom: 1px solid #ffe4d0;
       padding: 14px 20px;
+      text-align: center;
     }
+
     .earn-title {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 12px;
+      color: #ff5c00;
+      letter-spacing: 3px;
+    }
+
+    .earn-row {
+      background: white;
+      border: 1px solid #ffe1c6;
+      border-radius: 40px;
+      padding: 8px 16px;
+      display: inline-flex;
+      align-items: center;
+      gap: 12px;
+      margin: 8px 12px;
+    }
+
+    .earn-points {
+      background: #ff5c00;
+      color: white;
+      border-radius: 40px;
+      padding: 3px 12px;
+      font-weight: 800;
+      font-size: 13px;
+    }
+
+    .live-counter {
+      background: #fff9f3;
+      padding: 10px;
+      text-align: center;
+      font-weight: 700;
+      border-bottom: 1px solid #ffe1c6;
+    }
+
+    .live-num {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 22px;
+      color: #ff5c00;
+    }
+
+    /* Form */
+    .form-container {
+      max-width: 560px;
+      margin: 0 auto;
+      padding: 24px 28px 36px;
+    }
+
+    .field {
+      border-bottom: 1px solid #eaeaea;
+      padding: 18px 0;
+    }
+
+    .field-label-ar {
+      font-weight: 800;
+      font-size: 15px;
+    }
+
+    .field-label-en {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 12px;
+      color: #666;
+      letter-spacing: 2px;
+    }
+
+    input, select {
+      width: 100%;
+      padding: 12px 14px;
+      margin-top: 8px;
+      background: #f8f8f8;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      font-family: 'Cairo', sans-serif;
+    }
+
+    .phone-group {
+      display: flex;
+      gap: 8px;
+      margin-top: 8px;
+    }
+
+    .phone-code {
+      width: 130px;
+    }
+
+    .error-msg {
+      color: #d93c3c;
+      font-size: 12px;
+      font-weight: 600;
+      display: none;
+      margin-top: 6px;
+    }
+
+    .ref-banner {
+      background: #e9f9ef;
+      border-right: 4px solid #006c35;
+      padding: 12px;
+      border-radius: 8px;
+      display: none;
+      align-items: center;
+      gap: 8px;
+      margin-bottom: 12px;
+    }
+
+    .ref-banner.visible {
+      display: flex;
+    }
+
+    .terms {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin: 16px 0;
+    }
+
+    .submit-btn {
+      width: 100%;
+      display: flex;
+      border: none;
+      border-radius: 12px;
+      overflow: hidden;
+      cursor: pointer;
+      transition: 0.2s;
+    }
+
+    .submit-left {
+      background: #ff5c00;
+      flex: 1;
+      padding: 14px;
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 18px;
+      color: white;
+      text-align: center;
+    }
+
+    .submit-right {
+      background: #006c35;
+      flex: 1;
+      padding: 14px;
+      font-weight: 800;
+      color: white;
+      text-align: center;
+    }
+
+    .submit-btn:active { transform: scale(0.98); }
+
+    .msg-error-block {
+      background: #ffe5e5;
+      color: #c0392b;
+      padding: 10px;
+      border-radius: 8px;
+      margin-top: 12px;
+      display: none;
+      font-weight: 600;
+    }
+
+    /* success & stats */
+    .success-card {
+      display: none;
+      margin: 0 20px 16px;
+      background: #ffffff;
+      border-radius: 20px;
+      box-shadow: 0 12px 28px rgba(0,0,0,0.08);
+      overflow: hidden;
+    }
+
+    .success-header {
+      background: #006c35;
+      padding: 18px;
+      text-align: center;
+      color: white;
+      font-weight: 800;
+    }
+
+    .code-box {
+      background: #fef5e8;
+      padding: 18px;
       text-align: center;
       font-family: 'Bebas Neue', sans-serif;
-      font-size: 11px;
+      font-size: 28px;
       color: #ff5c00;
       letter-spacing: 4px;
-      margin-bottom: 10px;
-    }
-    .earn-rows { display: flex; gap: 10px; justify-content: center; flex-wrap: wrap; }
-    .earn-row {
-      display: flex;
-      align-items: center;
-      gap: 8px;
-      background: #fff;
-      border: 1px solid #ffe0c8;
-      border-radius: 8px;
-      padding: 8px 14px;
-      flex: 1;
-      min-width: 180px;
-      max-width: 260px;
-    }
-    .earn-icon { font-size: 20px; flex-shrink: 0; }
-    .earn-desc { flex: 1; }
-    .earn-desc-ar { font-size: 12px; font-weight: 700; color: #333; }
-    .earn-desc-en { font-family: 'Bebas Neue', sans-serif; font-size: 10px; color: #999; letter-spacing: 2px; }
-    .earn-pts-badge {
-      background: #ff5c00;
-      color: #fff;
-      font-family: 'Bebas Neue', sans-serif;
-      font-size: 14px;
-      letter-spacing: 1px;
-      padding: 3px 8px;
-      border-radius: 20px;
-      flex-shrink: 0;
-      white-space: nowrap;
     }
 
-    .counter-bar { background:#fff9f5; border-bottom:1px solid #ffe4d0; padding:10px 20px; display:flex; align-items:center; justify-content:center; gap:10px; flex-wrap:wrap; }
-    .counter-pulse { width:8px; height:8px; border-radius:50%; background:#ff5c00; animation:pulse 1.4s ease-in-out infinite; flex-shrink:0; }
-    @keyframes pulse { 0%,100%{opacity:1;transform:scale(1);}50%{opacity:0.5;transform:scale(1.5);} }
-    .counter-text { font-size:13px; font-weight:700; color:#333; }
-    .counter-num { color:#ff5c00; font-family:'Bebas Neue',sans-serif; font-size:20px; letter-spacing:2px; vertical-align:middle; }
-
-    .form-body { background:#ffffff; padding:28px 28px 36px; max-width:560px; margin:0 auto; display:flex; flex-direction:column; gap:0; }
-    .field { display:flex; flex-direction:column; gap:7px; padding:20px 0; border-bottom:1px solid #ececec; }
-    .field:last-of-type { border-bottom:none; }
-    .field-num { font-family:'Bebas Neue',sans-serif; font-size:11px; color:#ff5c00; letter-spacing:2px; margin-bottom:2px; text-align:right; }
-    .lbl-ar { font-size:16px; font-weight:800; color:#111; line-height:1; text-align:right; }
-    .lbl-en { font-family:'Bebas Neue',sans-serif; font-size:14px; color:#333; letter-spacing:3px; margin-top:4px; font-weight:700; text-align:right; }
-    .finput { background:#f7f7f7; border:1.5px solid #dcdcdc; border-radius:6px; padding:13px 15px; color:#111; font-family:'Cairo',sans-serif; font-size:14px; direction:rtl; outline:none; transition:border-color 0.2s,background 0.2s; width:100%; margin-top:6px; }
-    .finput:focus { border-color:#ff5c00; background:#fff7f2; }
-    .finput::placeholder { color:#8a8a8a; font-size:13px; }
-    .fselect { background:#f7f7f7; border:1.5px solid #dcdcdc; border-radius:6px; padding:13px 15px; color:#111; font-family:'Cairo',sans-serif; font-size:14px; direction:rtl; outline:none; transition:border-color 0.2s,background 0.2s; width:100%; margin-top:6px; appearance:none; -webkit-appearance:none; background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%23ff5c00' stroke-width='2' fill='none' stroke-linecap='round'/%3E%3C/svg%3E"); background-repeat:no-repeat; background-position:left 14px center; padding-left:36px; cursor:pointer; }
-    .fselect:focus { border-color:#ff5c00; background-color:#fff7f2; }
-    .fselect option { background:#ffffff; color:#111; }
-    .phone-row { display:flex; gap:8px; margin-top:6px; direction:rtl; }
-    .phone-code-wrap { flex-shrink:0; width:140px; }
-    .phone-code-select { background:#f7f7f7; border:1.5px solid #dcdcdc; border-radius:6px; padding:13px 10px; color:#111; font-family:'Cairo',sans-serif; font-size:13px; direction:ltr; outline:none; transition:border-color 0.2s,background 0.2s; width:100%; appearance:none; -webkit-appearance:none; background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='6' viewBox='0 0 10 6'%3E%3Cpath d='M1 1l4 4 4-4' stroke='%23ff5c00' stroke-width='1.5' fill='none' stroke-linecap='round'/%3E%3C/svg%3E"); background-repeat:no-repeat; background-position:right 10px center; padding-right:28px; cursor:pointer; text-align:left; }
-    .phone-code-select:focus { border-color:#ff5c00; background-color:#fff7f2; }
-    .phone-number-input { flex:1; background:#f7f7f7; border:1.5px solid #dcdcdc; border-radius:6px; padding:13px 15px; color:#111; font-family:'Cairo',sans-serif; font-size:14px; direction:ltr; outline:none; transition:border-color 0.2s,background 0.2s; text-align:left; }
-    .phone-number-input:focus { border-color:#ff5c00; background:#fff7f2; }
-    .phone-number-input::placeholder { color:#8a8a8a; font-size:13px; }
-    .error-text { color:#d93c3c; font-size:12px; font-weight:600; display:none; margin-top:4px; text-align:right; }
-
-    .ref-notice {
-      background: linear-gradient(135deg, #f0fff4, #e8f5e9);
-      border: 1.5px solid #006c35;
-      border-radius: 8px;
-      padding: 10px 14px;
+    .points-dashboard {
       display: none;
-      align-items: center;
-      gap: 10px;
-      margin-bottom: 4px;
-    }
-    .ref-notice.visible { display: flex; }
-    .ref-notice-icon { font-size: 22px; flex-shrink: 0; }
-    .ref-notice-text { flex: 1; }
-    .ref-notice-ar { font-size: 13px; font-weight: 700; color: #006c35; }
-    .ref-notice-en { font-family: 'Bebas Neue', sans-serif; font-size: 10px; color: #888; letter-spacing: 2px; }
-
-    .terms-row { display:flex; align-items:flex-start; gap:10px; padding:16px 0 4px; direction:rtl; }
-    .terms-check { width:18px; height:18px; border:2px solid #dcdcdc; border-radius:4px; flex-shrink:0; cursor:pointer; accent-color:#ff5c00; margin-top:2px; }
-    .terms-label { font-size:12px; color:#555; font-weight:600; line-height:1.6; text-align:right; }
-    .terms-label a { color:#ff5c00; text-decoration:none; }
-    .btn-wrap { padding-top:18px; }
-    .btn-submit { width:100%; border:none; border-radius:6px; padding:0; cursor:pointer; overflow:hidden; display:flex; transition:transform 0.1s,opacity 0.2s,box-shadow 0.2s; box-shadow:0 4px 18px rgba(0,0,0,0.06); }
-    .btn-submit:hover { box-shadow:0 6px 24px rgba(255,92,0,0.25); }
-    .btn-submit:active { transform:scale(0.98); }
-    .btn-submit:disabled { opacity:0.7; cursor:not-allowed; }
-    .btn-left { background:#ff5c00; flex:1; padding:16px; font-family:'Bebas Neue',sans-serif; font-size:18px; letter-spacing:3px; color:#fff; text-align:center; }
-    .btn-right { background:#006c35; flex:1; padding:16px; font-size:15px; font-weight:700; color:#fff; text-align:center; }
-    .msg-box { display:none; margin-top:18px; border-radius:8px; padding:12px 14px; text-align:center; font-size:14px; font-weight:700; }
-    .msg-error { background:#fff1f1; color:#c13b3b; border:1px solid #f0c7c7; }
-
-    .success { display:none; margin:0 28px 14px; border-radius:8px; overflow:hidden; box-shadow:0 6px 24px rgba(0,0,0,0.08); }
-    .success-top { background:#006c35; padding:20px; text-align:center; color:#fff; font-size:20px; font-weight:700; }
-    .success-ticket { background:#ffffff; padding:14px 20px; text-align:center; border-left:1px solid #ececec; border-right:1px solid #ececec; }
-    .ticket-label { font-size:10px; color:#777; font-weight:600; letter-spacing:2px; margin-bottom:4px; }
-    .ticket-id { font-family:'Bebas Neue',sans-serif; font-size:26px; color:#ff5c00; letter-spacing:6px; }
-    .success-bottom { background:#ff5c00; padding:10px; text-align:center; font-family:'Bebas Neue',sans-serif; font-size:13px; letter-spacing:3px; color:#fff; }
-
-    .points-card {
-      display: none;
-      margin: 0 28px 10px;
-      border-radius: 10px;
+      background: #fefaf5;
+      border-radius: 24px;
+      margin: 0 20px 20px;
+      border: 1px solid #d8ff3c;
       overflow: hidden;
-      box-shadow: 0 6px 24px rgba(0,0,0,0.10);
-      border: 2px solid #d8ff3c;
     }
-    .points-card-top {
-      background: linear-gradient(135deg, #0a2a15, #062010);
+
+    .points-header {
+      background: #0a2e18;
       padding: 14px 20px;
+      color: white;
       display: flex;
-      align-items: center;
       justify-content: space-between;
-      gap: 12px;
-    }
-    .pts-label-group { display: flex; flex-direction: column; gap: 2px; }
-    .pts-title { font-family: 'Bebas Neue', sans-serif; font-size: 11px; color: #d8ff3c; letter-spacing: 3px; }
-    .pts-title-ar { font-size: 13px; font-weight: 800; color: #fff; }
-    .pts-display {
-      display: flex;
-      flex-direction: column;
       align-items: center;
-      background: rgba(216,255,60,0.12);
-      border: 1px solid rgba(216,255,60,0.3);
-      border-radius: 8px;
-      padding: 8px 18px;
     }
-    .pts-num { font-family: 'Bebas Neue', sans-serif; font-size: 32px; color: #d8ff3c; line-height: 1; }
-    .pts-unit { font-size: 9px; color: rgba(216,255,60,0.7); letter-spacing: 2px; font-weight: 700; }
 
-    .points-actions {
-      background: #f9f9f9;
-      padding: 12px 16px;
-      display: flex;
-      flex-direction: column;
-      gap: 8px;
-    }
-    .pts-action-row {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      background: #fff;
-      border: 1px solid #ececec;
-      border-radius: 8px;
-      padding: 10px 12px;
-      gap: 10px;
-    }
-    .pts-action-left { display: flex; align-items: center; gap: 8px; }
-    .pts-action-icon { font-size: 18px; }
-    .pts-action-desc { font-size: 12px; font-weight: 700; color: #333; }
-    .pts-action-en { font-family: 'Bebas Neue', sans-serif; font-size: 9px; color: #aaa; letter-spacing: 2px; }
-    .pts-badge-done { background: #006c35; color: #fff; font-family: 'Bebas Neue', sans-serif; font-size: 12px; letter-spacing: 1px; padding: 3px 10px; border-radius: 20px; white-space: nowrap; }
-    .pts-badge-earn { background: #ff5c00; color: #fff; font-family: 'Bebas Neue', sans-serif; font-size: 12px; letter-spacing: 1px; padding: 3px 10px; border-radius: 20px; white-space: nowrap; }
-
-    .ref-link-box {
-      display: none;
-      margin: 0 28px 12px;
-      background: #f0fff4;
-      border: 1.5px dashed #006c35;
-      border-radius: 10px;
-      padding: 14px 16px;
-    }
-    .ref-link-title { font-size: 13px; font-weight: 800; color: #006c35; margin-bottom: 4px; text-align: right; }
-    .ref-link-sub { font-family: 'Bebas Neue', sans-serif; font-size: 10px; color: #888; letter-spacing: 2px; margin-bottom: 8px; text-align: right; }
-    .ref-link-row {
-      display: flex;
-      gap: 6px;
-      align-items: center;
-      direction: ltr;
-    }
-    .ref-link-input {
-      flex: 1;
-      background: #fff;
-      border: 1px solid #c3e6cb;
-      border-radius: 6px;
-      padding: 9px 12px;
-      font-size: 12px;
-      color: #333;
-      outline: none;
-      direction: ltr;
-      text-align: left;
-    }
-    .ref-copy-btn {
-      background: #006c35;
-      color: #fff;
-      border: none;
-      border-radius: 6px;
-      padding: 9px 14px;
+    .points-value {
       font-family: 'Bebas Neue', sans-serif;
+      font-size: 28px;
+      color: #d8ff3c;
+    }
+
+    .stats-grid {
+      padding: 14px;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 12px;
+      background: white;
+    }
+
+    .stat-item {
+      background: #fcfcfc;
+      border-radius: 12px;
+      padding: 10px;
+      text-align: center;
+      border: 1px solid #e7e7e7;
+    }
+
+    .stat-number {
+      font-weight: 800;
+      font-size: 20px;
+      color: #ff5c00;
+    }
+
+    .tshirt-progress {
+      padding: 14px;
+      background: #fff2e6;
+      border-top: 1px solid #ffd7b5;
+      font-weight: 700;
       font-size: 13px;
-      letter-spacing: 2px;
+    }
+
+    .ref-link-area {
+      display: none;
+      background: #f0faf2;
+      margin: 0 20px 20px;
+      padding: 14px;
+      border-radius: 16px;
+      border: 1px dashed #006c35;
+    }
+
+    .ref-link-input {
+      display: flex;
+      gap: 8px;
+      margin-top: 8px;
+    }
+
+    .ref-link-input input {
+      flex: 1;
+      background: white;
+    }
+
+    .copy-btn {
+      background: #006c35;
+      color: white;
+      border: none;
+      padding: 0 18px;
+      border-radius: 40px;
+      font-weight: bold;
       cursor: pointer;
-      white-space: nowrap;
-      transition: background 0.2s, transform 0.1s;
     }
-    .ref-copy-btn:active { transform: scale(0.97); background: #004d25; }
-    .ref-copied { font-size: 11px; color: #006c35; font-weight: 700; text-align: center; margin-top: 6px; display: none; }
 
-    #confetti-canvas { position:fixed; top:0; left:0; width:100%; height:100%; pointer-events:none; z-index:9999; display:none; }
-
-    .footer { text-align:center; padding:16px; color:#111; font-family:'Bebas Neue',sans-serif; font-size:11px; letter-spacing:3px; border-top:1px solid #ececec; display:flex; align-items:center; justify-content:center; gap:12px; flex-wrap:wrap; background:#fff; }
-    .footer span { color:#111; }
-    .f-dot { width:4px; height:4px; border-radius:50%; }
-    .f-orange { background:#ff5c00; }
-    .f-green { background:#006c35; }
-
-    .next-reward-bar {
-      background: #fff;
-      border-top: 1px solid #efefef;
-      padding: 10px 14px;
+    .footer {
+      text-align: center;
+      padding: 18px;
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 11px;
+      color: #777;
+      border-top: 1px solid #ececec;
+      margin-top: 20px;
     }
-    .nrb-label { font-size: 11px; font-weight: 700; color: #555; margin-bottom: 5px; text-align: right; }
-    .nrb-track { background: #ececec; border-radius: 20px; height: 8px; overflow: hidden; }
-    .nrb-fill { height: 100%; border-radius: 20px; background: linear-gradient(90deg, #006c35, #d8ff3c); transition: width 0.6s ease; }
-    .nrb-next { font-size: 10px; color: #ff5c00; font-weight: 700; text-align: left; margin-top: 4px; direction: ltr; }
 
-    @media (max-width:640px) {
-      .top-banner { padding:8px 14px; gap:8px; }
-      .countdown-bar { gap:4px; padding:8px 14px; }
-      .cd-num { font-size:18px; min-width:34px; padding:2px 6px; }
-      .logo-row { grid-template-columns:80px 1fr 110px; padding:8px 14px 6px; gap:8px; }
-      .header-logo-left { width:64px; height:64px; }
-      .main-top-logo { width:110px; }
-      .logo-outfit { font-size:20px; letter-spacing:2px; }
-      .logo-x { font-size:8px; letter-spacing:0.8px; }
-      .hero, .form-body { padding-left:18px; padding-right:18px; }
-      .hero-inner { padding:10px 0 20px; }
-      .hero-ar { font-size:23px; }
-      .prize-strip { gap:10px; padding:12px 14px; }
-      .prize-sep { display:none; }
-      .btn-left, .btn-right { padding:14px; }
-      .lbl-en { font-size:13px; }
-      .success { margin:0 18px 14px; }
-      .points-card, .ref-link-box { margin-left:18px; margin-right:18px; }
-      .phone-code-wrap { width:120px; }
-      .rewards-grid { gap:5px; }
-      .reward-card { min-width:70px; padding:8px 8px; }
-      .earn-row { min-width:160px; }
+    @media (max-width: 640px) {
+      .logo-left img { width: 50px; height: 50px; }
+      .logo-center img { height: 48px; }
+      .hero-ar { font-size: 22px; }
+      .form-container { padding: 16px; }
+    }
+
+    canvas#confettiCanvas {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      pointer-events: none;
+      z-index: 9999;
+      display: none;
     }
   </style>
 </head>
 <body>
-  <canvas id="confetti-canvas"></canvas>
 
-  <div class="top-banner">
-    <span class="banner-sub">المنتخب السعودي</span>
-    <span class="banner-text">🇸🇦 KSA — WORLD CUP 2026</span>
-    <span class="banner-sub">الصقور الخضر</span>
+<canvas id="confettiCanvas"></canvas>
+
+<div class="top-banner">
+  <span class="banner-sub">🇸🇦 المملكة العربية السعودية</span>
+  <span class="banner-text">FIFA WORLD CUP 2026</span>
+  <span class="banner-sub">OUTFIT × همكس</span>
+</div>
+
+<div class="countdown-bar">
+  <span class="cd-label-ar">كأس العالم ينطلق بعد</span>
+  <div class="cd-blocks">
+    <div class="cd-unit"><div class="cd-num" id="days">000</div><div class="cd-sub">يوم</div></div>
+    <div class="cd-sep">:</div>
+    <div class="cd-unit"><div class="cd-num" id="hours">00</div><div class="cd-sub">ساعة</div></div>
+    <div class="cd-sep">:</div>
+    <div class="cd-unit"><div class="cd-num" id="minutes">00</div><div class="cd-sub">دقيقة</div></div>
+    <div class="cd-sep">:</div>
+    <div class="cd-unit"><div class="cd-num" id="seconds">00</div><div class="cd-sub">ثانية</div></div>
+  </div>
+  <span class="cd-label">WORLD CUP STARTS IN</span>
+</div>
+
+<div class="logo-row">
+  <div class="logo-left">
+    <img src="./logo2.png" alt="همكس">
+    <span class="hmx-tag">همكس</span>
+  </div>
+  <div class="logo-center">
+    <img src="./logo3.png" alt="Outfit">
+  </div>
+  <div class="logo-right">
+    <div class="logo-outfit">OUTFIT</div>
+    <div class="logo-x">OFFICIAL PARTNER</div>
+  </div>
+</div>
+
+<div class="prize-strip">
+  <div class="prize-item"><div class="prize-icon">🏆</div><div class="prize-label">GRAND</div><div class="prize-val">تذكرة المونديال</div></div>
+  <div class="prize-item"><div class="prize-icon">👕</div><div class="prize-label">JERSEY</div><div class="prize-val">قميص Outfit</div></div>
+  <div class="prize-item"><div class="prize-icon">🎁</div><div class="prize-label">GIFT</div><div class="prize-val">هدية همكس</div></div>
+</div>
+
+<div class="reward-tier-section">
+  <div class="reward-title">🏅 نقاط المكافآت — REWARDS TIERS</div>
+  <div class="reward-grid">
+    <div class="reward-card"><div class="reward-pts">15</div><div class="reward-desc">خصم 15%</div></div>
+    <div class="reward-card"><div class="reward-pts">30</div><div class="reward-desc">قميص مجاني</div></div>
+    <div class="reward-card"><div class="reward-pts">60</div><div class="reward-desc">دخول مضاعف</div></div>
+    <div class="reward-card"><div class="reward-pts">100</div><div class="reward-desc">جائزة VIP</div></div>
+  </div>
+</div>
+
+<div class="earn-section">
+  <div class="earn-title">⭐ كيف تكسب النقاط</div>
+  <div><span class="earn-row">📝 التسجيل +10 <span class="earn-points">10 نقاط</span></span>
+  <span class="earn-row">👥 إحالة صديق +10 <span class="earn-points">10 نقاط</span></span></div>
+</div>
+
+<div class="live-counter">
+  🟢 <span class="live-num" id="liveRegCount">—</span> مشارك مسجل حتى الآن
+</div>
+
+<div class="hero">
+  <div class="hero-stripe"></div>
+  <div class="hero-eyebrow">سجل الآن واربح</div>
+  <div class="hero-ar">مسابقة <span>كأس العالم 2026</span></div>
+  <div class="hero-en">FIFA WORLD CUP 2026 REGISTRATION</div>
+</div>
+
+<div class="form-container" id="formContainer">
+  <div id="referralNotice" class="ref-banner">
+    <span>🎉</span>
+    <div><strong>تمت دعوتك بواسطة صديق!</strong><br>بعد التسجيل سيحصل صديقك على +10 نقاط.</div>
   </div>
 
-  <div class="countdown-bar">
-    <span class="cd-label-ar">كأس العالم يبدأ في</span>
-    <span class="cd-label">WORLD CUP STARTS IN</span>
-    <div class="cd-blocks">
-      <div class="cd-unit"><div class="cd-num" id="cd-days">000</div><div class="cd-sub">DAYS يوم</div></div>
-      <div class="cd-sep">:</div>
-      <div class="cd-unit"><div class="cd-num" id="cd-hours">00</div><div class="cd-sub">HRS ساعة</div></div>
-      <div class="cd-sep">:</div>
-      <div class="cd-unit"><div class="cd-num" id="cd-mins">00</div><div class="cd-sub">MIN دقيقة</div></div>
-      <div class="cd-sep">:</div>
-      <div class="cd-unit"><div class="cd-num" id="cd-secs">00</div><div class="cd-sub">SEC ثانية</div></div>
-    </div>
+  <div class="field">
+    <div class="field-label-ar">الاسم الكامل</div>
+    <div class="field-label-en">FULL NAME</div>
+    <input type="text" id="fullName" placeholder="مثال: خالد محمد">
+    <div class="error-msg" id="errorName">الاسم مطلوب</div>
   </div>
 
-  <div class="logo-row">
-    <div class="logo-row-left">
-      <span class="presenter">Presented by</span>
-      <img src="./logo2.png" alt="HMX" class="header-logo-left">
-      <span class="hmx-tag">همكس</span>
-    </div>
-    <div class="logo-row-center">
-      <img src="./logo3.png" alt="Outfit Arabic" class="main-top-logo">
-    </div>
-    <div class="logo-row-right">
-      <span class="logo-outfit">OUTFIT</span>
-      <span class="logo-x">BRAND × COMPETITION</span>
-    </div>
+  <div class="field">
+    <div class="field-label-ar">الجنسية</div>
+    <div class="field-label-en">NATIONALITY</div>
+    <select id="nationality">
+      <option value="">اختر الجنسية</option>
+      <option value="سعودي">🇸🇦 سعودي</option>
+      <option value="مصري">🇪🇬 مصري</option>
+      <option value="إماراتي">🇦🇪 إماراتي</option>
+      <option value="كويتي">🇰🇼 كويتي</option>
+      <option value="قطري">🇶🇦 قطري</option>
+      <option value="بحريني">🇧🇭 بحريني</option>
+      <option value="عماني">🇴🇲 عماني</option>
+      <option value="أردني">🇯🇴 أردني</option>
+      <option value="لبناني">🇱🇧 لبناني</option>
+      <option value="عراقي">🇮🇶 عراقي</option>
+      <option value="سوري">🇸🇾 سوري</option>
+      <option value="فلسطيني">🇵🇸 فلسطيني</option>
+      <option value="آخر">🌍 أخرى</option>
+    </select>
+    <div class="error-msg" id="errorNat">اختر الجنسية</div>
   </div>
 
-  <div class="prize-strip">
-    <div class="prize-item">
-      <div class="prize-icon">🏆</div>
-      <div class="prize-label">GRAND PRIZE</div>
-      <div class="prize-val">تذكرة كأس العالم</div>
-    </div>
-    <div class="prize-sep"></div>
-    <div class="prize-item">
-      <div class="prize-icon">👕</div>
-      <div class="prize-label">2ND PLACE</div>
-      <div class="prize-val">طقم Outfit رسمي</div>
-    </div>
-    <div class="prize-sep"></div>
-    <div class="prize-item">
-      <div class="prize-icon">🎁</div>
-      <div class="prize-label">3RD PLACE</div>
-      <div class="prize-val">هدية همكس المميزة</div>
-    </div>
-    <div class="prize-sep"></div>
-    <div class="prize-item">
-      <div class="prize-icon">📅</div>
-      <div class="prize-label">DRAW DATE</div>
-      <div class="prize-val">11 يونيو 2026</div>
-    </div>
+  <div class="field">
+    <div class="field-label-ar">المدينة</div>
+    <div class="field-label-en">CITY</div>
+    <input type="text" id="city" placeholder="الرياض، جدة، دبي...">
+    <div class="error-msg" id="errorCity">المدينة مطلوبة</div>
   </div>
 
-  <div class="earn-section">
-    <div class="earn-title">⭐ اكسب نقاط — EARN POINTS</div>
-    <div class="earn-rows">
-      <div class="earn-row">
-        <div class="earn-icon">✅</div>
-        <div class="earn-desc">
-          <div class="earn-desc-ar">التسجيل في المسابقة</div>
-          <div class="earn-desc-en">REGISTER IN COMPETITION</div>
-        </div>
-        <div class="earn-pts-badge">+10 PTS</div>
-      </div>
-      <div class="earn-row">
-        <div class="earn-icon">👥</div>
-        <div class="earn-desc">
-          <div class="earn-desc-ar">كل تسجيل من رابطك</div>
-          <div class="earn-desc-en">EACH REFERRAL SIGNUP</div>
-        </div>
-        <div class="earn-pts-badge">+10 PTS</div>
-      </div>
-    </div>
-  </div>
-
-  <div class="rewards-section">
-    <div class="rewards-title">🎁 جوائز النقاط — <span>POINTS REWARDS</span></div>
-    <div class="rewards-grid">
-      <div class="reward-card tier1">
-        <div class="reward-pts">15</div>
-        <div class="reward-pts-label">POINTS نقطة</div>
-        <div class="reward-emoji">🏷️</div>
-        <div class="reward-name">خصم 15% على منتجات Outfit</div>
-      </div>
-      <div class="reward-card tier2">
-        <div class="reward-pts">30</div>
-        <div class="reward-pts-label">POINTS نقطة</div>
-        <div class="reward-emoji">👕</div>
-        <div class="reward-name">قميص Outfit مجاني</div>
-      </div>
-      <div class="reward-card tier3">
-        <div class="reward-pts">60</div>
-        <div class="reward-pts-label">POINTS نقطة</div>
-        <div class="reward-emoji">🎟️</div>
-        <div class="reward-name">دخول مضاعف في السحب</div>
-      </div>
-      <div class="reward-card tier4">
-        <div class="reward-pts">100</div>
-        <div class="reward-pts-label">POINTS نقطة</div>
-        <div class="reward-emoji">👑</div>
-        <div class="reward-name">جائزة VIP خاصة</div>
-      </div>
-    </div>
-  </div>
-
-  <div class="counter-bar">
-    <div class="counter-pulse"></div>
-    <span class="counter-text">
-      انضم <span class="counter-num" id="liveCount">—</span> مشارك حتى الآن
-    </span>
-    <span style="font-size:10px;color:#999;font-weight:600;">LIVE REGISTRATIONS</span>
-  </div>
-
-  <div class="hero">
-    <div class="hero-stripe"></div>
-    <div class="hero-inner">
-      <div class="hero-eyebrow">SAUDI ARABIA × FIFA 2026</div>
-      <div class="hero-ar">مسابقة <span>كأس العالم</span> 2026</div>
-      <div class="hero-en">FIFA WORLD CUP 2026 — REGISTRATION</div>
-      <div class="hero-divider">
-        <div class="hd-line hd-left"></div>
-        <div class="hd-dot"></div>
-        <div class="hd-line hd-right"></div>
-      </div>
-    </div>
-  </div>
-
-  <div class="form-body" id="theForm">
-    <div class="ref-notice" id="refNotice">
-      <div class="ref-notice-icon">🎉</div>
-      <div class="ref-notice-text">
-        <div class="ref-notice-ar">تمت دعوتك من قِبَل صديق! ستحصل على <strong>+10 نقاط إضافية</strong> عند التسجيل</div>
-        <div class="ref-notice-en">INVITED BY A FRIEND — BONUS +10 POINTS ON SIGNUP</div>
-      </div>
-    </div>
-
-    <div class="field">
-      <div class="field-num">01</div>
-      <label class="lbl-ar" for="f-name">الاسم</label>
-      <div class="lbl-en">FULL NAME</div>
-      <input class="finput" id="f-name" type="text" placeholder="اكتب اسمك الكامل">
-      <div class="error-text" id="err-name">يرجى إدخال الاسم الكامل</div>
-    </div>
-
-    <div class="field">
-      <div class="field-num">02</div>
-      <label class="lbl-ar" for="f-nat">الجنسية</label>
-      <div class="lbl-en">NATIONALITY</div>
-      <select class="fselect" id="f-nat">
-        <option value="" disabled selected>اختر جنسيتك</option>
-        <option value="سعودي">🇸🇦 سعودي — Saudi Arabian</option>
-        <option value="إماراتي">🇦🇪 إماراتي — Emirati</option>
-        <option value="كويتي">🇰🇼 كويتي — Kuwaiti</option>
-        <option value="قطري">🇶🇦 قطري — Qatari</option>
-        <option value="بحريني">🇧🇭 بحريني — Bahraini</option>
-        <option value="عماني">🇴🇲 عماني — Omani</option>
-        <option value="مصري">🇪🇬 مصري — Egyptian</option>
-        <option value="أردني">🇯🇴 أردني — Jordanian</option>
-        <option value="لبناني">🇱🇧 لبناني — Lebanese</option>
-        <option value="سوري">🇸🇾 سوري — Syrian</option>
-        <option value="عراقي">🇮🇶 عراقي — Iraqi</option>
-        <option value="يمني">🇾🇪 يمني — Yemeni</option>
-        <option value="فلسطيني">🇵🇸 فلسطيني — Palestinian</option>
-        <option value="سوداني">🇸🇩 سوداني — Sudanese</option>
-        <option value="ليبي">🇱🇾 ليبي — Libyan</option>
-        <option value="تونسي">🇹🇳 تونسي — Tunisian</option>
-        <option value="جزائري">🇩🇿 جزائري — Algerian</option>
-        <option value="مغربي">🇲🇦 مغربي — Moroccan</option>
-        <option value="باكستاني">🇵🇰 باكستاني — Pakistani</option>
-        <option value="هندي">🇮🇳 هندي — Indian</option>
-        <option value="بنغلاديشي">🇧🇩 بنغلاديشي — Bangladeshi</option>
-        <option value="فلبيني">🇵🇭 فلبيني — Filipino</option>
-        <option value="إندونيسي">🇮🇩 إندونيسي — Indonesian</option>
-        <option value="سريلانكي">🇱🇰 سريلانكي — Sri Lankan</option>
-        <option value="نيبالي">🇳🇵 نيبالي — Nepali</option>
-        <option value="إثيوبي">🇪🇹 إثيوبي — Ethiopian</option>
-        <option value="تركي">🇹🇷 تركي — Turkish</option>
-        <option value="إيراني">🇮🇷 إيراني — Iranian</option>
-        <option value="أمريكي">🇺🇸 أمريكي — American</option>
-        <option value="بريطاني">🇬🇧 بريطاني — British</option>
-        <option value="فرنسي">🇫🇷 فرنسي — French</option>
-        <option value="ألماني">🇩🇪 ألماني — German</option>
-        <option value="كندي">🇨🇦 كندي — Canadian</option>
-        <option value="أسترالي">🇦🇺 أسترالي — Australian</option>
-        <option value="آخر">🌍 أخرى — Other</option>
+  <div class="field">
+    <div class="field-label-ar">رقم الجوال</div>
+    <div class="field-label-en">PHONE NUMBER</div>
+    <div class="phone-group">
+      <select id="countryCode" class="phone-code">
+        <option value="+966">🇸🇦 +966</option>
+        <option value="+971">🇦🇪 +971</option>
+        <option value="+965">🇰🇼 +965</option>
+        <option value="+974">🇶🇦 +974</option>
+        <option value="+20">🇪🇬 +20</option>
+        <option value="+962">🇯🇴 +962</option>
+        <option value="+961">🇱🇧 +961</option>
+        <option value="+964">🇮🇶 +964</option>
+        <option value="+1">🇺🇸 +1</option>
+        <option value="+44">🇬🇧 +44</option>
       </select>
-      <div class="error-text" id="err-nat">يرجى اختيار الجنسية</div>
+      <input type="tel" id="phoneNumber" placeholder="5xxxxxxxx" style="flex:1">
     </div>
-
-    <div class="field">
-      <div class="field-num">03</div>
-      <label class="lbl-ar" for="f-city">المدينة</label>
-      <div class="lbl-en">CITY</div>
-      <input class="finput" id="f-city" type="text" placeholder="اكتب مدينتك">
-      <div class="error-text" id="err-city">يرجى إدخال المدينة</div>
-    </div>
-
-    <div class="field">
-      <div class="field-num">04</div>
-      <label class="lbl-ar" for="f-num">الرقم</label>
-      <div class="lbl-en">PHONE NUMBER</div>
-      <div class="phone-row">
-        <div class="phone-code-wrap">
-          <select class="phone-code-select" id="f-code">
-            <option value="+966">🇸🇦 +966</option>
-            <option value="+971">🇦🇪 +971</option>
-            <option value="+965">🇰🇼 +965</option>
-            <option value="+974">🇶🇦 +974</option>
-            <option value="+973">🇧🇭 +973</option>
-            <option value="+968">🇴🇲 +968</option>
-            <option value="+20">🇪🇬 +20</option>
-            <option value="+962">🇯🇴 +962</option>
-            <option value="+961">🇱🇧 +961</option>
-            <option value="+963">🇸🇾 +963</option>
-            <option value="+964">🇮🇶 +964</option>
-            <option value="+967">🇾🇪 +967</option>
-            <option value="+970">🇵🇸 +970</option>
-            <option value="+249">🇸🇩 +249</option>
-            <option value="+218">🇱🇾 +218</option>
-            <option value="+216">🇹🇳 +216</option>
-            <option value="+213">🇩🇿 +213</option>
-            <option value="+212">🇲🇦 +212</option>
-            <option value="+92">🇵🇰 +92</option>
-            <option value="+91">🇮🇳 +91</option>
-            <option value="+880">🇧🇩 +880</option>
-            <option value="+63">🇵🇭 +63</option>
-            <option value="+62">🇮🇩 +62</option>
-            <option value="+94">🇱🇰 +94</option>
-            <option value="+977">🇳🇵 +977</option>
-            <option value="+90">🇹🇷 +90</option>
-            <option value="+98">🇮🇷 +98</option>
-            <option value="+1">🇺🇸 +1</option>
-            <option value="+44">🇬🇧 +44</option>
-            <option value="+33">🇫🇷 +33</option>
-            <option value="+49">🇩🇪 +49</option>
-            <option value="+1-CA">🇨🇦 +1</option>
-            <option value="+61">🇦🇺 +61</option>
-          </select>
-        </div>
-        <input class="phone-number-input" id="f-num" type="text" inputmode="numeric" placeholder="5xxxxxxxx">
-      </div>
-      <div class="error-text" id="err-num">يرجى إدخال رقم صحيح</div>
-    </div>
-
-    <div class="terms-row">
-      <input type="checkbox" class="terms-check" id="f-terms">
-      <label class="terms-label" for="f-terms">
-        أوافق على <a href="#">الشروط والأحكام</a> وأتيح لـ Outfit × همكس التواصل معي
-      </label>
-    </div>
-    <div class="error-text" id="err-terms" style="text-align:right;">يرجى الموافقة على الشروط للمتابعة</div>
-
-    <div class="btn-wrap">
-      <button class="btn-submit" id="submitBtn" type="button" onclick="doSubmit()">
-        <div class="btn-left" id="btnLeft">REGISTER</div>
-        <div class="btn-right" id="btnRight">سجّل الآن</div>
-      </button>
-    </div>
-    <div class="msg-box msg-error" id="errorBox"></div>
+    <div class="error-msg" id="errorPhone">رقم هاتف صحيح مطلوب</div>
   </div>
 
-  <div class="success" id="successBox">
-    <div class="success-top">✓ تم التسجيل بنجاح! 🇸🇦</div>
-    <div class="success-ticket">
-      <div class="ticket-label">ENTRY NUMBER — رقم المشاركة</div>
-      <div class="ticket-id" id="ticketId">WC-000000</div>
-    </div>
-    <div class="success-bottom">REGISTRATION SUBMITTED — OUTFIT × همكس</div>
+  <div class="terms">
+    <input type="checkbox" id="termsCheck">
+    <label>أوافق على <a href="#">الشروط والأحكام</a> وأتلقى العروض</label>
   </div>
+  <div class="error-msg" id="errorTerms">يجب الموافقة على الشروط</div>
 
-  <div class="points-card" id="pointsCard">
-    <div class="points-card-top">
-      <div class="pts-label-group">
-        <div class="pts-title">YOUR POINTS — نقاطك</div>
-        <div class="pts-title-ar">اكسب أكثر واربح أكثر!</div>
-      </div>
-      <div class="pts-display">
-        <div class="pts-num" id="userPtsNum">10</div>
-        <div class="pts-unit">POINTS نقطة</div>
-      </div>
-    </div>
-    <div class="next-reward-bar">
-      <div class="nrb-label" id="nrbLabel">الجائزة التالية: خصم 15% — تحتاج <span id="nrbNeeded">5</span> نقاط إضافية</div>
-      <div class="nrb-track"><div class="nrb-fill" id="nrbFill" style="width:67%"></div></div>
-      <div class="nrb-next" id="nrbNext">15 pts → 🏷️ 15% Discount</div>
-    </div>
-    <div class="points-actions">
-      <div class="pts-action-row">
-        <div class="pts-action-left">
-          <div class="pts-action-icon">✅</div>
-          <div>
-            <div class="pts-action-desc">تسجّلت في المسابقة</div>
-            <div class="pts-action-en">COMPETITION REGISTERED</div>
-          </div>
-        </div>
-        <div class="pts-badge-done">+10 ✓</div>
-      </div>
-      <div class="pts-action-row">
-        <div class="pts-action-left">
-          <div class="pts-action-icon">👥</div>
-          <div>
-            <div class="pts-action-desc">ادعُ أصدقاءك — كل تسجيل = +10</div>
-            <div class="pts-action-en">EACH FRIEND SIGNUP = +10 PTS</div>
-          </div>
-        </div>
-        <div class="pts-badge-earn">+10 PTS</div>
-      </div>
-    </div>
+  <button class="submit-btn" id="submitBtn">
+    <div class="submit-left">REGISTER</div>
+    <div class="submit-right">سجّل الآن</div>
+  </button>
+  <div id="globalErrorMsg" class="msg-error-block"></div>
+</div>
+
+<div id="successCard" class="success-card">
+  <div class="success-header">✓ تم التسجيل بنجاح!</div>
+  <div class="code-box" id="entryCodeDisplay">WC-000000</div>
+</div>
+
+<div id="pointsDashboard" class="points-dashboard">
+  <div class="points-header">
+    <span>🏆 نقاطك</span>
+    <span class="points-value" id="totalPointsSpan">0</span>
   </div>
-
-  <div class="ref-link-box" id="refLinkBox">
-    <div class="ref-link-title">🔗 رابط الدعوة الخاص بك</div>
-    <div class="ref-link-sub">YOUR PERSONAL REFERRAL LINK — شارك واكسب نقاط</div>
-    <div class="ref-link-row">
-      <input class="ref-link-input" id="refLinkInput" readonly type="text" value="">
-      <button class="ref-copy-btn" onclick="copyRefLink()">نسخ COPY</button>
-    </div>
-    <div class="ref-copied" id="refCopied">✓ تم النسخ! — Copied!</div>
+  <div class="stats-grid">
+    <div class="stat-item">📊 عدد الإحالات<br><span class="stat-number" id="referralCountStat">0</span></div>
+    <div class="stat-item">⚡ نقاط الإحالات<br><span class="stat-number" id="referralPointsStat">0</span></div>
+    <div class="stat-item">👕 القمصان المجانية<br><span class="stat-number" id="tshirtsEarnedStat">0</span></div>
+    <div class="stat-item">🎯 للقميص القادم<br><span class="stat-number" id="nextTshirtStat">10</span> إحالة</div>
   </div>
+  <div class="tshirt-progress" id="tshirtProgressText">💡 قم بدعوة 10 أصدقاء لتحصل على قميص Outfit مجاني!</div>
+</div>
 
-  <div class="footer">
-    <div class="f-dot f-orange"></div>
-    <span>OUTFIT © 2026</span>
-    <div class="f-dot f-green"></div>
-    <span>PRESENTED BY همكس</span>
-    <div class="f-dot f-orange"></div>
+<div id="refLinkContainer" class="ref-link-area">
+  <div>🔗 رابط الدعوة الخاص بك (شاركه لتربح نقاط)</div>
+  <div class="ref-link-input">
+    <input type="text" id="referralLinkField" readonly>
+    <button id="copyRefBtn" class="copy-btn">نسخ</button>
   </div>
+  <div id="copyFeedback" style="font-size:12px; color:#006c35; margin-top:6px; display:none;">✓ تم النسخ</div>
+</div>
 
-  <script>
-    const SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbyHoZ9U3O8qAUq2c1-nmDhoPNDckGzKRzEYJmD4Byrek0ICp-_w0qi0HcsSfSDFwwgG/exec';
-    const WC_DATE = new Date('2026-06-11T00:00:00');
-    const TIERS = [
-      { pts: 15, label: 'خصم 15% — 15% Discount', emoji: '🏷️' },
-      { pts: 30, label: 'قميص Outfit — Outfit Jersey', emoji: '👕' },
-      { pts: 60, label: 'دخول مضاعف — Double Entry', emoji: '🎟️' },
-      { pts: 100, label: 'جائزة VIP — VIP Prize', emoji: '👑' }
-    ];
+<div class="footer">
+  OUTFiT × همكس — FIFA WORLD CUP 2026 — OFFICIAL REGISTRATION
+</div>
 
-    const PTS_KEY = 'wc2026_points';
-    const TID_KEY = 'wc2026_tid';
+<script>
+  // ======================= CONFIG =======================
+  const SCRIPT_URL = 'PASTE_YOUR_GOOGLE_APPS_SCRIPT_WEBAPP_URL_HERE';   // REPLACE WITH YOUR WEB APP URL
 
-    function getPoints() { return parseInt(localStorage.getItem(PTS_KEY) || '0'); }
-    function setPoints(n) { localStorage.setItem(PTS_KEY, n); }
-    function addPoints(n) { setPoints(getPoints() + n); refreshPointsUI(); }
+  // Helper: parse referral from URL
+  const urlParams = new URLSearchParams(window.location.search);
+  let referredCode = urlParams.get('ref') || '';
 
-    function refreshPointsUI() {
-      const p = getPoints();
-      document.getElementById('userPtsNum').textContent = p;
-      const next = TIERS.find(t => t.pts > p);
+  // DOM elements
+  const formDiv = document.getElementById('formContainer');
+  const successCard = document.getElementById('successCard');
+  const pointsDashboard = document.getElementById('pointsDashboard');
+  const refLinkContainer = document.getElementById('refLinkContainer');
+  const submitBtn = document.getElementById('submitBtn');
+  const globalError = document.getElementById('globalErrorMsg');
 
-      if (next) {
-        const prev = TIERS.filter(t => t.pts <= p).pop();
-        const base = prev ? prev.pts : 0;
-        const pct = Math.min(100, Math.round(((p - base) / (next.pts - base)) * 100));
-        document.getElementById('nrbFill').style.width = pct + '%';
-        document.getElementById('nrbNeeded').textContent = next.pts - p;
-        document.getElementById('nrbLabel').innerHTML = `الجائزة التالية: ${next.emoji} ${next.label} — تحتاج <span id="nrbNeeded">${next.pts - p}</span> نقطة إضافية`;
-        document.getElementById('nrbNext').textContent = `${next.pts} pts → ${next.emoji} ${next.label}`;
-      } else {
-        document.getElementById('nrbFill').style.width = '100%';
-        document.getElementById('nrbLabel').textContent = '🏆 وصلت للمستوى الأعلى! — MAX LEVEL REACHED!';
-        document.getElementById('nrbNext').textContent = '✓ ALL REWARDS UNLOCKED';
-      }
+  // Display referral notice if exists
+  if (referredCode) {
+    const noticeDiv = document.getElementById('referralNotice');
+    noticeDiv.classList.add('visible');
+  }
+
+  // live registrations placeholder
+  function updateLiveCount() {
+    const base = 287;
+    const fakeRand = Math.floor(Date.now() / 60000) % 89;
+    document.getElementById('liveRegCount').innerText = base + fakeRand;
+  }
+  updateLiveCount();
+  setInterval(updateLiveCount, 30000);
+
+  // countdown
+  const targetDate = new Date('2026-06-11T00:00:00').getTime();
+  function updateCountdown() {
+    const now = new Date().getTime();
+    const diff = targetDate - now;
+    if (diff <= 0) {
+      document.querySelector('.countdown-bar').innerHTML = '<span style="font-weight:bold;color:#006c35;">🏆 كأس العالم 2026 انطلق! 🏆</span>';
+      return;
     }
+    const days = Math.floor(diff / (1000*60*60*24));
+    const hours = Math.floor((diff % (86400000)) / 3600000);
+    const mins = Math.floor((diff % 3600000) / 60000);
+    const secs = Math.floor((diff % 60000) / 1000);
+    document.getElementById('days').innerText = String(days).padStart(3,'0');
+    document.getElementById('hours').innerText = String(hours).padStart(2,'0');
+    document.getElementById('minutes').innerText = String(mins).padStart(2,'0');
+    document.getElementById('seconds').innerText = String(secs).padStart(2,'0');
+  }
+  updateCountdown();
+  setInterval(updateCountdown, 1000);
 
-    function updateCountdown() {
-      const diff = WC_DATE - new Date();
-      if (diff <= 0) {
-        document.querySelector('.countdown-bar').innerHTML =
-          '<span class="cd-label" style="color:#006c35;font-size:14px">🏆 FIFA WORLD CUP 2026 HAS STARTED!</span>';
-        return;
-      }
-      const d = Math.floor(diff / 86400000);
-      const h = Math.floor((diff % 86400000) / 3600000);
-      const m = Math.floor((diff % 3600000) / 60000);
-      const s = Math.floor((diff % 60000) / 1000);
-      document.getElementById('cd-days').textContent = String(d).padStart(3,'0');
-      document.getElementById('cd-hours').textContent = String(h).padStart(2,'0');
-      document.getElementById('cd-mins').textContent = String(m).padStart(2,'0');
-      document.getElementById('cd-secs').textContent = String(s).padStart(2,'0');
+  // Confetti logic
+  const canvas = document.getElementById('confettiCanvas');
+  let ctx = canvas.getContext('2d');
+  let particles = [];
+  let anim = null;
+  function startConfetti() {
+    canvas.width = window.innerWidth;
+    canvas.height = window.innerHeight;
+    canvas.style.display = 'block';
+    particles = [];
+    for(let i=0;i<150;i++) {
+      particles.push({
+        x: Math.random() * canvas.width,
+        y: -30 - Math.random() * 200,
+        size: 6 + Math.random() * 8,
+        color: ['#ff5c00','#006c35','#d8ff3c','#ffffff'][Math.floor(Math.random()*4)],
+        velY: 2 + Math.random() * 4,
+        velX: (Math.random() - 0.5) * 2,
+        rot: Math.random() * 360
+      });
     }
-    updateCountdown();
-    setInterval(updateCountdown, 1000);
-
-    (function(){
-      const el = document.getElementById('liveCount');
-      const EPOCH = new Date('2026-04-01T00:00:00Z').getTime();
-      const BASE = 312;
-      function getCount(){
-        const ms = Date.now() - EPOCH, hrs = ms / 3600000;
-        const steady = Math.floor(hrs * 18);
-        const slot = Math.floor(ms / 240000);
-        const bump = ((slot * 2654435761) >>> 0) % 3;
-        return BASE + steady + bump;
-      }
-      el.textContent = getCount();
-      setInterval(() => { el.textContent = getCount(); }, 30000);
-    })();
-
-    const canvas = document.getElementById('confetti-canvas');
-    const ctx = canvas.getContext('2d');
-    let particles = [], animFrame;
-
-    function launchConfetti(){
-      canvas.width = window.innerWidth;
-      canvas.height = window.innerHeight;
-      canvas.style.display = 'block';
-      particles = [];
-      const colors = ['#ff5c00','#006c35','#ffffff','#d8ff3c','#ffb347','#00cc55'];
-      for(let i=0;i<180;i++){
-        particles.push({
-          x:Math.random()*canvas.width,
-          y:-20-Math.random()*300,
-          w:6+Math.random()*8,
-          h:10+Math.random()*6,
-          color:colors[Math.floor(Math.random()*colors.length)],
-          rot:Math.random()*360,
-          rotSpeed:(Math.random()-0.5)*7,
-          vy:2.5+Math.random()*4,
-          vx:(Math.random()-0.5)*2.5,
-          opacity:1
-        });
-      }
-      cancelAnimationFrame(animFrame);
-      drawConfetti();
-    }
-
-    function drawConfetti(){
+    function draw() {
       ctx.clearRect(0,0,canvas.width,canvas.height);
       let alive = false;
-      particles.forEach(p=>{
-        p.y += p.vy;
-        p.x += p.vx;
-        p.rot += p.rotSpeed;
-        if(p.y > canvas.height * 0.7) p.opacity -= 0.018;
-        if(p.opacity > 0 && p.y < canvas.height + 40){
-          alive = true;
-          ctx.save();
-          ctx.globalAlpha = Math.max(0,p.opacity);
-          ctx.translate(p.x,p.y);
-          ctx.rotate(p.rot*Math.PI/180);
-          ctx.fillStyle = p.color;
-          ctx.fillRect(-p.w/2,-p.h/2,p.w,p.h);
-          ctx.restore();
-        }
+      particles.forEach(p => {
+        p.y += p.velY;
+        p.x += p.velX;
+        p.rot += 3;
+        if(p.y < canvas.height + 50) alive = true;
+        if(p.y > canvas.height + 80) return;
+        ctx.save();
+        ctx.translate(p.x,p.y);
+        ctx.rotate(p.rot * Math.PI/180);
+        ctx.fillStyle = p.color;
+        ctx.fillRect(-p.size/2, -p.size/2, p.size, p.size/1.5);
+        ctx.restore();
       });
-      if(alive) animFrame = requestAnimationFrame(drawConfetti);
-      else {
-        canvas.style.display = 'none';
-        ctx.clearRect(0,0,canvas.width,canvas.height);
+      if(alive) anim = requestAnimationFrame(draw);
+      else { canvas.style.display = 'none'; cancelAnimationFrame(anim); }
+    }
+    if(anim) cancelAnimationFrame(anim);
+    draw();
+  }
+
+  // Validation
+  function validateForm() {
+    let ok = true;
+    document.querySelectorAll('.error-msg').forEach(e => e.style.display = 'none');
+    const name = document.getElementById('fullName').value.trim();
+    const nat = document.getElementById('nationality').value;
+    const city = document.getElementById('city').value.trim();
+    const phoneRaw = document.getElementById('phoneNumber').value.trim();
+    const phoneDigits = phoneRaw.replace(/\D/g,'');
+    const terms = document.getElementById('termsCheck').checked;
+
+    if(name.length < 3) { document.getElementById('errorName').style.display = 'block'; ok = false; }
+    if(!nat) { document.getElementById('errorNat').style.display = 'block'; ok = false; }
+    if(!city) { document.getElementById('errorCity').style.display = 'block'; ok = false; }
+    if(phoneDigits.length < 8 || phoneDigits.length > 15) { document.getElementById('errorPhone').style.display = 'block'; ok = false; }
+    if(!terms) { document.getElementById('errorTerms').style.display = 'block'; ok = false; }
+    return ok;
+  }
+
+  // API: fetch stats after registration
+  async function fetchUserStats(entryCode) {
+    try {
+      const res = await fetch(`${SCRIPT_URL}?entryCode=${encodeURIComponent(entryCode)}`);
+      const data = await res.json();
+      if(data.status === 'success') {
+        document.getElementById('totalPointsSpan').innerText = data.totalPoints;
+        document.getElementById('referralCountStat').innerText = data.referralCount;
+        document.getElementById('referralPointsStat').innerText = data.referralPoints;
+        document.getElementById('tshirtsEarnedStat').innerText = data.tshirtsEarned;
+        document.getElementById('nextTshirtStat').innerText = data.nextTshirtIn;
+        let msg = data.tshirtsEarned > 0 ? `🎉 لقد ربحت ${data.tshirtsEarned} قميص/قمصان مجانية!` : `💪 قم بدعوة ${data.nextTshirtIn} أصدقاء لتربح أول قميص Outfit مجاني.`;
+        document.getElementById('tshirtProgressText').innerHTML = msg;
+      } else {
+        console.warn("could not fetch stats");
       }
+    } catch(e) {
+      console.error(e);
     }
+  }
 
-    const urlParams = new URLSearchParams(window.location.search);
-    const incomingRef = urlParams.get('ref') || '';
-    if (incomingRef) {
-      document.getElementById('refNotice').classList.add('visible');
-    }
+  // create & display referral link
+  function setReferralLink(code) {
+    const baseUrl = window.location.href.split('?')[0];
+    const fullLink = `${baseUrl}?ref=${encodeURIComponent(code)}`;
+    document.getElementById('referralLinkField').value = fullLink;
+  }
 
-    const els = {
-      name: document.getElementById('f-name'),
-      nat: document.getElementById('f-nat'),
-      city: document.getElementById('f-city'),
-      code: document.getElementById('f-code'),
-      num: document.getElementById('f-num'),
-      terms: document.getElementById('f-terms'),
-      errName: document.getElementById('err-name'),
-      errNat: document.getElementById('err-nat'),
-      errCity: document.getElementById('err-city'),
-      errNum: document.getElementById('err-num'),
-      errTerms: document.getElementById('err-terms'),
-      submitBtn: document.getElementById('submitBtn'),
-      btnLeft: document.getElementById('btnLeft'),
-      btnRight: document.getElementById('btnRight'),
-      errorBox: document.getElementById('errorBox'),
-      form: document.getElementById('theForm'),
-      success: document.getElementById('successBox'),
-      ticketId: document.getElementById('ticketId')
-    };
+  document.getElementById('copyRefBtn').addEventListener('click', function() {
+    const input = document.getElementById('referralLinkField');
+    input.select();
+    input.setSelectionRange(0, 99999);
+    navigator.clipboard.writeText(input.value);
+    const fb = document.getElementById('copyFeedback');
+    fb.style.display = 'block';
+    setTimeout(()=> fb.style.display='none', 2000);
+  });
 
-    function hideErrors(){
-      ['errName','errNat','errCity','errNum','errTerms'].forEach(k=>els[k].style.display='none');
-      els.errorBox.style.display='none';
-      els.errorBox.textContent='';
-    }
+  // main submit
+  window.doSubmit = async function() {
+    if(!validateForm()) return;
+    const name = document.getElementById('fullName').value.trim();
+    const nationality = document.getElementById('nationality').value;
+    const city = document.getElementById('city').value.trim();
+    const codeSel = document.getElementById('countryCode').value;
+    const phoneDigits = document.getElementById('phoneNumber').value.trim().replace(/\D/g,'');
+    const fullPhone = codeSel + ' ' + phoneDigits;
+    const terms = document.getElementById('termsCheck').checked;
 
-    function validateForm(){
-      hideErrors();
-      let valid = true;
-      const name = els.name.value.trim();
-      const city = els.city.value.trim();
-      const digits = els.num.value.trim().replace(/\D/g,'');
+    const formData = new URLSearchParams();
+    formData.append('name', name);
+    formData.append('nationality', nationality);
+    formData.append('city', city);
+    formData.append('number', fullPhone);
+    if(referredCode) formData.append('referredBy', referredCode);
 
-      if(!name || name.length < 3){ els.errName.style.display='block'; valid=false; }
-      if(!els.nat.value){ els.errNat.style.display='block'; valid=false; }
-      if(!city || city.length < 2){ els.errCity.style.display='block'; valid=false; }
-      if(!/^[0-9]{7,15}$/.test(digits)){ els.errNum.style.display='block'; valid=false; }
-      if(!els.terms.checked){ els.errTerms.style.display='block'; valid=false; }
+    submitBtn.disabled = true;
+    globalError.style.display = 'none';
+    try {
+      const response = await fetch(SCRIPT_URL, { method: 'POST', body: formData });
+      const result = await response.json();
 
-      return valid;
-    }
-
-    function setLoading(on){
-      els.submitBtn.disabled = on;
-      els.btnLeft.textContent = on ? 'SENDING...' : 'REGISTER';
-      els.btnRight.textContent = on ? 'جاري الإرسال...' : 'سجّل الآن';
-    }
-
-    function buildRefLink(tid){
-      const base = window.location.href.split('?')[0];
-      return base + '?ref=' + encodeURIComponent(tid);
-    }
-
-    function copyRefLink(){
-      const input = document.getElementById('refLinkInput');
-      input.select();
-      input.setSelectionRange(0,9999);
-      try {
-        document.execCommand('copy');
-      } catch(e) {
-        navigator.clipboard.writeText(input.value);
+      if(result.status === 'duplicate') {
+        globalError.innerText = '⚠️ هذا الرقم مسجل مسبقاً في المسابقة.';
+        globalError.style.display = 'block';
+        submitBtn.disabled = false;
+        return;
       }
-      const el = document.getElementById('refCopied');
-      el.style.display = 'block';
-      setTimeout(()=>{ el.style.display='none'; }, 2500);
+      if(result.status !== 'success') throw new Error(result.message);
+
+      const entryCode = result.entryCode;
+      document.getElementById('entryCodeDisplay').innerText = entryCode;
+
+      // Show success UI
+      formDiv.style.display = 'none';
+      successCard.style.display = 'block';
+      pointsDashboard.style.display = 'block';
+      refLinkContainer.style.display = 'block';
+      setReferralLink(entryCode);
+
+      // fetch live stats from backend (points, referral counts etc)
+      await fetchUserStats(entryCode);
+
+      // confetti
+      startConfetti();
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+
+    } catch(err) {
+      globalError.innerText = 'حدث خطأ، حاول مرة أخرى لاحقاً';
+      globalError.style.display = 'block';
+      console.error(err);
+    } finally {
+      submitBtn.disabled = false;
     }
+  };
 
-    async function doSubmit(){
-      if(!validateForm()) return;
+  document.getElementById('submitBtn').addEventListener('click', doSubmit);
+  
+  // optional: if user already registered and stored code? (just for completeness)
+  // No localStorage requirement but clean.
 
-      const codeVal = els.code.value.replace('-CA','');
-      const digits = els.num.value.trim().replace(/\D/g,'');
-      const fullPhone = codeVal + ' ' + digits;
-
-      const body = new URLSearchParams();
-      body.append('name', els.name.value.trim());
-      body.append('nationality', els.nat.value);
-      body.append('city', els.city.value.trim());
-      body.append('number', fullPhone);
-
-      if(incomingRef) body.append('referredBy', incomingRef);
-
-      try {
-        setLoading(true);
-        const res = await fetch(SCRIPT_URL,{method:'POST',body});
-        const data = await res.json();
-
-        if(data.status === 'duplicate'){
-          els.errorBox.textContent = 'هذا الرقم مسجّل مسبقاً في المسابقة';
-          els.errorBox.style.display = 'block';
-          return;
-        }
-
-        if(data.status !== 'success') throw new Error(data.message || 'Submission failed');
-
-        const tid = data.entryCode || 'WC-000000';
-        els.ticketId.textContent = tid;
-        localStorage.setItem(TID_KEY, tid);
-
-        const startPts = incomingRef ? 20 : 10;
-        setPoints(startPts);
-        refreshPointsUI();
-
-        const refLink = buildRefLink(tid);
-        document.getElementById('refLinkInput').value = refLink;
-
-        els.form.style.display = 'none';
-        els.success.style.display = 'block';
-        document.getElementById('pointsCard').style.display = 'block';
-        document.getElementById('refLinkBox').style.display = 'block';
-
-        launchConfetti();
-        setTimeout(()=>els.success.scrollIntoView({behavior:'smooth',block:'center'}), 100);
-
-      } catch(err){
-        console.error(err);
-        els.errorBox.textContent = 'حدث خطأ أثناء الإرسال، يرجى المحاولة مرة أخرى';
-        els.errorBox.style.display = 'block';
-      } finally {
-        setLoading(false);
-      }
-    }
-  </script>
+</script>
 </body>
 </html>
