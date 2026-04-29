@@ -577,6 +577,11 @@
       <div class="ticket-id" id="ticketId">WC-000000</div>
     </div>
     <div class="success-bottom">REGISTRATION SUBMITTED — OUTFIT × همكس</div>
+    <div style="text-align:center;padding:8px;background:#f9f9f9;border-top:1px solid #eee;">
+      <button onclick="resetForm()" style="background:none;border:none;color:#aaa;font-size:11px;cursor:pointer;font-family:'Cairo',sans-serif;">
+        تسجيل بحساب آخر / Register another
+      </button>
+    </div>
   </div>
 
   <div class="points-card" id="pointsCard">
@@ -938,15 +943,29 @@
       }
     }
 
+    function resetForm(){
+      localStorage.removeItem(TID_KEY);
+      document.getElementById('successBox').style.display     = 'none';
+      document.getElementById('pointsCard').style.display     = 'none';
+      document.getElementById('refLinkBox').style.display     = 'none';
+      document.getElementById('theForm').style.display        = 'flex';
+      document.getElementById('f-name').value  = '';
+      document.getElementById('f-nat').selectedIndex = 0;
+      document.getElementById('f-city').value = '';
+      document.getElementById('f-num').value  = '';
+      document.getElementById('f-terms').checked = false;
+    }
+
     // ── On load: restore if already registered ────────────────────
     window.addEventListener('load', async () => {
       const savedTid = localStorage.getItem(TID_KEY);
       if(savedTid){
-        document.getElementById('ticketId').textContent    = savedTid;
-        document.getElementById('refLinkInput').value      = buildRefLink(savedTid);
-        document.getElementById('pointsCard').style.display= 'block';
-        document.getElementById('refLinkBox').style.display= 'block';
-        document.getElementById('theForm').style.display   = 'none';
+        document.getElementById('ticketId').textContent             = savedTid;
+        document.getElementById('refLinkInput').value               = buildRefLink(savedTid);
+        document.getElementById('theForm').style.display            = 'none';
+        document.getElementById('successBox').style.display         = 'block';
+        document.getElementById('pointsCard').style.display         = 'block';
+        document.getElementById('refLinkBox').style.display         = 'block';
         await loadReferralStats(savedTid);
       } else {
         updateTierProgress(10);
