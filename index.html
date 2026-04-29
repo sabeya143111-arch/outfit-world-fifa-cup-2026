@@ -893,6 +893,13 @@
     async function doSubmit(){
       if(!validateForm()) return;
 
+      const scriptUrl = SCRIPT_URL.trim();
+      if(!scriptUrl || scriptUrl.includes('PASTE_YOUR')){
+        els.errorBox.textContent   = '⚠️ SCRIPT_URL set nahi hai — Google Apps Script URL paste karein';
+        els.errorBox.style.display = 'block';
+        return;
+      }
+
       const codeVal  = els.code.value.replace('-CA','');
       const digits   = els.num.value.trim().replace(/\D/g,'');
       const fullPhone= codeVal + ' ' + digits;
@@ -907,8 +914,14 @@
       try {
         setLoading(true);
 
-        const res  = await fetch(SCRIPT_URL, { method:'POST', body });
-        const data = await res.json();
+        const res  = await fetch(scriptUrl, { method:'POST', body });
+
+        if(!res.ok) throw new Error('Server responded with ' + res.status);
+
+        const text = await res.text();
+        let data;
+        try { data = JSON.parse(text); }
+        catch(e) { throw new Error('Invalid response from server'); }
 
         if(data.status === 'duplicate'){
           els.errorBox.textContent   = 'هذا الرقم مسجّل مسبقاً في المسابقة';
@@ -918,15 +931,15 @@
 
         if(data.status !== 'success') throw new Error(data.message || 'Submission failed');
 
-        const tid     = data.entryCode || 'WC-000000';
+        const tid = data.entryCode || 'WC-000000';
         els.ticketId.textContent = tid;
         localStorage.setItem(TID_KEY, tid);
 
         const refLink = buildRefLink(tid);
         document.getElementById('refLinkInput').value = refLink;
 
-        els.form.style.display                          = 'none';
-        els.success.style.display                       = 'block';
+        els.form.style.display                               = 'none';
+        els.success.style.display                            = 'block';
         document.getElementById('pointsCard').style.display  = 'block';
         document.getElementById('refLinkBox').style.display  = 'block';
 
@@ -935,8 +948,8 @@
         setTimeout(()=> els.success.scrollIntoView({behavior:'smooth',block:'center'}), 100);
 
       } catch(err){
-        console.error(err);
-        els.errorBox.textContent   = 'حدث خطأ أثناء الإرسال، يرجى المحاولة مرة أخرى';
+        console.error('Submit error:', err);
+        els.errorBox.textContent   = 'خطأ في الإرسال: ' + (err.message || 'يرجى المحاولة مرة أخرى');
         els.errorBox.style.display = 'block';
       } finally {
         setLoading(false);
@@ -956,21 +969,15 @@
       document.getElementById('f-terms').checked = false;
     }
 
-    // ── On load: restore if already registered ────────────────────
-    window.addEventListener('load', async () => {
-      const savedTid = localStorage.getItem(TID_KEY);
-      if(savedTid){
-        document.getElementById('ticketId').textContent             = savedTid;
-        document.getElementById('refLinkInput').value               = buildRefLink(savedTid);
-        document.getElementById('theForm').style.display            = 'none';
-        document.getElementById('successBox').style.display         = 'block';
-        document.getElementById('pointsCard').style.display         = 'block';
-        document.getElementById('refLinkBox').style.display         = 'block';
-        await loadReferralStats(savedTid);
-      } else {
-        updateTierProgress(10);
-        updateTshirtBox(0, 0, 10);
-      }
+    // ── On load ───────────────────────────────────────────────────
+    window.addEventListener('load', () => {
+      // Form hamesha dikhao — localStorage se auto-hide nahi karo
+      document.getElementById('theForm').style.display    = 'flex';
+      document.getElementById('successBox').style.display = 'none';
+      document.getElementById('pointsCard').style.display = 'none';
+      document.getElementById('refLinkBox').style.display = 'none';
+      updateTierProgress(10);
+      updateTshirtBox(0, 0, 10);
     });
   </script>
 </body>
