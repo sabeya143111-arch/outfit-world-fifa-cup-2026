@@ -134,70 +134,7 @@
     .ticket-id { font-family:'Bebas Neue',sans-serif; font-size:26px; color:#ff5c00; letter-spacing:6px; }
     .success-bottom { background:#ff5c00; padding:10px; text-align:center; font-family:'Bebas Neue',sans-serif; font-size:13px; letter-spacing:3px; color:#fff; }
 
-    .points-card {
-      display: none; margin: 0 28px 10px; border-radius: 10px; overflow: hidden;
-      box-shadow: 0 6px 24px rgba(0,0,0,0.10); border: 2px solid #d8ff3c;
-    }
-    .points-card-top {
-      background: linear-gradient(135deg, #0a2a15, #062010);
-      padding: 14px 20px; display: flex; align-items: center; justify-content: space-between; gap: 12px;
-    }
-    .pts-label-group { display:flex; flex-direction:column; gap:2px; }
-    .pts-title { font-family:'Bebas Neue',sans-serif; font-size:11px; color:#d8ff3c; letter-spacing:3px; }
-    .pts-title-ar { font-size:13px; font-weight:800; color:#fff; }
-    .pts-display {
-      display:flex; flex-direction:column; align-items:center;
-      background:rgba(216,255,60,0.12); border:1px solid rgba(216,255,60,0.3);
-      border-radius:8px; padding:8px 18px;
-    }
-    .pts-num { font-family:'Bebas Neue',sans-serif; font-size:32px; color:#d8ff3c; line-height:1; }
-    .pts-unit { font-size:9px; color:rgba(216,255,60,0.7); letter-spacing:2px; font-weight:700; }
 
-    .next-reward-bar { background:#fff; border-top:1px solid #efefef; padding:10px 14px; }
-    .nrb-label { font-size:11px; font-weight:700; color:#555; margin-bottom:5px; text-align:right; }
-    .nrb-track { background:#ececec; border-radius:20px; height:8px; overflow:hidden; }
-    .nrb-fill { height:100%; border-radius:20px; background:linear-gradient(90deg,#006c35,#d8ff3c); transition:width 0.6s ease; }
-    .nrb-next { font-size:10px; color:#ff5c00; font-weight:700; text-align:left; margin-top:4px; direction:ltr; }
-
-    .points-actions { background:#f9f9f9; padding:12px 16px; display:flex; flex-direction:column; gap:8px; }
-    .pts-action-row {
-      display:flex; align-items:center; justify-content:space-between;
-      background:#fff; border:1px solid #ececec; border-radius:8px; padding:10px 12px; gap:10px;
-    }
-    .pts-action-left { display:flex; align-items:center; gap:8px; }
-    .pts-action-icon { font-size:18px; }
-    .pts-action-desc { font-size:12px; font-weight:700; color:#333; }
-    .pts-action-en { font-family:'Bebas Neue',sans-serif; font-size:9px; color:#aaa; letter-spacing:2px; }
-    .pts-badge-done { background:#006c35; color:#fff; font-family:'Bebas Neue',sans-serif; font-size:12px; letter-spacing:1px; padding:3px 10px; border-radius:20px; white-space:nowrap; }
-    .pts-badge-earn { background:#ff5c00; color:#fff; font-family:'Bebas Neue',sans-serif; font-size:12px; letter-spacing:1px; padding:3px 10px; border-radius:20px; white-space:nowrap; }
-
-    .stats-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:8px; padding:12px 16px; background:#fff; border-top:1px solid #efefef; }
-    .stat-box { background:#f7f7f7; border:1px solid #ececec; border-radius:8px; padding:10px; text-align:center; }
-    .stat-num { font-family:'Bebas Neue',sans-serif; font-size:24px; color:#006c35; line-height:1; }
-    .stat-label { font-size:10px; font-weight:700; color:#666; margin-top:4px; }
-
-    .tshirt-box { background:linear-gradient(135deg,#fff8e8,#fff2cc); border-top:1px solid #f1df9a; padding:12px 16px; text-align:center; }
-    .tshirt-title { font-size:12px; font-weight:800; color:#7a5a00; }
-    .tshirt-sub { font-family:'Bebas Neue',sans-serif; font-size:10px; letter-spacing:2px; color:#a97b00; margin-top:4px; }
-
-    .ref-link-box {
-      display:none; margin:0 28px 12px; background:#f0fff4;
-      border:1.5px dashed #006c35; border-radius:10px; padding:14px 16px;
-    }
-    .ref-link-title { font-size:13px; font-weight:800; color:#006c35; margin-bottom:4px; text-align:right; }
-    .ref-link-sub { font-family:'Bebas Neue',sans-serif; font-size:10px; color:#888; letter-spacing:2px; margin-bottom:8px; text-align:right; }
-    .ref-link-row { display:flex; gap:6px; align-items:center; direction:ltr; }
-    .ref-link-input {
-      flex:1; background:#fff; border:1px solid #c3e6cb; border-radius:6px;
-      padding:9px 12px; font-size:12px; color:#333; outline:none; direction:ltr; text-align:left;
-    }
-    .ref-copy-btn {
-      background:#006c35; color:#fff; border:none; border-radius:6px; padding:9px 14px;
-      font-family:'Bebas Neue',sans-serif; font-size:13px; letter-spacing:2px; cursor:pointer;
-      white-space:nowrap; transition:background 0.2s,transform 0.1s;
-    }
-    .ref-copy-btn:active { transform:scale(0.97); background:#004d25; }
-    .ref-copied { font-size:11px; color:#006c35; font-weight:700; text-align:center; margin-top:6px; display:none; }
 
     #confetti-canvas { position:fixed; top:0; left:0; width:100%; height:100%; pointer-events:none; z-index:9999; display:none; }
 
@@ -225,8 +162,7 @@
 .btn-left, .btn-right { padding:14px; }
       .lbl-en { font-size:13px; }
       .success { margin:0 18px 14px; }
-      .points-card, .ref-link-box { margin-left:18px; margin-right:18px; }
-      .phone-code-wrap { width:120px; }
+.phone-code-wrap { width:120px; }
 .stats-grid { grid-template-columns:1fr; }
     }
   </style>
@@ -439,73 +375,7 @@
     </div>
   </div>
 
-  <div class="points-card" id="pointsCard">
-    <div class="points-card-top">
-      <div class="pts-label-group">
-        <div class="pts-title">YOUR POINTS — نقاطك</div>
-        <div class="pts-title-ar">اكسب أكثر واربح أكثر!</div>
-      </div>
-      <div class="pts-display">
-        <div class="pts-num" id="userPtsNum">10</div>
-        <div class="pts-unit">POINTS نقطة</div>
-      </div>
-    </div>
-    <div class="next-reward-bar">
-      <div class="nrb-label" id="nrbLabel">الجائزة التالية</div>
-      <div class="nrb-track"><div class="nrb-fill" id="nrbFill" style="width:0%"></div></div>
-      <div class="nrb-next" id="nrbNext">15 pts → Discount</div>
-    </div>
-    <div class="points-actions">
-      <div class="pts-action-row">
-        <div class="pts-action-left">
-          <div class="pts-action-icon">✅</div>
-          <div>
-            <div class="pts-action-desc">تسجّلت في المسابقة</div>
-            <div class="pts-action-en">COMPETITION REGISTERED</div>
-          </div>
-        </div>
-        <div class="pts-badge-done">+10 ✓</div>
-      </div>
-      <div class="pts-action-row">
-        <div class="pts-action-left">
-          <div class="pts-action-icon">👥</div>
-          <div>
-            <div class="pts-action-desc">كل صديق يسجل من رابطك = +10</div>
-            <div class="pts-action-en">EACH FRIEND SIGNUP = +10 PTS</div>
-          </div>
-        </div>
-        <div class="pts-badge-earn">+10 PTS</div>
-      </div>
-    </div>
-    <div class="stats-grid">
-      <div class="stat-box">
-        <div class="stat-num" id="refCountNum">0</div>
-        <div class="stat-label">REFERRALS</div>
-      </div>
-      <div class="stat-box">
-        <div class="stat-num" id="refPointsNum">0</div>
-        <div class="stat-label">REF POINTS</div>
-      </div>
-      <div class="stat-box">
-        <div class="stat-num" id="totalPointsNum">10</div>
-        <div class="stat-label">TOTAL POINTS</div>
-      </div>
-    </div>
-    <div class="tshirt-box">
-      <div class="tshirt-title" id="tshirtTitle">👕 10 referrals = 1 Free T-Shirt</div>
-      <div class="tshirt-sub" id="tshirtSub">YOU NEED 10 MORE REFERRALS</div>
-    </div>
-  </div>
 
-  <div class="ref-link-box" id="refLinkBox">
-    <div class="ref-link-title">🔗 رابط الدعوة الخاص بك</div>
-    <div class="ref-link-sub">YOUR PERSONAL REFERRAL LINK — شارك واكسب نقاط</div>
-    <div class="ref-link-row">
-      <input class="ref-link-input" id="refLinkInput" readonly type="text" value="">
-      <button class="ref-copy-btn" onclick="copyRefLink()">نسخ COPY</button>
-    </div>
-    <div class="ref-copied" id="refCopied">✓ تم النسخ! — Copied!</div>
-  </div>
 
   <div class="footer">
     <div class="f-dot f-orange"></div>
@@ -521,12 +391,7 @@
     const WC_DATE = new Date('2026-06-11T00:00:00');
     const TID_KEY = 'wc2026_tid';
 
-    const TIERS = [
-      { pts: 15, label: '🏷️ 15% Discount' },
-      { pts: 30, label: '👕 Outfit Jersey' },
-      { pts: 60, label: '🎟️ Double Entry' },
-      { pts: 100, label: '👑 VIP Prize' }
-    ];
+
 
     function updateCountdown() {
       const diff = WC_DATE - new Date();
@@ -666,73 +531,7 @@
       els.btnRight.textContent = on ? 'جاري الإرسال...' : 'سجّل الآن';
     }
 
-    function buildRefLink(tid){
-      const base = window.location.href.split('?')[0];
-      return base + '?ref=' + encodeURIComponent(tid);
-    }
 
-    function copyRefLink(){
-      const input = document.getElementById('refLinkInput');
-      input.select();
-      input.setSelectionRange(0,99999);
-      try { document.execCommand('copy'); }
-      catch(e) { navigator.clipboard.writeText(input.value); }
-      const el = document.getElementById('refCopied');
-      el.style.display = 'block';
-      setTimeout(()=>{ el.style.display='none'; }, 2500);
-    }
-
-    function updateTierProgress(totalPoints){
-      const next   = TIERS.find(t => t.pts > totalPoints);
-      const fill   = document.getElementById('nrbFill');
-      const label  = document.getElementById('nrbLabel');
-      const nextTxt= document.getElementById('nrbNext');
-
-      if(next){
-        const prevTier = [...TIERS].reverse().find(t => t.pts <= totalPoints);
-        const prevPts  = prevTier ? prevTier.pts : 0;
-        const range    = next.pts - prevPts;
-        const current  = totalPoints - prevPts;
-        const pct      = Math.max(0, Math.min(100, Math.round((current/range)*100)));
-        fill.style.width = pct + '%';
-        label.textContent = 'الجائزة التالية: ' + next.label + ' — تحتاج ' + (next.pts - totalPoints) + ' نقطة إضافية';
-        nextTxt.textContent = next.pts + ' pts → ' + next.label;
-      } else {
-        fill.style.width = '100%';
-        label.textContent = '🏆 وصلت للمستوى الأعلى! — MAX LEVEL REACHED!';
-        nextTxt.textContent = 'ALL REWARDS UNLOCKED';
-      }
-    }
-
-    function updateTshirtBox(referralCount, tshirtsEarned, nextTshirtIn){
-      const title = document.getElementById('tshirtTitle');
-      const sub   = document.getElementById('tshirtSub');
-      if(tshirtsEarned > 0){
-        title.textContent = '👕 Free T-Shirts Earned: ' + tshirtsEarned;
-        sub.textContent   = 'NEXT T-SHIRT IN ' + nextTshirtIn + ' REFERRALS';
-      } else {
-        title.textContent = '👕 10 referrals = 1 Free T-Shirt';
-        sub.textContent   = 'YOU NEED ' + nextTshirtIn + ' MORE REFERRALS';
-      }
-    }
-
-    async function loadReferralStats(entryCode){
-      try {
-        const res  = await fetch(SCRIPT_URL + '?entryCode=' + encodeURIComponent(entryCode));
-        const data = await res.json();
-        if(data.status !== 'success') return;
-
-        document.getElementById('refCountNum').textContent   = data.referralCount  || 0;
-        document.getElementById('refPointsNum').textContent  = data.referralPoints || 0;
-        document.getElementById('totalPointsNum').textContent= data.totalPoints    || 10;
-        document.getElementById('userPtsNum').textContent    = data.totalPoints    || 10;
-
-        updateTierProgress(data.totalPoints || 10);
-        updateTshirtBox(data.referralCount||0, data.tshirtsEarned||0, data.nextTshirtIn||10);
-      } catch(err){
-        console.error('Stats load failed', err);
-      }
-    }
 
     async function doSubmit(){
       if(!validateForm()) return;
@@ -779,16 +578,10 @@
         els.ticketId.textContent = tid;
         localStorage.setItem(TID_KEY, tid);
 
-        const refLink = buildRefLink(tid);
-        document.getElementById('refLinkInput').value = refLink;
-
-        els.form.style.display                               = 'none';
-        els.success.style.display                            = 'block';
-        document.getElementById('pointsCard').style.display  = 'block';
-        document.getElementById('refLinkBox').style.display  = 'block';
+        els.form.style.display    = 'none';
+        els.success.style.display = 'block';
 
         launchConfetti();
-        await loadReferralStats(tid);
         setTimeout(()=> els.success.scrollIntoView({behavior:'smooth',block:'center'}), 100);
 
       } catch(err){
@@ -802,10 +595,8 @@
 
     function resetForm(){
       localStorage.removeItem(TID_KEY);
-      document.getElementById('successBox').style.display     = 'none';
-      document.getElementById('pointsCard').style.display     = 'none';
-      document.getElementById('refLinkBox').style.display     = 'none';
-      document.getElementById('theForm').style.display        = 'flex';
+      document.getElementById('successBox').style.display = 'none';
+      document.getElementById('theForm').style.display    = 'flex';
       document.getElementById('f-name').value  = '';
       document.getElementById('f-nat').selectedIndex = 0;
       document.getElementById('f-city').value = '';
@@ -816,10 +607,6 @@
     window.addEventListener('load', () => {
       document.getElementById('theForm').style.display    = 'flex';
       document.getElementById('successBox').style.display = 'none';
-      document.getElementById('pointsCard').style.display = 'none';
-      document.getElementById('refLinkBox').style.display = 'none';
-      updateTierProgress(10);
-      updateTshirtBox(0, 0, 10);
     });
   </script>
 </body>
