@@ -48,28 +48,7 @@
     .hd-right { background:#006c35; }
     .hd-dot { width:6px; height:6px; background:#111; border-radius:50%; }
 
-    .prize-strip { background:linear-gradient(135deg,#111 0%,#1a1a1a 100%); padding:14px 20px; display:flex; align-items:center; justify-content:center; gap:18px; flex-wrap:wrap; border-top:2px solid #ff5c00; border-bottom:2px solid #006c35; }
-    .prize-item { display:flex; flex-direction:column; align-items:center; gap:2px; }
-    .prize-icon { font-size:22px; }
-    .prize-label { font-family:'Bebas Neue',sans-serif; font-size:11px; color:#ff5c00; letter-spacing:2px; }
-    .prize-val { font-size:11px; font-weight:700; color:#fff; }
-    .prize-sep { width:1px; height:36px; background:rgba(255,255,255,0.15); }
 
-    .earn-section { background:#fffbf5; border-bottom:1px solid #ffe4d0; padding:14px 20px; }
-    .earn-title { text-align:center; font-family:'Bebas Neue',sans-serif; font-size:11px; color:#ff5c00; letter-spacing:4px; margin-bottom:10px; }
-    .earn-rows { display:flex; gap:10px; justify-content:center; flex-wrap:wrap; }
-    .earn-row {
-      display:flex; align-items:center; gap:8px; background:#fff; border:1px solid #ffe0c8;
-      border-radius:8px; padding:8px 14px; flex:1; min-width:180px; max-width:260px;
-    }
-    .earn-icon { font-size:20px; flex-shrink:0; }
-    .earn-desc { flex:1; }
-    .earn-desc-ar { font-size:12px; font-weight:700; color:#333; }
-    .earn-desc-en { font-family:'Bebas Neue',sans-serif; font-size:10px; color:#999; letter-spacing:2px; }
-    .earn-pts-badge {
-      background:#ff5c00; color:#fff; font-family:'Bebas Neue',sans-serif;
-      font-size:14px; letter-spacing:1px; padding:3px 8px; border-radius:20px; flex-shrink:0; white-space:nowrap;
-    }
 
     .counter-bar { background:#fff9f5; border-bottom:1px solid #ffe4d0; padding:10px 20px; display:flex; align-items:center; justify-content:center; gap:10px; flex-wrap:wrap; }
     .counter-pulse { width:8px; height:8px; border-radius:50%; background:#ff5c00; animation:pulse 1.4s ease-in-out infinite; flex-shrink:0; }
@@ -243,15 +222,12 @@
       .hero, .form-body { padding-left:18px; padding-right:18px; }
       .hero-inner { padding:10px 0 20px; }
       .hero-ar { font-size:23px; }
-      .prize-strip { gap:10px; padding:12px 14px; }
-      .prize-sep { display:none; }
-      .btn-left, .btn-right { padding:14px; }
+.btn-left, .btn-right { padding:14px; }
       .lbl-en { font-size:13px; }
       .success { margin:0 18px 14px; }
       .points-card, .ref-link-box { margin-left:18px; margin-right:18px; }
       .phone-code-wrap { width:120px; }
-      .earn-row { min-width:160px; }
-      .stats-grid { grid-template-columns:1fr; }
+.stats-grid { grid-template-columns:1fr; }
     }
   </style>
 </head>
@@ -290,54 +266,6 @@
     <div class="logo-row-right">
       <span class="logo-outfit">OUTFIT</span>
       <span class="logo-x">BRAND × COMPETITION</span>
-    </div>
-  </div>
-
-  <div class="prize-strip">
-    <div class="prize-item">
-      <div class="prize-icon">🏆</div>
-      <div class="prize-label">GRAND PRIZE</div>
-      <div class="prize-val">تذكرة كأس العالم</div>
-    </div>
-    <div class="prize-sep"></div>
-    <div class="prize-item">
-      <div class="prize-icon">👕</div>
-      <div class="prize-label">2ND PLACE</div>
-      <div class="prize-val">طقم Outfit رسمي</div>
-    </div>
-    <div class="prize-sep"></div>
-    <div class="prize-item">
-      <div class="prize-icon">🎁</div>
-      <div class="prize-label">3RD PLACE</div>
-      <div class="prize-val">هدية همكس المميزة</div>
-    </div>
-    <div class="prize-sep"></div>
-    <div class="prize-item">
-      <div class="prize-icon">📅</div>
-      <div class="prize-label">DRAW DATE</div>
-      <div class="prize-val">11 يونيو 2026</div>
-    </div>
-  </div>
-
-  <div class="earn-section">
-    <div class="earn-title">⭐ اكسب نقاط — EARN POINTS</div>
-    <div class="earn-rows">
-      <div class="earn-row">
-        <div class="earn-icon">✅</div>
-        <div class="earn-desc">
-          <div class="earn-desc-ar">التسجيل في المسابقة</div>
-          <div class="earn-desc-en">REGISTER IN COMPETITION</div>
-        </div>
-        <div class="earn-pts-badge">+10 PTS</div>
-      </div>
-      <div class="earn-row">
-        <div class="earn-icon">👥</div>
-        <div class="earn-desc">
-          <div class="earn-desc-ar">كل تسجيل من رابطك</div>
-          <div class="earn-desc-en">EACH REFERRAL SIGNUP</div>
-        </div>
-        <div class="earn-pts-badge">+10 PTS</div>
-      </div>
     </div>
   </div>
 
