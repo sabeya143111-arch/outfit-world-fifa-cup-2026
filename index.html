@@ -4,9 +4,11 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>مسابقة كأس العالم 2026 — Outfit × همكس</title>
+
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700;900&family=Bebas+Neue&display=swap" rel="stylesheet">
+
   <style>
     * { box-sizing: border-box; margin: 0; padding: 0; }
     body { background:#ffffff; font-family:'Cairo',sans-serif; direction:rtl; min-height:100vh; color:#111; }
@@ -60,51 +62,92 @@
     .field-num { font-family:'Bebas Neue',sans-serif; font-size:11px; color:#ff5c00; letter-spacing:2px; margin-bottom:2px; text-align:right; }
     .lbl-ar { font-size:16px; font-weight:800; color:#111; line-height:1; text-align:right; }
     .lbl-en { font-family:'Bebas Neue',sans-serif; font-size:14px; color:#333; letter-spacing:3px; margin-top:4px; font-weight:700; text-align:right; }
-    .finput {
-      background:#f7f7f7; border:1.5px solid #dcdcdc; border-radius:6px; padding:13px 15px;
-      color:#111; font-family:'Cairo',sans-serif; font-size:14px; direction:rtl; outline:none;
-      transition:border-color 0.2s,background 0.2s; width:100%; margin-top:6px;
+
+    .finput,
+    .fselect,
+    .phone-number-input,
+    .phone-code-select {
+      background:#f7f7f7;
+      border:1.5px solid #dcdcdc;
+      border-radius:6px;
+      color:#111;
+      font-family:'Cairo',sans-serif;
+      outline:none;
+      transition:border-color 0.2s,background 0.2s;
     }
-    .finput:focus { border-color:#ff5c00; background:#fff7f2; }
-    .finput::placeholder { color:#8a8a8a; font-size:13px; }
+
+    .finput,
+    .fselect {
+      width:100%;
+      margin-top:6px;
+      padding:13px 15px;
+      font-size:14px;
+    }
+
+    .finput:focus,
+    .fselect:focus,
+    .phone-number-input:focus,
+    .phone-code-select:focus {
+      border-color:#ff5c00;
+      background:#fff7f2;
+    }
+
+    .finput::placeholder,
+    .phone-number-input::placeholder {
+      color:#8a8a8a;
+      font-size:13px;
+    }
 
     .fselect {
-      background:#f7f7f7; border:1.5px solid #dcdcdc; border-radius:6px; padding:13px 15px;
-      color:#111; font-family:'Cairo',sans-serif; font-size:14px; direction:rtl; outline:none;
-      transition:border-color 0.2s,background 0.2s; width:100%; margin-top:6px;
-      appearance:none; -webkit-appearance:none;
+      appearance:none;
+      -webkit-appearance:none;
       background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%23ff5c00' stroke-width='2' fill='none' stroke-linecap='round'/%3E%3C/svg%3E");
-      background-repeat:no-repeat; background-position:left 14px center; padding-left:36px; cursor:pointer;
+      background-repeat:no-repeat;
+      background-position:left 14px center;
+      padding-left:36px;
+      cursor:pointer;
     }
-    .fselect:focus { border-color:#ff5c00; background-color:#fff7f2; }
-    .fselect option { background:#ffffff; color:#111; }
 
     .phone-row { display:flex; gap:8px; margin-top:6px; direction:rtl; }
     .phone-code-wrap { flex-shrink:0; width:140px; }
+
     .phone-code-select {
-      background:#f7f7f7; border:1.5px solid #dcdcdc; border-radius:6px; padding:13px 10px;
-      color:#111; font-family:'Cairo',sans-serif; font-size:13px; direction:ltr; outline:none;
-      transition:border-color 0.2s,background 0.2s; width:100%; appearance:none; -webkit-appearance:none;
+      width:100%;
+      padding:13px 10px;
+      font-size:13px;
+      direction:ltr;
+      appearance:none;
+      -webkit-appearance:none;
       background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='6' viewBox='0 0 10 6'%3E%3Cpath d='M1 1l4 4 4-4' stroke='%23ff5c00' stroke-width='1.5' fill='none' stroke-linecap='round'/%3E%3C/svg%3E");
-      background-repeat:no-repeat; background-position:right 10px center; padding-right:28px; cursor:pointer; text-align:left;
+      background-repeat:no-repeat;
+      background-position:right 10px center;
+      padding-right:28px;
+      cursor:pointer;
+      text-align:left;
     }
-    .phone-code-select:focus { border-color:#ff5c00; background-color:#fff7f2; }
+
     .phone-number-input {
-      flex:1; background:#f7f7f7; border:1.5px solid #dcdcdc; border-radius:6px; padding:13px 15px;
-      color:#111; font-family:'Cairo',sans-serif; font-size:14px; direction:ltr; outline:none;
-      transition:border-color 0.2s,background 0.2s; text-align:left;
+      flex:1;
+      padding:13px 15px;
+      font-size:14px;
+      direction:ltr;
+      text-align:left;
     }
-    .phone-number-input:focus { border-color:#ff5c00; background:#fff7f2; }
-    .phone-number-input::placeholder { color:#8a8a8a; font-size:13px; }
 
     .error-text { color:#d93c3c; font-size:12px; font-weight:600; display:none; margin-top:4px; text-align:right; }
 
     .ref-notice {
       background: linear-gradient(135deg, #f0fff4, #e8f5e9);
-      border: 1.5px solid #006c35; border-radius: 8px; padding: 10px 14px;
-      display: none; align-items: center; gap: 10px; margin-bottom: 4px;
+      border: 1.5px solid #006c35;
+      border-radius: 8px;
+      padding: 10px 14px;
+      display: none;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 4px;
     }
-    .ref-notice.visible { display: flex; }
+
+    .ref-notice.visible { display:flex; }
     .ref-notice-icon { font-size:22px; flex-shrink:0; }
     .ref-notice-text { flex:1; }
     .ref-notice-ar { font-size:13px; font-weight:700; color:#006c35; }
@@ -117,8 +160,14 @@
 
     .btn-wrap { padding-top:18px; }
     .btn-submit {
-      width:100%; border:none; border-radius:6px; padding:0; cursor:pointer; overflow:hidden;
-      display:flex; transition:transform 0.1s,opacity 0.2s,box-shadow 0.2s;
+      width:100%;
+      border:none;
+      border-radius:6px;
+      padding:0;
+      cursor:pointer;
+      overflow:hidden;
+      display:flex;
+      transition:transform 0.1s,opacity 0.2s,box-shadow 0.2s;
       box-shadow:0 4px 18px rgba(0,0,0,0.06);
     }
     .btn-submit:hover { box-shadow:0 6px 24px rgba(255,92,0,0.25); }
@@ -126,6 +175,7 @@
     .btn-submit:disabled { opacity:0.7; cursor:not-allowed; }
     .btn-left { background:#ff5c00; flex:1; padding:16px; font-family:'Bebas Neue',sans-serif; font-size:18px; letter-spacing:3px; color:#fff; text-align:center; }
     .btn-right { background:#006c35; flex:1; padding:16px; font-size:15px; font-weight:700; color:#fff; text-align:center; }
+
     .msg-box { display:none; margin-top:18px; border-radius:8px; padding:12px 14px; text-align:center; font-size:14px; font-weight:700; }
     .msg-error { background:#fff1f1; color:#c13b3b; border:1px solid #f0c7c7; }
 
@@ -136,12 +186,20 @@
     .ticket-id { font-family:'Bebas Neue',sans-serif; font-size:26px; color:#ff5c00; letter-spacing:6px; }
     .success-bottom { background:#ff5c00; padding:10px; text-align:center; font-family:'Bebas Neue',sans-serif; font-size:13px; letter-spacing:3px; color:#fff; }
 
-    #confetti-canvas { position:fixed; top:0; left:0; width:100%; height:100%; pointer-events:none; z-index:9999; display:none; }
-
     .footer {
-      text-align:center; padding:16px; color:#111; font-family:'Bebas Neue',sans-serif;
-      font-size:11px; letter-spacing:3px; border-top:1px solid #ececec;
-      display:flex; align-items:center; justify-content:center; gap:12px; flex-wrap:wrap; background:#fff;
+      text-align:center;
+      padding:16px;
+      color:#111;
+      font-family:'Bebas Neue',sans-serif;
+      font-size:11px;
+      letter-spacing:3px;
+      border-top:1px solid #ececec;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      gap:12px;
+      flex-wrap:wrap;
+      background:#fff;
     }
     .f-dot { width:4px; height:4px; border-radius:50%; }
     .f-orange { background:#ff5c00; }
@@ -167,7 +225,6 @@
   </style>
 </head>
 <body>
-  <canvas id="confetti-canvas"></canvas>
 
   <div class="top-banner">
     <span class="banner-sub">المنتخب السعودي</span>
@@ -250,40 +307,12 @@
       <select class="fselect" id="f-nat">
         <option value="" disabled selected>اختر جنسيتك</option>
         <option value="سعودي">🇸🇦 سعودي — Saudi Arabian</option>
-        <option value="إماراتي">🇦🇪 إماراتي — Emirati</option>
-        <option value="كويتي">🇰🇼 كويتي — Kuwaiti</option>
-        <option value="قطري">🇶🇦 قطري — Qatari</option>
-        <option value="بحريني">🇧🇭 بحريني — Bahraini</option>
-        <option value="عماني">🇴🇲 عماني — Omani</option>
-        <option value="مصري">🇪🇬 مصري — Egyptian</option>
-        <option value="أردني">🇯🇴 أردني — Jordanian</option>
-        <option value="لبناني">🇱🇧 لبناني — Lebanese</option>
-        <option value="سوري">🇸🇾 سوري — Syrian</option>
-        <option value="عراقي">🇮🇶 عراقي — Iraqi</option>
-        <option value="يمني">🇾🇪 يمني — Yemeni</option>
-        <option value="فلسطيني">🇵🇸 فلسطيني — Palestinian</option>
-        <option value="سوداني">🇸🇩 سوداني — Sudanese</option>
-        <option value="ليبي">🇱🇾 ليبي — Libyan</option>
-        <option value="تونسي">🇹🇳 تونسي — Tunisian</option>
-        <option value="جزائري">🇩🇿 جزائري — Algerian</option>
-        <option value="مغربي">🇲🇦 مغربي — Moroccan</option>
-        <option value="باكستاني">🇵🇰 باكستاني — Pakistani</option>
         <option value="هندي">🇮🇳 هندي — Indian</option>
+        <option value="باكستاني">🇵🇰 باكستاني — Pakistani</option>
         <option value="بنغلاديشي">🇧🇩 بنغلاديشي — Bangladeshi</option>
+        <option value="مصري">🇪🇬 مصري — Egyptian</option>
         <option value="فلبيني">🇵🇭 فلبيني — Filipino</option>
-        <option value="إندونيسي">🇮🇩 إندونيسي — Indonesian</option>
-        <option value="سريلانكي">🇱🇰 سريلانكي — Sri Lankan</option>
-        <option value="نيبالي">🇳🇵 نيبالي — Nepali</option>
-        <option value="إثيوبي">🇪🇹 إثيوبي — Ethiopian</option>
-        <option value="تركي">🇹🇷 تركي — Turkish</option>
-        <option value="إيراني">🇮🇷 إيراني — Iranian</option>
-        <option value="أمريكي">🇺🇸 أمريكي — American</option>
-        <option value="بريطاني">🇬🇧 بريطاني — British</option>
-        <option value="فرنسي">🇫🇷 فرنسي — French</option>
-        <option value="ألماني">🇩🇪 ألماني — German</option>
-        <option value="كندي">🇨🇦 كندي — Canadian</option>
-        <option value="أسترالي">🇦🇺 أسترالي — Australian</option>
-        <option value="آخر">🌍 أخرى — Other</option>
+        <option value="أخرى">🌍 Other</option>
       </select>
       <div class="error-text" id="err-nat">يرجى اختيار الجنسية</div>
     </div>
@@ -305,37 +334,11 @@
           <select class="phone-code-select" id="f-code">
             <option value="+966">🇸🇦 +966</option>
             <option value="+971">🇦🇪 +971</option>
-            <option value="+965">🇰🇼 +965</option>
-            <option value="+974">🇶🇦 +974</option>
-            <option value="+973">🇧🇭 +973</option>
-            <option value="+968">🇴🇲 +968</option>
-            <option value="+20">🇪🇬 +20</option>
-            <option value="+962">🇯🇴 +962</option>
-            <option value="+961">🇱🇧 +961</option>
-            <option value="+963">🇸🇾 +963</option>
-            <option value="+964">🇮🇶 +964</option>
-            <option value="+967">🇾🇪 +967</option>
-            <option value="+970">🇵🇸 +970</option>
-            <option value="+249">🇸🇩 +249</option>
-            <option value="+218">🇱🇾 +218</option>
-            <option value="+216">🇹🇳 +216</option>
-            <option value="+213">🇩🇿 +213</option>
-            <option value="+212">🇲🇦 +212</option>
             <option value="+92">🇵🇰 +92</option>
             <option value="+91">🇮🇳 +91</option>
             <option value="+880">🇧🇩 +880</option>
+            <option value="+20">🇪🇬 +20</option>
             <option value="+63">🇵🇭 +63</option>
-            <option value="+62">🇮🇩 +62</option>
-            <option value="+94">🇱🇰 +94</option>
-            <option value="+977">🇳🇵 +977</option>
-            <option value="+90">🇹🇷 +90</option>
-            <option value="+98">🇮🇷 +98</option>
-            <option value="+1">🇺🇸 +1</option>
-            <option value="+44">🇬🇧 +44</option>
-            <option value="+33">🇫🇷 +33</option>
-            <option value="+49">🇩🇪 +49</option>
-            <option value="+1">🇨🇦 +1</option>
-            <option value="+61">🇦🇺 +61</option>
           </select>
         </div>
         <input class="phone-number-input" id="f-num" type="text" inputmode="numeric" placeholder="5xxxxxxxx">
@@ -399,29 +402,13 @@
       const h = Math.floor((diff % 86400000) / 3600000);
       const m = Math.floor((diff % 3600000) / 60000);
       const s = Math.floor((diff % 60000) / 1000);
-      document.getElementById('cd-days').textContent  = String(d).padStart(3,'0');
-      document.getElementById('cd-hours').textContent = String(h).padStart(2,'0');
-      document.getElementById('cd-mins').textContent  = String(m).padStart(2,'0');
-      document.getElementById('cd-secs').textContent  = String(s).padStart(2,'0');
+      document.getElementById('cd-days').textContent = String(d).padStart(3, '0');
+      document.getElementById('cd-hours').textContent = String(h).padStart(2, '0');
+      document.getElementById('cd-mins').textContent = String(m).padStart(2, '0');
+      document.getElementById('cd-secs').textContent = String(s).padStart(2, '0');
     }
     updateCountdown();
     setInterval(updateCountdown, 1000);
-
-    (function(){
-      const el = document.getElementById('liveCount');
-      const EPOCH = new Date('2026-04-01T00:00:00Z').getTime();
-      const BASE  = 312;
-      function getCount(){
-        const ms   = Date.now() - EPOCH;
-        const hrs  = ms / 3600000;
-        const steady = Math.floor(hrs * 18);
-        const slot   = Math.floor(ms / 240000);
-        const bump   = ((slot * 2654435761) >>> 0) % 3;
-        return BASE + steady + bump;
-      }
-      el.textContent = getCount();
-      setInterval(() => { el.textContent = getCount(); }, 30000);
-    })();
 
     const urlParams = new URLSearchParams(window.location.search);
     const incomingRef = urlParams.get('ref') || '';
@@ -462,7 +449,7 @@
 
       const name = els.name.value.trim();
       const city = els.city.value.trim();
-      const digits = els.num.value.trim().replace(/\D/g,'');
+      const digits = els.num.value.trim().replace(/\D/g, '');
 
       if (!name || name.length < 3) { els.errName.style.display = 'block'; valid = false; }
       if (!els.nat.value) { els.errNat.style.display = 'block'; valid = false; }
@@ -482,9 +469,7 @@
     async function doSubmit() {
       if (!validateForm()) return;
 
-      const codeVal = els.code.value;
-      const digits = els.num.value.trim().replace(/\D/g,'');
-      const fullPhone = codeVal + digits;
+      const fullPhone = els.code.value + els.num.value.trim().replace(/\D/g, '');
 
       const body = new URLSearchParams();
       body.append('name', els.name.value.trim());
@@ -498,7 +483,10 @@
 
         const res = await fetch(SCRIPT_URL, {
           method: 'POST',
-          body: body
+          headers: {
+            'Content-Type': 'application/x-www-form-urlencoded;charset=UTF-8'
+          },
+          body: body.toString()
         });
 
         const text = await res.text();
@@ -539,7 +527,6 @@
 
     function resetForm() {
       try { localStorage.removeItem(TID_KEY); } catch (_) {}
-
       els.success.style.display = 'none';
       els.form.style.display = 'flex';
       els.name.value = '';
@@ -552,11 +539,6 @@
     }
 
     document.getElementById('submitBtn').addEventListener('click', doSubmit);
-
-    window.addEventListener('load', () => {
-      els.form.style.display = 'flex';
-      els.success.style.display = 'none';
-    });
   </script>
 </body>
 </html>
