@@ -48,8 +48,6 @@
     .hd-right { background:#006c35; }
     .hd-dot { width:6px; height:6px; background:#111; border-radius:50%; }
 
-
-
     .counter-bar { background:#fff9f5; border-bottom:1px solid #ffe4d0; padding:10px 20px; display:flex; align-items:center; justify-content:center; gap:10px; flex-wrap:wrap; }
     .counter-pulse { width:8px; height:8px; border-radius:50%; background:#ff5c00; animation:pulse 1.4s ease-in-out infinite; flex-shrink:0; }
     @keyframes pulse { 0%,100%{opacity:1;transform:scale(1);}50%{opacity:0.5;transform:scale(1.5);} }
@@ -69,6 +67,7 @@
     }
     .finput:focus { border-color:#ff5c00; background:#fff7f2; }
     .finput::placeholder { color:#8a8a8a; font-size:13px; }
+
     .fselect {
       background:#f7f7f7; border:1.5px solid #dcdcdc; border-radius:6px; padding:13px 15px;
       color:#111; font-family:'Cairo',sans-serif; font-size:14px; direction:rtl; outline:none;
@@ -79,6 +78,7 @@
     }
     .fselect:focus { border-color:#ff5c00; background-color:#fff7f2; }
     .fselect option { background:#ffffff; color:#111; }
+
     .phone-row { display:flex; gap:8px; margin-top:6px; direction:rtl; }
     .phone-code-wrap { flex-shrink:0; width:140px; }
     .phone-code-select {
@@ -96,6 +96,7 @@
     }
     .phone-number-input:focus { border-color:#ff5c00; background:#fff7f2; }
     .phone-number-input::placeholder { color:#8a8a8a; font-size:13px; }
+
     .error-text { color:#d93c3c; font-size:12px; font-weight:600; display:none; margin-top:4px; text-align:right; }
 
     .ref-notice {
@@ -113,6 +114,7 @@
     .terms-check { width:18px; height:18px; border:2px solid #dcdcdc; border-radius:4px; flex-shrink:0; cursor:pointer; accent-color:#ff5c00; margin-top:2px; }
     .terms-label { font-size:12px; color:#555; font-weight:600; line-height:1.6; text-align:right; }
     .terms-label a { color:#ff5c00; text-decoration:none; }
+
     .btn-wrap { padding-top:18px; }
     .btn-submit {
       width:100%; border:none; border-radius:6px; padding:0; cursor:pointer; overflow:hidden;
@@ -133,8 +135,6 @@
     .ticket-label { font-size:10px; color:#777; font-weight:600; letter-spacing:2px; margin-bottom:4px; }
     .ticket-id { font-family:'Bebas Neue',sans-serif; font-size:26px; color:#ff5c00; letter-spacing:6px; }
     .success-bottom { background:#ff5c00; padding:10px; text-align:center; font-family:'Bebas Neue',sans-serif; font-size:13px; letter-spacing:3px; color:#fff; }
-
-
 
     #confetti-canvas { position:fixed; top:0; left:0; width:100%; height:100%; pointer-events:none; z-index:9999; display:none; }
 
@@ -159,11 +159,10 @@
       .hero, .form-body { padding-left:18px; padding-right:18px; }
       .hero-inner { padding:10px 0 20px; }
       .hero-ar { font-size:23px; }
-.btn-left, .btn-right { padding:14px; }
+      .btn-left, .btn-right { padding:14px; }
       .lbl-en { font-size:13px; }
       .success { margin:0 18px 14px; }
-.phone-code-wrap { width:120px; }
-.stats-grid { grid-template-columns:1fr; }
+      .phone-code-wrap { width:120px; }
     }
   </style>
 </head>
@@ -335,7 +334,7 @@
             <option value="+44">🇬🇧 +44</option>
             <option value="+33">🇫🇷 +33</option>
             <option value="+49">🇩🇪 +49</option>
-            <option value="+1-CA">🇨🇦 +1</option>
+            <option value="+1">🇨🇦 +1</option>
             <option value="+61">🇦🇺 +61</option>
           </select>
         </div>
@@ -353,11 +352,12 @@
     <div class="error-text" id="err-terms" style="text-align:right;">يرجى الموافقة على الشروط للمتابعة</div>
 
     <div class="btn-wrap">
-      <button class="btn-submit" id="submitBtn" type="button" onclick="doSubmit()">
+      <button class="btn-submit" id="submitBtn" type="button">
         <div class="btn-left" id="btnLeft">REGISTER</div>
         <div class="btn-right" id="btnRight">سجّل الآن</div>
       </button>
     </div>
+
     <div class="msg-box msg-error" id="errorBox"></div>
   </div>
 
@@ -375,8 +375,6 @@
     </div>
   </div>
 
-
-
   <div class="footer">
     <div class="f-dot f-orange"></div>
     <span>OUTFIT © 2026</span>
@@ -387,11 +385,8 @@
 
   <script>
     const SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbwlZK6GqhzuhcvDsLvfVTH6PV-gjDp4CsNPt0eDCjSsri_NtutGRWn9uTTLPTj2k76_Tg/exec';
-
     const WC_DATE = new Date('2026-06-11T00:00:00');
     const TID_KEY = 'wc2026_tid';
-
-
 
     function updateCountdown() {
       const diff = WC_DATE - new Date();
@@ -428,185 +423,139 @@
       setInterval(() => { el.textContent = getCount(); }, 30000);
     })();
 
-    const canvas = document.getElementById('confetti-canvas');
-    const ctx    = canvas.getContext('2d');
-    let particles = [], animFrame;
-
-    function launchConfetti(){
-      canvas.width  = window.innerWidth;
-      canvas.height = window.innerHeight;
-      canvas.style.display = 'block';
-      particles = [];
-      const colors = ['#ff5c00','#006c35','#ffffff','#d8ff3c','#ffb347','#00cc55'];
-      for(let i=0;i<180;i++){
-        particles.push({
-          x: Math.random()*canvas.width,
-          y: -20 - Math.random()*300,
-          w: 6 + Math.random()*8,
-          h: 10 + Math.random()*6,
-          color: colors[Math.floor(Math.random()*colors.length)],
-          rot: Math.random()*360,
-          rotSpeed: (Math.random()-0.5)*7,
-          vy: 2.5 + Math.random()*4,
-          vx: (Math.random()-0.5)*2.5,
-          opacity: 1
-        });
-      }
-      cancelAnimationFrame(animFrame);
-      drawConfetti();
-    }
-
-    function drawConfetti(){
-      ctx.clearRect(0,0,canvas.width,canvas.height);
-      let alive = false;
-      particles.forEach(p => {
-        p.y += p.vy; p.x += p.vx; p.rot += p.rotSpeed;
-        if(p.y > canvas.height * 0.7) p.opacity -= 0.018;
-        if(p.opacity > 0 && p.y < canvas.height + 40){
-          alive = true;
-          ctx.save();
-          ctx.globalAlpha = Math.max(0, p.opacity);
-          ctx.translate(p.x, p.y);
-          ctx.rotate(p.rot * Math.PI/180);
-          ctx.fillStyle = p.color;
-          ctx.fillRect(-p.w/2, -p.h/2, p.w, p.h);
-          ctx.restore();
-        }
-      });
-      if(alive) animFrame = requestAnimationFrame(drawConfetti);
-      else { canvas.style.display='none'; ctx.clearRect(0,0,canvas.width,canvas.height); }
-    }
-
-    const urlParams  = new URLSearchParams(window.location.search);
+    const urlParams = new URLSearchParams(window.location.search);
     const incomingRef = urlParams.get('ref') || '';
     if (incomingRef) {
       document.getElementById('refNotice').classList.add('visible');
     }
 
     const els = {
-      name:     document.getElementById('f-name'),
-      nat:      document.getElementById('f-nat'),
-      city:     document.getElementById('f-city'),
-      code:     document.getElementById('f-code'),
-      num:      document.getElementById('f-num'),
-      terms:    document.getElementById('f-terms'),
-      errName:  document.getElementById('err-name'),
-      errNat:   document.getElementById('err-nat'),
-      errCity:  document.getElementById('err-city'),
-      errNum:   document.getElementById('err-num'),
+      name: document.getElementById('f-name'),
+      nat: document.getElementById('f-nat'),
+      city: document.getElementById('f-city'),
+      code: document.getElementById('f-code'),
+      num: document.getElementById('f-num'),
+      terms: document.getElementById('f-terms'),
+      errName: document.getElementById('err-name'),
+      errNat: document.getElementById('err-nat'),
+      errCity: document.getElementById('err-city'),
+      errNum: document.getElementById('err-num'),
       errTerms: document.getElementById('err-terms'),
       submitBtn: document.getElementById('submitBtn'),
-      btnLeft:   document.getElementById('btnLeft'),
-      btnRight:  document.getElementById('btnRight'),
-      errorBox:  document.getElementById('errorBox'),
-      form:      document.getElementById('theForm'),
-      success:   document.getElementById('successBox'),
-      ticketId:  document.getElementById('ticketId')
+      btnLeft: document.getElementById('btnLeft'),
+      btnRight: document.getElementById('btnRight'),
+      errorBox: document.getElementById('errorBox'),
+      form: document.getElementById('theForm'),
+      success: document.getElementById('successBox'),
+      ticketId: document.getElementById('ticketId')
     };
 
-    function hideErrors(){
-      ['errName','errNat','errCity','errNum','errTerms'].forEach(k => els[k].style.display='none');
-      els.errorBox.style.display='none';
-      els.errorBox.textContent='';
+    function hideErrors() {
+      ['errName','errNat','errCity','errNum','errTerms'].forEach(k => els[k].style.display = 'none');
+      els.errorBox.style.display = 'none';
+      els.errorBox.textContent = '';
     }
 
-    function validateForm(){
+    function validateForm() {
       hideErrors();
       let valid = true;
-      const name   = els.name.value.trim();
-      const city   = els.city.value.trim();
+
+      const name = els.name.value.trim();
+      const city = els.city.value.trim();
       const digits = els.num.value.trim().replace(/\D/g,'');
 
-      if(!name || name.length < 3)           { els.errName.style.display='block';  valid=false; }
-      if(!els.nat.value)                      { els.errNat.style.display='block';   valid=false; }
-      if(!city || city.length < 2)            { els.errCity.style.display='block';  valid=false; }
-      if(!/^[0-9]{7,15}$/.test(digits))       { els.errNum.style.display='block';   valid=false; }
-      if(!els.terms.checked)                  { els.errTerms.style.display='block'; valid=false; }
+      if (!name || name.length < 3) { els.errName.style.display = 'block'; valid = false; }
+      if (!els.nat.value) { els.errNat.style.display = 'block'; valid = false; }
+      if (!city || city.length < 2) { els.errCity.style.display = 'block'; valid = false; }
+      if (!/^[0-9]{7,15}$/.test(digits)) { els.errNum.style.display = 'block'; valid = false; }
+      if (!els.terms.checked) { els.errTerms.style.display = 'block'; valid = false; }
+
       return valid;
     }
 
-    function setLoading(on){
-      els.submitBtn.disabled  = on;
-      els.btnLeft.textContent  = on ? 'SENDING...'      : 'REGISTER';
+    function setLoading(on) {
+      els.submitBtn.disabled = on;
+      els.btnLeft.textContent = on ? 'SENDING...' : 'REGISTER';
       els.btnRight.textContent = on ? 'جاري الإرسال...' : 'سجّل الآن';
     }
 
+    async function doSubmit() {
+      if (!validateForm()) return;
 
-
-    async function doSubmit(){
-      if(!validateForm()) return;
-
-      const scriptUrl = SCRIPT_URL.trim();
-      if(!scriptUrl || scriptUrl.includes('PASTE_YOUR')){
-        els.errorBox.textContent   = '⚠️ SCRIPT_URL set nahi hai — Google Apps Script URL paste karein';
-        els.errorBox.style.display = 'block';
-        return;
-      }
-
-      const codeVal  = els.code.value.replace('-CA','');
-      const digits   = els.num.value.trim().replace(/\D/g,'');
-      const fullPhone= codeVal + ' ' + digits;
+      const codeVal = els.code.value;
+      const digits = els.num.value.trim().replace(/\D/g,'');
+      const fullPhone = codeVal + digits;
 
       const body = new URLSearchParams();
-      body.append('name',        els.name.value.trim());
+      body.append('name', els.name.value.trim());
       body.append('nationality', els.nat.value);
-      body.append('city',        els.city.value.trim());
-      body.append('number',      fullPhone);
-      if(incomingRef) body.append('referredBy', incomingRef);
+      body.append('city', els.city.value.trim());
+      body.append('number', fullPhone);
+      if (incomingRef) body.append('referredBy', incomingRef);
 
       try {
         setLoading(true);
 
-        const res  = await fetch(scriptUrl, { method:'POST', body });
-
-        if(!res.ok) throw new Error('Server responded with ' + res.status);
+        const res = await fetch(SCRIPT_URL, {
+          method: 'POST',
+          body: body
+        });
 
         const text = await res.text();
         let data;
-        try { data = JSON.parse(text); }
-        catch(e) { throw new Error('Invalid response from server'); }
 
-        if(data.status === 'duplicate'){
-          els.errorBox.textContent   = 'هذا الرقم مسجّل مسبقاً في المسابقة';
+        try {
+          data = JSON.parse(text);
+        } catch (e) {
+          throw new Error('Invalid response from server');
+        }
+
+        if (data.status === 'duplicate') {
+          els.errorBox.textContent = 'هذا الرقم مسجّل مسبقاً في المسابقة';
           els.errorBox.style.display = 'block';
           return;
         }
 
-        if(data.status !== 'success') throw new Error(data.message || 'Submission failed');
+        if (data.status !== 'success') {
+          throw new Error(data.message || 'Submission failed');
+        }
 
         const tid = data.entryCode || 'WC-000000';
         els.ticketId.textContent = tid;
-        localStorage.setItem(TID_KEY, tid);
 
-        els.form.style.display    = 'none';
+        try { localStorage.setItem(TID_KEY, tid); } catch (_) {}
+
+        els.form.style.display = 'none';
         els.success.style.display = 'block';
+        els.success.scrollIntoView({ behavior: 'smooth', block: 'center' });
 
-        launchConfetti();
-        setTimeout(()=> els.success.scrollIntoView({behavior:'smooth',block:'center'}), 100);
-
-      } catch(err){
-        console.error('Submit error:', err);
-        els.errorBox.textContent   = 'خطأ في الإرسال: ' + (err.message || 'يرجى المحاولة مرة أخرى');
+      } catch (err) {
+        els.errorBox.textContent = 'خطأ في الإرسال: ' + (err.message || 'يرجى المحاولة مرة أخرى');
         els.errorBox.style.display = 'block';
       } finally {
         setLoading(false);
       }
     }
 
-    function resetForm(){
-      localStorage.removeItem(TID_KEY);
-      document.getElementById('successBox').style.display = 'none';
-      document.getElementById('theForm').style.display    = 'flex';
-      document.getElementById('f-name').value  = '';
-      document.getElementById('f-nat').selectedIndex = 0;
-      document.getElementById('f-city').value = '';
-      document.getElementById('f-num').value  = '';
-      document.getElementById('f-terms').checked = false;
+    function resetForm() {
+      try { localStorage.removeItem(TID_KEY); } catch (_) {}
+
+      els.success.style.display = 'none';
+      els.form.style.display = 'flex';
+      els.name.value = '';
+      els.nat.selectedIndex = 0;
+      els.city.value = '';
+      els.code.value = '+966';
+      els.num.value = '';
+      els.terms.checked = false;
+      hideErrors();
     }
 
+    document.getElementById('submitBtn').addEventListener('click', doSubmit);
+
     window.addEventListener('load', () => {
-      document.getElementById('theForm').style.display    = 'flex';
-      document.getElementById('successBox').style.display = 'none';
+      els.form.style.display = 'flex';
+      els.success.style.display = 'none';
     });
   </script>
 </body>
