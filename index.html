@@ -60,48 +60,23 @@
     .field-num { font-family:'Bebas Neue',sans-serif; font-size:11px; color:#ff5c00; letter-spacing:2px; margin-bottom:2px; text-align:right; }
     .lbl-ar { font-size:16px; font-weight:800; color:#111; line-height:1; text-align:right; }
     .lbl-en { font-family:'Bebas Neue',sans-serif; font-size:14px; color:#333; letter-spacing:3px; margin-top:4px; font-weight:700; text-align:right; }
-    .finput {
-      background:#f7f7f7; border:1.5px solid #dcdcdc; border-radius:6px; padding:13px 15px;
-      color:#111; font-family:'Cairo',sans-serif; font-size:14px; direction:rtl; outline:none;
-      transition:border-color 0.2s,background 0.2s; width:100%; margin-top:6px;
-    }
+    .finput { background:#f7f7f7; border:1.5px solid #dcdcdc; border-radius:6px; padding:13px 15px; color:#111; font-family:'Cairo',sans-serif; font-size:14px; direction:rtl; outline:none; transition:border-color .2s,background .2s; width:100%; margin-top:6px; }
     .finput:focus { border-color:#ff5c00; background:#fff7f2; }
     .finput::placeholder { color:#8a8a8a; font-size:13px; }
-    .fselect {
-      background:#f7f7f7; border:1.5px solid #dcdcdc; border-radius:6px; padding:13px 15px;
-      color:#111; font-family:'Cairo',sans-serif; font-size:14px; direction:rtl; outline:none;
-      transition:border-color 0.2s,background 0.2s; width:100%; margin-top:6px;
-      appearance:none; -webkit-appearance:none;
-      background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%23ff5c00' stroke-width='2' fill='none' stroke-linecap='round'/%3E%3C/svg%3E");
-      background-repeat:no-repeat; background-position:left 14px center; padding-left:36px; cursor:pointer;
-    }
+    .fselect { background:#f7f7f7; border:1.5px solid #dcdcdc; border-radius:6px; padding:13px 15px; color:#111; font-family:'Cairo',sans-serif; font-size:14px; direction:rtl; outline:none; transition:border-color .2s,background .2s; width:100%; margin-top:6px; appearance:none; -webkit-appearance:none; background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%23ff5c00' stroke-width='2' fill='none' stroke-linecap='round'/%3E%3C/svg%3E"); background-repeat:no-repeat; background-position:left 14px center; padding-left:36px; cursor:pointer; }
     .fselect:focus { border-color:#ff5c00; background-color:#fff7f2; }
     .fselect option { background:#ffffff; color:#111; }
     .phone-row { display:flex; gap:8px; margin-top:6px; direction:rtl; }
     .phone-code-wrap { flex-shrink:0; width:140px; }
-    .phone-code-select {
-      background:#f7f7f7; border:1.5px solid #dcdcdc; border-radius:6px; padding:13px 10px;
-      color:#111; font-family:'Cairo',sans-serif; font-size:13px; direction:ltr; outline:none;
-      transition:border-color 0.2s,background 0.2s; width:100%; appearance:none; -webkit-appearance:none;
-      background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='6' viewBox='0 0 10 6'%3E%3Cpath d='M1 1l4 4 4-4' stroke='%23ff5c00' stroke-width='1.5' fill='none' stroke-linecap='round'/%3E%3C/svg%3E");
-      background-repeat:no-repeat; background-position:right 10px center; padding-right:28px; cursor:pointer; text-align:left;
-    }
+    .phone-code-select { background:#f7f7f7; border:1.5px solid #dcdcdc; border-radius:6px; padding:13px 10px; color:#111; font-family:'Cairo',sans-serif; font-size:13px; direction:ltr; outline:none; transition:border-color .2s,background .2s; width:100%; appearance:none; -webkit-appearance:none; background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='6' viewBox='0 0 10 6'%3E%3Cpath d='M1 1l4 4 4-4' stroke='%23ff5c00' stroke-width='1.5' fill='none' stroke-linecap='round'/%3E%3C/svg%3E"); background-repeat:no-repeat; background-position:right 10px center; padding-right:28px; cursor:pointer; text-align:left; }
     .phone-code-select:focus { border-color:#ff5c00; background-color:#fff7f2; }
-    .phone-number-input {
-      flex:1; background:#f7f7f7; border:1.5px solid #dcdcdc; border-radius:6px; padding:13px 15px;
-      color:#111; font-family:'Cairo',sans-serif; font-size:14px; direction:ltr; outline:none;
-      transition:border-color 0.2s,background 0.2s; text-align:left;
-    }
+    .phone-number-input { flex:1; background:#f7f7f7; border:1.5px solid #dcdcdc; border-radius:6px; padding:13px 15px; color:#111; font-family:'Cairo',sans-serif; font-size:14px; direction:ltr; outline:none; transition:border-color .2s,background .2s; text-align:left; }
     .phone-number-input:focus { border-color:#ff5c00; background:#fff7f2; }
     .phone-number-input::placeholder { color:#8a8a8a; font-size:13px; }
     .error-text { color:#d93c3c; font-size:12px; font-weight:600; display:none; margin-top:4px; text-align:right; }
 
-    .ref-notice {
-      background: linear-gradient(135deg, #f0fff4, #e8f5e9);
-      border: 1.5px solid #006c35; border-radius: 8px; padding: 10px 14px;
-      display: none; align-items: center; gap: 10px; margin-bottom: 4px;
-    }
-    .ref-notice.visible { display: flex; }
+    .ref-notice { background:linear-gradient(135deg,#f0fff4,#e8f5e9); border:1.5px solid #006c35; border-radius:8px; padding:10px 14px; display:none; align-items:center; gap:10px; margin-bottom:4px; }
+    .ref-notice.visible { display:flex; }
     .ref-notice-icon { font-size:22px; flex-shrink:0; }
     .ref-notice-text { flex:1; }
     .ref-notice-ar { font-size:13px; font-weight:700; color:#006c35; }
@@ -111,30 +86,20 @@
     .terms-check { width:18px; height:18px; border:2px solid #dcdcdc; border-radius:4px; flex-shrink:0; cursor:pointer; accent-color:#ff5c00; margin-top:2px; }
     .terms-label { font-size:12px; color:#555; font-weight:600; line-height:1.6; text-align:right; }
     .terms-label a { color:#ff5c00; text-decoration:none; }
+
     .btn-wrap { padding-top:18px; }
-    .btn-submit {
-      width:100%; border:none; border-radius:6px; padding:0; cursor:pointer; overflow:hidden;
-      display:flex; transition:transform 0.1s,opacity 0.2s,box-shadow 0.2s;
-      box-shadow:0 4px 18px rgba(0,0,0,0.06);
-    }
-    .btn-submit:hover { box-shadow:0 6px 24px rgba(255,92,0,0.25); }
-    .btn-submit:active { transform:scale(0.98); }
-    .btn-submit:disabled { opacity:0.7; cursor:not-allowed; }
+    .btn-submit { width:100%; border:none; border-radius:6px; padding:0; cursor:pointer; overflow:hidden; display:flex; transition:transform .1s,opacity .2s,box-shadow .2s; box-shadow:0 4px 18px rgba(0,0,0,.06); }
+    .btn-submit:hover { box-shadow:0 6px 24px rgba(255,92,0,.25); }
+    .btn-submit:active { transform:scale(.98); }
+    .btn-submit:disabled { opacity:.7; cursor:not-allowed; }
     .btn-left { background:#ff5c00; flex:1; padding:16px; font-family:'Bebas Neue',sans-serif; font-size:18px; letter-spacing:3px; color:#fff; text-align:center; }
     .btn-right { background:#006c35; flex:1; padding:16px; font-size:15px; font-weight:700; color:#fff; text-align:center; }
-    .msg-box { display:none; margin-top:18px; border-radius:8px; padding:12px 14px; text-align:center; font-size:14px; font-weight:700; }
+
+    .msg-box { display:none; margin-top:18px; border-radius:8px; padding:14px 16px; text-align:center; font-size:14px; font-weight:700; }
     .msg-error { background:#fff1f1; color:#c13b3b; border:1px solid #f0c7c7; }
+    .msg-dup   { background:#fff8e1; color:#b45309; border:1.5px solid #ffc107; }
 
-    /* ─── Duplicate Warning Box ─────────────────────────── */
-    .duplicate-box {
-      display:none; margin-top:14px; background:#fff8e1; border:1.5px solid #ffc107;
-      border-radius:8px; padding:14px 16px; text-align:center;
-    }
-    .duplicate-box .dup-icon { font-size:28px; margin-bottom:6px; }
-    .duplicate-box .dup-ar { font-size:15px; font-weight:800; color:#b45309; }
-    .duplicate-box .dup-en { font-family:'Bebas Neue',sans-serif; font-size:11px; color:#999; letter-spacing:2px; margin-top:4px; }
-
-    .success { display:none; margin:0 28px 14px; border-radius:8px; overflow:hidden; box-shadow:0 6px 24px rgba(0,0,0,0.08); }
+    .success { display:none; margin:0 28px 14px; border-radius:8px; overflow:hidden; box-shadow:0 6px 24px rgba(0,0,0,.08); }
     .success-top { background:#006c35; padding:20px; text-align:center; color:#fff; font-size:20px; font-weight:700; }
     .success-ticket { background:#ffffff; padding:14px 20px; text-align:center; border-left:1px solid #ececec; border-right:1px solid #ececec; }
     .ticket-label { font-size:10px; color:#777; font-weight:600; letter-spacing:2px; margin-bottom:4px; }
@@ -143,11 +108,7 @@
 
     #confetti-canvas { position:fixed; top:0; left:0; width:100%; height:100%; pointer-events:none; z-index:9999; display:none; }
 
-    .footer {
-      text-align:center; padding:16px; color:#111; font-family:'Bebas Neue',sans-serif;
-      font-size:11px; letter-spacing:3px; border-top:1px solid #ececec;
-      display:flex; align-items:center; justify-content:center; gap:12px; flex-wrap:wrap; background:#fff;
-    }
+    .footer { text-align:center; padding:16px; color:#111; font-family:'Bebas Neue',sans-serif; font-size:11px; letter-spacing:3px; border-top:1px solid #ececec; display:flex; align-items:center; justify-content:center; gap:12px; flex-wrap:wrap; background:#fff; }
     .f-dot { width:4px; height:4px; border-radius:50%; }
     .f-orange { background:#ff5c00; }
     .f-green { background:#006c35; }
@@ -160,7 +121,7 @@
       .header-logo-left { width:64px; height:64px; }
       .main-top-logo { width:110px; }
       .logo-outfit { font-size:20px; letter-spacing:2px; }
-      .logo-x { font-size:8px; letter-spacing:0.8px; }
+      .logo-x { font-size:8px; }
       .hero, .form-body { padding-left:18px; padding-right:18px; }
       .hero-inner { padding:10px 0 20px; }
       .hero-ar { font-size:23px; }
@@ -211,9 +172,7 @@
 
   <div class="counter-bar">
     <div class="counter-pulse"></div>
-    <span class="counter-text">
-      انضم <span class="counter-num" id="liveCount">—</span> مشارك حتى الآن
-    </span>
+    <span class="counter-text">انضم <span class="counter-num" id="liveCount">—</span> مشارك حتى الآن</span>
     <span style="font-size:10px;color:#999;font-weight:600;">LIVE REGISTRATIONS</span>
   </div>
 
@@ -232,6 +191,7 @@
   </div>
 
   <div class="form-body" id="theForm">
+
     <div class="ref-notice" id="refNotice">
       <div class="ref-notice-icon">🎉</div>
       <div class="ref-notice-text">
@@ -363,13 +323,9 @@
       </button>
     </div>
 
-    <!-- ─── Duplicate Warning ────────────────────────── -->
-    <div class="duplicate-box" id="dupBox">
-      <div class="dup-icon">⚠️</div>
-      <div class="dup-ar">هذا الرقم مسجّل مسبقاً في المسابقة</div>
-      <div class="dup-en">THIS NUMBER IS ALREADY REGISTERED</div>
+    <div class="msg-box msg-dup" id="dupBox">
+      ⚠️ هذا الرقم مسجّل مسبقاً في المسابقة — THIS NUMBER IS ALREADY REGISTERED
     </div>
-
     <div class="msg-box msg-error" id="errorBox"></div>
   </div>
 
@@ -396,11 +352,13 @@
   </div>
 
   <script>
-    const SCRIPT_URL = 'https://script.google.com/macros/library/d/1z0aCVck5ZvfrckZMbQgkGS_xst1sj3rpIF3k-3iv0hcjnRikE36peLkR/2';
-    const WC_DATE    = new Date('2026-06-11T00:00:00');
-    const TID_KEY    = 'wc2026_tid';
+    // !! اپنی نئی Deploy URL یہاں paste کریں !!
+    const SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbwlZK6GqhzuhcvDsLvfVTH6PV-gjDp4CsNPt0eDCjSsri_NtutGRWn9uTTLPTj2k76_Tg/exec';
 
-    // ── Countdown ──────────────────────────────────────────────────────────
+    const WC_DATE = new Date('2026-06-11T00:00:00');
+    const TID_KEY = 'wc2026_tid';
+
+    // ── Countdown ───────────────────────────────────────────────────────────
     function updateCountdown() {
       const diff = WC_DATE - new Date();
       if (diff <= 0) {
@@ -426,11 +384,9 @@
       const EPOCH = new Date('2026-04-01T00:00:00Z').getTime();
       const BASE  = 312;
       function getCount(){
-        const ms   = Date.now() - EPOCH;
-        const hrs  = ms / 3600000;
-        const steady = Math.floor(hrs * 18);
-        const slot   = Math.floor(ms / 240000);
-        const bump   = ((slot * 2654435761) >>> 0) % 3;
+        const ms     = Date.now() - EPOCH;
+        const steady = Math.floor(ms / 3600000 * 18);
+        const bump   = ((Math.floor(ms/240000) * 2654435761) >>> 0) % 3;
         return BASE + steady + bump;
       }
       el.textContent = getCount();
@@ -441,53 +397,36 @@
     const canvas = document.getElementById('confetti-canvas');
     const ctx    = canvas.getContext('2d');
     let particles = [], animFrame;
-
     function launchConfetti(){
-      canvas.width  = window.innerWidth;
-      canvas.height = window.innerHeight;
-      canvas.style.display = 'block';
-      particles = [];
+      canvas.width = window.innerWidth; canvas.height = window.innerHeight;
+      canvas.style.display = 'block'; particles = [];
       const colors = ['#ff5c00','#006c35','#ffffff','#d8ff3c','#ffb347','#00cc55'];
-      for(let i=0;i<180;i++){
-        particles.push({
-          x: Math.random()*canvas.width,
-          y: -20 - Math.random()*300,
-          w: 6 + Math.random()*8,
-          h: 10 + Math.random()*6,
-          color: colors[Math.floor(Math.random()*colors.length)],
-          rot: Math.random()*360,
-          rotSpeed: (Math.random()-0.5)*7,
-          vy: 2.5 + Math.random()*4,
-          vx: (Math.random()-0.5)*2.5,
-          opacity: 1
-        });
-      }
-      cancelAnimationFrame(animFrame);
-      drawConfetti();
+      for(let i=0;i<180;i++) particles.push({
+        x:Math.random()*canvas.width, y:-20-Math.random()*300,
+        w:6+Math.random()*8, h:10+Math.random()*6,
+        color:colors[Math.floor(Math.random()*colors.length)],
+        rot:Math.random()*360, rotSpeed:(Math.random()-.5)*7,
+        vy:2.5+Math.random()*4, vx:(Math.random()-.5)*2.5, opacity:1
+      });
+      cancelAnimationFrame(animFrame); drawConfetti();
     }
-
     function drawConfetti(){
       ctx.clearRect(0,0,canvas.width,canvas.height);
       let alive = false;
       particles.forEach(p => {
-        p.y += p.vy; p.x += p.vx; p.rot += p.rotSpeed;
-        if(p.y > canvas.height * 0.7) p.opacity -= 0.018;
-        if(p.opacity > 0 && p.y < canvas.height + 40){
-          alive = true;
-          ctx.save();
-          ctx.globalAlpha = Math.max(0, p.opacity);
-          ctx.translate(p.x, p.y);
-          ctx.rotate(p.rot * Math.PI/180);
-          ctx.fillStyle = p.color;
-          ctx.fillRect(-p.w/2, -p.h/2, p.w, p.h);
-          ctx.restore();
+        p.y+=p.vy; p.x+=p.vx; p.rot+=p.rotSpeed;
+        if(p.y>canvas.height*.7) p.opacity-=.018;
+        if(p.opacity>0 && p.y<canvas.height+40){
+          alive=true; ctx.save(); ctx.globalAlpha=Math.max(0,p.opacity);
+          ctx.translate(p.x,p.y); ctx.rotate(p.rot*Math.PI/180);
+          ctx.fillStyle=p.color; ctx.fillRect(-p.w/2,-p.h/2,p.w,p.h); ctx.restore();
         }
       });
-      if(alive) animFrame = requestAnimationFrame(drawConfetti);
+      if(alive) animFrame=requestAnimationFrame(drawConfetti);
       else { canvas.style.display='none'; ctx.clearRect(0,0,canvas.width,canvas.height); }
     }
 
-    // ── Referral notice ─────────────────────────────────────────────────────
+    // ── Referral ────────────────────────────────────────────────────────────
     const urlParams   = new URLSearchParams(window.location.search);
     const incomingRef = urlParams.get('ref') || '';
     if (incomingRef) document.getElementById('refNotice').classList.add('visible');
@@ -528,12 +467,11 @@
       const name   = els.name.value.trim();
       const city   = els.city.value.trim();
       const digits = els.num.value.trim().replace(/\D/g,'');
-
-      if(!name || name.length < 3)         { els.errName.style.display='block';  valid=false; }
-      if(!els.nat.value)                    { els.errNat.style.display='block';   valid=false; }
-      if(!city || city.length < 2)          { els.errCity.style.display='block';  valid=false; }
-      if(!/^[0-9]{7,15}$/.test(digits))     { els.errNum.style.display='block';   valid=false; }
-      if(!els.terms.checked)                { els.errTerms.style.display='block'; valid=false; }
+      if(!name || name.length < 3)       { els.errName.style.display='block';  valid=false; }
+      if(!els.nat.value)                  { els.errNat.style.display='block';   valid=false; }
+      if(!city || city.length < 2)        { els.errCity.style.display='block';  valid=false; }
+      if(!/^[0-9]{7,15}$/.test(digits))   { els.errNum.style.display='block';   valid=false; }
+      if(!els.terms.checked)              { els.errTerms.style.display='block'; valid=false; }
       return valid;
     }
 
@@ -546,12 +484,10 @@
     async function doSubmit(){
       if(!validateForm()) return;
 
-      // ── FIXED: normalize phone before sending ─────────────────────────────
-      // Remove country code prefix "+", dashes, spaces — send digits only
-      const rawCode  = els.code.value.replace('-CA','').replace('+','');
-      const digits   = els.num.value.trim().replace(/\D/g,'');
+      // ── FIXED: digits only — no +, no spaces ────────────────────────────
+      const rawCode   = els.code.value.replace('-CA','').replace(/\D/g,'');
+      const digits    = els.num.value.trim().replace(/\D/g,'');
       const fullPhone = rawCode + digits;   // e.g. "966512345678"
-      // ─────────────────────────────────────────────────────────────────────
 
       const body = new URLSearchParams();
       body.append('name',        els.name.value.trim());
@@ -563,15 +499,13 @@
       try {
         setLoading(true);
 
-        const res = await fetch(SCRIPT_URL, { method:'POST', body });
-        if(!res.ok) throw new Error('Server responded with ' + res.status);
-
-        const text = await res.text();
+        // ── FIXED: mode no-cors workaround using form POST redirect trick ─
+        // Google Apps Script requires no-cors OR we use XMLHttpRequest
+        const xhr = await sendXHR(SCRIPT_URL, body.toString());
         let data;
-        try { data = JSON.parse(text); }
-        catch(e) { throw new Error('Invalid response from server'); }
+        try { data = JSON.parse(xhr); }
+        catch(e) { throw new Error('Invalid server response'); }
 
-        // ── Duplicate: show friendly warning instead of generic error ──────
         if(data.status === 'duplicate'){
           els.dupBox.style.display = 'block';
           els.dupBox.scrollIntoView({ behavior:'smooth', block:'center' });
@@ -583,10 +517,8 @@
         const tid = data.entryCode || 'WC-000000';
         els.ticketId.textContent = tid;
         localStorage.setItem(TID_KEY, tid);
-
         els.form.style.display    = 'none';
         els.success.style.display = 'block';
-
         launchConfetti();
         setTimeout(()=> els.success.scrollIntoView({behavior:'smooth',block:'center'}), 100);
 
@@ -599,21 +531,35 @@
       }
     }
 
+    // ── XHR instead of fetch — fixes "Failed to fetch" on some browsers ────
+    function sendXHR(url, body) {
+      return new Promise((resolve, reject) => {
+        const xhr = new XMLHttpRequest();
+        xhr.open('POST', url, true);
+        xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
+        xhr.onload  = () => resolve(xhr.responseText);
+        xhr.onerror = () => reject(new Error('Network error — check internet connection'));
+        xhr.ontimeout = () => reject(new Error('Request timed out'));
+        xhr.timeout = 15000;
+        xhr.send(body);
+      });
+    }
+
     function resetForm(){
       localStorage.removeItem(TID_KEY);
-      document.getElementById('successBox').style.display = 'none';
-      document.getElementById('theForm').style.display    = 'flex';
-      document.getElementById('f-name').value  = '';
-      document.getElementById('f-nat').selectedIndex = 0;
-      document.getElementById('f-city').value = '';
-      document.getElementById('f-num').value  = '';
-      document.getElementById('f-terms').checked = false;
+      els.success.style.display = 'none';
+      els.form.style.display    = 'flex';
+      els.name.value  = '';
+      els.nat.selectedIndex = 0;
+      els.city.value  = '';
+      els.num.value   = '';
+      els.terms.checked = false;
       hideErrors();
     }
 
     window.addEventListener('load', () => {
-      document.getElementById('theForm').style.display    = 'flex';
-      document.getElementById('successBox').style.display = 'none';
+      els.form.style.display    = 'flex';
+      els.success.style.display = 'none';
     });
   </script>
 </body>
